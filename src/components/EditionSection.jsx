@@ -16,7 +16,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
           <div>
             <span className="inline-block text-xs font-semibold text-sky-600 uppercase tracking-widest mb-2">
-              Edycja {index === 0 ? 'pierwsza' : 'druga'}
+              Edycja {index === 0 ? 'druga' : 'pierwsza'}
             </span>
             <h2 className="text-3xl font-bold text-gray-900 tracking-tight">RFtime {edition}</h2>
             <p className="text-gray-500 text-sm mt-1">{theme}</p>
