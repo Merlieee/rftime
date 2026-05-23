@@ -99,10 +99,10 @@ export default function OrganizerSection() {
         </div>
       </section>
 
-      {/* Patronaty i Punkty Edukacyjne */}
+      {/* Poprzedni patroni i punkty edukacyjne */}
       <section className="border-t border-gray-200 py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 mb-8">
-          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Patronaty i Punkty Edukacyjne</p>
+          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Poprzedni patroni i punkty edukacyjne</p>
         </div>
 
         <div className="relative">

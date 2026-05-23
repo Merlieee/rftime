@@ -22,19 +22,8 @@ function Home() {
       <About />
       <div id="edycje">
         <EditionSection
-          edition="2024"
-          index={0}
-          date="3–4 października 2024"
-          location="WSS Biała Podlaska"
-          theme="Mapowanie 3D i złożone ablacje RF"
-          speakers={speakers2024}
-          highlights={highlights2024}
-          program={program2024}
-          accent="blue"
-        />
-        <EditionSection
           edition="2025"
-          index={1}
+          index={0}
           date="23–24 października 2025"
           location="WSS Biała Podlaska"
           theme="PFA II gen., ablacja VT, mapowanie epikardialne"
@@ -42,6 +31,17 @@ function Home() {
           highlights={highlights2025}
           program={program2025}
           accent="pink"
+        />
+        <EditionSection
+          edition="2024"
+          index={1}
+          date="3–4 października 2024"
+          location="WSS Biała Podlaska"
+          theme="Mapowanie 3D i złożone ablacje RF"
+          speakers={speakers2024}
+          highlights={highlights2024}
+          program={program2024}
+          accent="blue"
         />
       </div>
       <OrganizerSection />
