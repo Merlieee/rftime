@@ -31,9 +31,16 @@
   animation: logo-ticker 35s linear infinite;
 }
 
-@media (max-width: 768px) {
-  .logo-ticker {
-    animation-duration: 15s;
-  }
+.ticker-desktop { display: none; }
+.ticker-mobile  { display: block; }
+
+@media (min-width: 768px) {
+  .ticker-desktop { display: block; }
+  .ticker-mobile  { display: none; }
+  .logo-ticker { animation-duration: 35s; }
+}
+
+@media (max-width: 767px) {
+  .logo-ticker { animation-duration: 15s; }
 }
 
