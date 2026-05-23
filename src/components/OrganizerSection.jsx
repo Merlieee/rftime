@@ -18,7 +18,7 @@ function DraggableTicker() {
   const startScroll = useRef(0);
 
   useEffect(() => {
-    const speed = window.innerWidth < 768 ? 1.2 : 0.6;
+    const speed = window.innerWidth < 768 ? 0.5 : 0.3;
     const tick = () => {
       if (ref.current && !isDragging.current) {
         const el = ref.current;
@@ -101,7 +101,13 @@ export default function OrganizerSection() {
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Patronaty i Punkty Edukacyjne</p>
         </div>
 
-        <DraggableTicker />
+        <div className="relative">
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10"
+            style={{ background: 'linear-gradient(to right, #f9fafb, transparent)' }} />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10"
+            style={{ background: 'linear-gradient(to left, #f9fafb, transparent)' }} />
+          <DraggableTicker />
+        </div>
       </section>
     </>
   );
