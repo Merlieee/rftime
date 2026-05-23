@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+
 const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
   { src: 'https://rftime.pl/wp-content/uploads/2025/09/PTK-Punkty-Edukacyjne-RFtime-2025.png',   alt: 'PTK Punkty Edukacyjne' },
@@ -6,6 +8,40 @@ const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/Klub-30-PTK-RFtime.webp',                  alt: 'Klub 30 PTK' },
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
+
+function LogoTicker() {
+  const ref = useRef(null);
+  const [dragging, setDragging] = useState(false);
+  const dragStart = useRef(0);
+  const scrollStart = useRef(0);
+
+  const onTouchStart = (e) => {
+    dragStart.current = e.touches[0].clientX;
+    scrollStart.current = ref.current.scrollLeft;
+  };
+  const onTouchMove = (e) => {
+    const dx = dragStart.current - e.touches[0].clientX;
+    ref.current.scrollLeft = scrollStart.current + dx;
+  };
+
+  return (
+    <div
+      ref={ref}
+      className="overflow-x-auto md:overflow-hidden"
+      style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none' }}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+    >
+      <div className="logo-ticker flex gap-8 w-max items-center">
+        {[...patronLogos, ...patronLogos].map((logo, i) => (
+          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
+            <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function OrganizerSection() {
   return (
@@ -40,31 +76,12 @@ export default function OrganizerSection() {
         <div className="max-w-6xl mx-auto px-6 mb-8">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Patronaty i Punkty Edukacyjne</p>
         </div>
-
-        {/* Desktop: auto-scroll ticker */}
-        <div className="relative hidden md:block">
+        <div className="relative">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-32 z-10"
             style={{ background: 'linear-gradient(to right, #f9fafb, transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-32 z-10"
             style={{ background: 'linear-gradient(to left, #f9fafb, transparent)' }} />
-          <div className="logo-ticker flex gap-8 w-max items-center">
-            {[...patronLogos, ...patronLogos].map((logo, i) => (
-              <div key={i} className="flex items-center justify-center" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
-                <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile: horizontal scroll */}
-        <div className="md:hidden overflow-x-auto px-6" style={{ WebkitOverflowScrolling: 'touch' }}>
-          <div className="flex gap-6 w-max items-center pb-2">
-            {patronLogos.map((logo, i) => (
-              <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '160px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
-                <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
-              </div>
-            ))}
-          </div>
+          <LogoTicker />
         </div>
       </section>
     </>
