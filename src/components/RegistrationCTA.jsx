@@ -9,7 +9,7 @@ export default function RegistrationCTA() {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center gap-6">
         <div>
-          <p className="text-blue-200 text-sm font-medium mb-2 opacity-80">RFtime 2026 — Biała Podlaska</p>
+          <p className="text-blue-200 text-sm font-medium mb-2 opacity-80">RFtime 2026 · Biała Podlaska</p>
           <h2 className="text-3xl font-bold text-white tracking-tight mb-3">
             Dołącz do kolejnej edycji
           </h2>
