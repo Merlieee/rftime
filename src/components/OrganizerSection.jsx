@@ -50,8 +50,8 @@ export default function OrganizerSection() {
 
           <div className="logo-ticker flex gap-8 w-max items-center">
             {[...patronLogos, ...patronLogos].map((logo, i) => (
-              <div key={i} className="flex items-center justify-center" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb' }}>
-                <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" />
+              <div key={i} className="flex items-center justify-center" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
+                <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
               </div>
             ))}
           </div>
