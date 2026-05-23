@@ -21,7 +21,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
             <h2 className="text-3xl font-bold text-gray-900 tracking-tight">RFtime {edition}</h2>
             <p className="text-gray-500 text-sm mt-1">{theme}</p>
           </div>
-          <div className="border border-gray-200 rounded-lg px-5 py-4 bg-white text-right shrink-0">
+          <div className="border border-gray-200 rounded-lg px-5 py-4 bg-white text-left md:text-right w-full md:w-auto shrink-0">
             <p className="text-sm font-semibold text-gray-900">{date}</p>
             <p className="text-xs text-gray-400 mt-1">{location}</p>
           </div>
