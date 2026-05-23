@@ -15,7 +15,7 @@ export default function RegistrationCTA() {
           </h2>
           <p className="text-white/80 max-w-xl leading-relaxed">
             Szczegóły programu zostaną ogłoszone wkrótce. Zostaw swoje dane, aby być pierwszym
-            poinformowanym o naborze uczestników na edycję 2026. Udział bezpłatny.
+            poinformowanym o naborze uczestników na edycję 2026. Udział bezpłatny. Liczy się kolejność zgłoszeń.
           </p>
         </div>
         <div className="shrink-0">
