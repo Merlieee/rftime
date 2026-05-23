@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 flex flex-col items-center text-center">
 
         <p className="text-sm font-medium text-sky-600 mb-4">
-          Październik 2026 · WSS Biała Podlaska
+          29-30 października 2026 · WSS Biała Podlaska
         </p>
 
         <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900 mb-4">
@@ -12,7 +12,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base text-gray-500 mb-3 max-w-xl leading-relaxed text-balance">
-          Warsztaty Ablacyjne dla Elektrofizjologów, mapowanie 3D i złożone ablacje RF/PFA
+          Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów, Mapowanie 3D i Złożone Ablacje RF/PFA
         </p>
 
         <p className="text-xs text-gray-400 mb-8">

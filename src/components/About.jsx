@@ -19,7 +19,7 @@ export default function About() {
             <h2 className="text-3xl font-bold text-gray-900 mb-5 tracking-tight">Czym jest RFtime?</h2>
             <p className="text-gray-500 leading-relaxed mb-4">
               RFtime to platforma spotkań i wymiany doświadczeń elektrofizjologów zajmujących się gęstym mapowaniem 3D
-              i punktowymi ablacjami RF, założona przez dr. hab. Macieja Wójcika z UM Lublin.
+              i punktowymi ablacjami RF/PFA, założona przez dr. hab. Macieja Wójcika z UM Lublin.
             </p>
             <p className="text-gray-500 leading-relaxed mb-6">
               Każda edycja łączy operatorów i wykładowców z całego świata z uczestnikami na różnych etapach kariery —
