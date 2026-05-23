@@ -25,7 +25,7 @@ export default function RegistrationCTA() {
           >
             Zgłoś uczestnictwo
           </a>
-          <p className="text-xs text-white/50 mt-2 text-center">
+          <p className="text-xs text-white/50 mt-2 text-left md:text-center">
             Rejestracja przez WSzS w Białej Podlaskiej · RODO
           </p>
         </div>
