@@ -43,7 +43,7 @@ export default function PhotoCarousel() {
     <div className="px-4 md:px-12">
     <div
       className="relative w-full overflow-hidden bg-gray-950 rounded-2xl shadow-xl"
-      style={{ height: '70vh' }}
+      style={{ height: '70vh', touchAction: 'pan-y' }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
