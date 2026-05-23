@@ -11,20 +11,21 @@ const patronLogos = [
 
 
 function DraggableTicker() {
-  const ref = useRef(null);
+  const wrapRef = useRef(null);
+  const innerRef = useRef(null);
   const raf = useRef(null);
+  const offset = useRef(0);
   const isDragging = useRef(false);
   const startX = useRef(0);
-  const startScroll = useRef(0);
+  const startOffset = useRef(0);
 
   useEffect(() => {
     const speed = window.innerWidth < 768 ? 0.5 : 0.3;
     const tick = () => {
-      if (ref.current && !isDragging.current) {
-        const el = ref.current;
-        el.scrollLeft += speed;
-        const half = el.scrollWidth / 2;
-        if (el.scrollLeft >= half) el.scrollLeft -= half;
+      if (!isDragging.current && innerRef.current) {
+        const cycle = innerRef.current.scrollWidth / 2;
+        offset.current = (offset.current + speed) % cycle;
+        innerRef.current.style.transform = `translateX(-${offset.current}px)`;
       }
       raf.current = requestAnimationFrame(tick);
     };
@@ -35,19 +36,22 @@ function DraggableTicker() {
   const begin = (x) => {
     isDragging.current = true;
     startX.current = x;
-    startScroll.current = ref.current.scrollLeft;
+    startOffset.current = offset.current;
   };
   const move = (x) => {
-    if (!isDragging.current) return;
-    ref.current.scrollLeft = startScroll.current - (x - startX.current);
+    if (!isDragging.current || !innerRef.current) return;
+    const cycle = innerRef.current.scrollWidth / 2;
+    const dx = startX.current - x;
+    offset.current = ((startOffset.current + dx) % cycle + cycle) % cycle;
+    innerRef.current.style.transform = `translateX(-${offset.current}px)`;
   };
   const end = () => { isDragging.current = false; };
 
   return (
     <div
-      ref={ref}
-      className="overflow-x-auto px-6"
-      style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', cursor: 'grab', userSelect: 'none' }}
+      ref={wrapRef}
+      className="overflow-hidden"
+      style={{ cursor: 'grab', userSelect: 'none' }}
       onMouseDown={(e) => begin(e.pageX)}
       onMouseMove={(e) => move(e.pageX)}
       onMouseUp={end}
@@ -56,7 +60,7 @@ function DraggableTicker() {
       onTouchMove={(e) => move(e.touches[0].pageX)}
       onTouchEnd={end}
     >
-      <div className="flex gap-8 w-max items-center py-1">
+      <div ref={innerRef} className="flex gap-8 w-max items-center py-1" style={{ willChange: 'transform' }}>
         {[...patronLogos, ...patronLogos].map((logo, i) => (
           <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
             <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" draggable={false} style={{ mixBlendMode: 'multiply' }} />
