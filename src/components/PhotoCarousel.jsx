@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const photos2024 = Array.from({ length: 28 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.jpg`, year: '2024' }));
-const photos2025 = Array.from({ length: 46 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.jpg`, year: '2025' }));
+const photos2024 = Array.from({ length: 28 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.webp`, year: '2024' }));
+const photos2025 = Array.from({ length: 46 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.webp`, year: '2025' }));
 
 function shuffle(arr) {
   const a = [...arr];

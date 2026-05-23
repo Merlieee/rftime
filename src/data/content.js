@@ -75,7 +75,7 @@ export const speakers2025 = [
     name: 'Ivo Roca-Luque',
     title: 'prof. dr',
     location: 'Universitat de Barcelona, Hiszpania',
-    photo: '/speakers/Ivo-Roca-Luque.jpg',
+    photo: '/speakers/Ivo-Roca-Luque.webp',
     talks: ['Ablacja VT w protokole S3', 'Zabieg live transmitowany z Barcelony'],
   },
   {

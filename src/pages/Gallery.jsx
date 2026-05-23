@@ -4,8 +4,8 @@ import { ArrowLeft } from 'lucide-react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-const photos2024 = Array.from({ length: 28 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.jpg` }));
-const photos2025 = Array.from({ length: 46 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.jpg` }));
+const photos2024 = Array.from({ length: 28 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.webp` }));
+const photos2025 = Array.from({ length: 46 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.webp` }));
 
 function EditionGrid({ year, photos }) {
   const [index, setIndex] = useState(-1);
