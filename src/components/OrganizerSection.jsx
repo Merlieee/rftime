@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 
 const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
@@ -8,6 +9,47 @@ const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
 
+
+function DraggableTicker() {
+  const ref = useRef(null);
+  const dragging = useRef(false);
+  const startX = useRef(0);
+  const startScroll = useRef(0);
+
+  const begin = (x) => {
+    dragging.current = true;
+    startX.current = x;
+    startScroll.current = ref.current.scrollLeft;
+  };
+  const move = (x) => {
+    if (!dragging.current) return;
+    ref.current.scrollLeft = startScroll.current - (x - startX.current);
+  };
+  const end = () => { dragging.current = false; };
+
+  return (
+    <div
+      ref={ref}
+      className="overflow-x-auto px-6"
+      style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch', cursor: 'grab', userSelect: 'none' }}
+      onMouseDown={(e) => begin(e.pageX)}
+      onMouseMove={(e) => move(e.pageX)}
+      onMouseUp={end}
+      onMouseLeave={end}
+      onTouchStart={(e) => begin(e.touches[0].pageX)}
+      onTouchMove={(e) => move(e.touches[0].pageX)}
+      onTouchEnd={end}
+    >
+      <div className="flex gap-8 w-max items-center py-1">
+        {patronLogos.map((logo, i) => (
+          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
+            <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full pointer-events-none" style={{ mixBlendMode: 'multiply' }} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function OrganizerSection() {
   return (
@@ -43,33 +85,7 @@ export default function OrganizerSection() {
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Patronaty i Punkty Edukacyjne</p>
         </div>
 
-        {/* Desktop: animated ticker */}
-        <div className="ticker-desktop">
-          <div className="relative overflow-hidden">
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-32 z-10"
-              style={{ background: 'linear-gradient(to right, #f9fafb, transparent)' }} />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-32 z-10"
-              style={{ background: 'linear-gradient(to left, #f9fafb, transparent)' }} />
-            <div className="logo-ticker flex gap-8 w-max items-center">
-              {[...patronLogos, ...patronLogos].map((logo, i) => (
-                <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
-                  <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile: native horizontal scroll */}
-        <div className="ticker-mobile overflow-x-auto px-6" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none' }}>
-          <div className="flex gap-6 w-max items-center">
-            {patronLogos.map((logo, i) => (
-              <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '160px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
-                <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" style={{ mixBlendMode: 'multiply' }} />
-              </div>
-            ))}
-          </div>
-        </div>
+        <DraggableTicker />
       </section>
     </>
   );
