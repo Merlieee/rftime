@@ -12,7 +12,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base text-gray-500 mb-3 max-w-xl leading-relaxed text-balance">
-          Warsztaty Ablacyjne dla Elektrofizjologów, mapowanie 3D i złożone ablacje RF
+          Warsztaty Ablacyjne dla Elektrofizjologów, mapowanie 3D i złożone ablacje RF/PFA
         </p>
 
         <p className="text-xs text-gray-400 mb-8">
