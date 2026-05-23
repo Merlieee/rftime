@@ -58,7 +58,6 @@ export default function PhotoCarousel() {
             backgroundPosition: 'center',
             opacity: i === current ? 1 : 0,
             pointerEvents: i === current ? 'auto' : 'none',
-            filter: 'saturate(0.65)',
           }}
         />
       ))}
