@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -29,9 +29,24 @@ export default function PhotoCarousel() {
     return () => clearInterval(id);
   }, [autoKey, allPhotos.length]);
 
+  const touchStartX = useRef(null);
+
+  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) go(current + (diff > 0 ? 1 : -1));
+    touchStartX.current = null;
+  };
+
   return (
-    <div className="px-12">
-    <div className="relative w-full overflow-hidden bg-gray-950 rounded-2xl shadow-xl" style={{ height: '70vh' }}>
+    <div className="px-4 md:px-12">
+    <div
+      className="relative w-full overflow-hidden bg-gray-950 rounded-2xl shadow-xl"
+      style={{ height: '70vh' }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Slides */}
       {allPhotos.map((photo, i) => (
         <div
