@@ -31,3 +31,9 @@
   animation: logo-ticker 35s linear infinite;
 }
 
+@media (max-width: 768px) {
+  .logo-ticker {
+    animation-duration: 15s;
+  }
+}
+
