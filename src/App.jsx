@@ -3,7 +3,14 @@ import { useEffect } from 'react';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  useEffect(() => {
+    if (pathname === '/') {
+      const el = document.getElementById('carousel');
+      if (el) el.scrollIntoView({ behavior: 'instant' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
   return null;
 }
 import { Agentation } from 'agentation';
@@ -26,7 +33,7 @@ function Home() {
   return (
     <div>
       <Hero />
-      <PhotoCarousel />
+      <div id="carousel"><PhotoCarousel /></div>
       <About />
       <ProgramAnnouncement />
       <div id="edycje">
