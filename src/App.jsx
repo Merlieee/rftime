@@ -20,8 +20,8 @@ function Home() {
     <div>
       <Hero />
       <PhotoCarousel />
-      <ProgramAnnouncement />
       <About />
+      <ProgramAnnouncement />
       <div id="edycje">
         <EditionSection
           edition="2025"
