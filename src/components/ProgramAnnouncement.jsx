@@ -36,7 +36,7 @@ export default function ProgramAnnouncement() {
         {/* Header */}
         <div className="mb-12">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-3">RFtime 2026 · 29–30 października</p>
-          <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">Program warsztatów</h2>
+          <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">Wstępny program warsztatów*</h2>
           <p className="text-gray-500 leading-relaxed max-w-2xl">
             Kolejna edycja RFtime odbędzie się w WSS Biała Podlaska. W programie zabiegi live wykonywane różnymi
             technologiami — RF, PFA (TactiFlex Duo, Volt, Affera) — transmisje z europejskich ośrodków, wykłady
@@ -96,6 +96,10 @@ export default function ProgramAnnouncement() {
             </p>
           </div>
         </div>
+
+        <p className="text-xs text-gray-400 mt-8">
+          * Ostateczny program warsztatów zostanie opublikowany w czerwcu 2026.
+        </p>
 
       </div>
     </section>
