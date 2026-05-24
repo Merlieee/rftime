@@ -1,4 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 import { Agentation } from 'agentation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -56,6 +63,7 @@ function Home() {
 export default function App() {
   return (
     <>
+    <ScrollToTop />
     {import.meta.env.DEV && <Agentation endpoint="http://localhost:4747" />}
     <Routes>
       <Route path="/" element={<Home />} />
