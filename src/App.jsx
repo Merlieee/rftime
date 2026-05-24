@@ -6,6 +6,7 @@ import EditionSection from './components/EditionSection';
 import OrganizerSection from './components/OrganizerSection';
 import RegistrationCTA from './components/RegistrationCTA';
 import PhotoCarousel from './components/PhotoCarousel';
+import ProgramAnnouncement from './components/ProgramAnnouncement';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
 import {
@@ -19,6 +20,7 @@ function Home() {
     <div>
       <Hero />
       <PhotoCarousel />
+      <ProgramAnnouncement />
       <About />
       <div id="edycje">
         <EditionSection
