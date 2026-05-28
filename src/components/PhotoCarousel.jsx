@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const photos2024 = Array.from({ length: 130 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.webp`, year: '2024' }));
 const photos2025 = Array.from({ length: 220 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.webp`, year: '2025' }));
@@ -15,6 +16,7 @@ function shuffle(arr) {
 }
 
 export default function PhotoCarousel() {
+  const { t } = useTranslation();
   const allPhotos = useMemo(() => shuffle([...photos2024, ...photos2025]), []);
   const [current, setCurrent] = useState(0);
   const [autoKey, setAutoKey] = useState(0);
@@ -77,21 +79,21 @@ export default function PhotoCarousel() {
           to="/galeria"
           className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-md border border-white/20 transition-colors"
         >
-          Galeria
+          {t('gallery.title')}
         </Link>
       </div>
 
       {/* Prev / Next */}
       <button
         onClick={() => go(current - 1)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-colors border border-white/10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-colors border border-white/10 cursor-pointer"
         aria-label="Poprzednie zdjęcie"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={() => go(current + 1)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-colors border border-white/10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm transition-colors border border-white/10 cursor-pointer"
         aria-label="Następne zdjęcie"
       >
         <ChevronRight className="w-5 h-5" />

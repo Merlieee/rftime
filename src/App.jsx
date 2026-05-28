@@ -14,6 +14,7 @@ function ScrollToTop() {
   return null;
 }
 import { Agentation } from 'agentation';
+import LangBanner from './components/LangBanner';
 import Hero from './components/Hero';
 import About from './components/About';
 import EditionSection from './components/EditionSection';
@@ -23,13 +24,22 @@ import PhotoCarousel from './components/PhotoCarousel';
 import ProgramAnnouncement from './components/ProgramAnnouncement';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
+import { useTranslation } from 'react-i18next';
 import {
-  speakers2024, speakers2025,
-  highlights2024, highlights2025,
-  program2024, program2025,
+  speakerBase2024, speakerBase2025,
+  highlightIcons2024, highlightIcons2025,
 } from './data/content';
 
 function Home() {
+  const { t } = useTranslation();
+  const e2025 = t('editions.e2025', { returnObjects: true });
+  const e2024 = t('editions.e2024', { returnObjects: true });
+
+  const speakers2025   = speakerBase2025.map((s, i) => ({ ...s, ...e2025.speakers[i] }));
+  const speakers2024   = speakerBase2024.map((s, i) => ({ ...s, ...e2024.speakers[i] }));
+  const highlights2025 = e2025.highlights.map((h, i) => ({ ...h, icon: highlightIcons2025[i] }));
+  const highlights2024 = e2024.highlights.map((h, i) => ({ ...h, icon: highlightIcons2024[i] }));
+
   return (
     <div>
       <Hero />
@@ -40,23 +50,23 @@ function Home() {
         <EditionSection
           edition="2025"
           index={0}
-          date="23–24 października 2025"
+          date={e2025.date}
           location="WSS Biała Podlaska"
-          theme="PFA II gen., ablacja VT, mapowanie epikardialne"
+          theme={e2025.theme}
           speakers={speakers2025}
           highlights={highlights2025}
-          program={program2025}
+          program={e2025.program}
           accent="pink"
         />
         <EditionSection
           edition="2024"
           index={1}
-          date="3–4 października 2024"
+          date={e2024.date}
           location="WSS Biała Podlaska"
-          theme="Mapowanie 3D i złożone ablacje RF"
+          theme={e2024.theme}
           speakers={speakers2024}
           highlights={highlights2024}
-          program={program2024}
+          program={e2024.program}
           accent="blue"
         />
       </div>
@@ -72,6 +82,7 @@ export default function App() {
     <>
     <ScrollToTop />
     {import.meta.env.DEV && <Agentation endpoint="http://localhost:4747" />}
+    <LangBanner />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/galeria" element={<Gallery />} />
