@@ -8,7 +8,7 @@ export default function ProgramTable({ program }) {
           </div>
           <div className="divide-y divide-gray-100">
             {day.items.map((item, i) => (
-              <div key={i} className="px-4 py-3 flex gap-4 hover:bg-gray-50 transition-colors">
+              <div key={i} className="px-4 py-3 flex gap-4">
                 <span className="text-xs text-gray-400 shrink-0 w-24 pt-0.5 font-medium tabular-nums">{item.time}</span>
                 <div>
                   <p className="text-sm text-gray-800 leading-snug">{item.title}</p>
