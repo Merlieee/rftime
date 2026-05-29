@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next';
+import { setLang } from '../i18n/index.js';
+
 function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
@@ -26,16 +29,17 @@ function YoutubeIcon() {
 }
 
 export default function Footer() {
+  const { t, i18n } = useTranslation();
+  const navLinks = t('footer.navLinks', { returnObjects: true });
+
   return (
     <footer className="bg-gray-900 text-gray-400 py-12">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm">
         <div>
-          <p className="text-white font-semibold text-lg mb-2">
-            RFtime
-          </p>
+          <p className="text-white font-semibold text-lg mb-2">RFtime</p>
           <p className="text-gray-400 leading-relaxed mb-4">
-            Warsztaty Ablacyjne dla Elektrofizjologów<br />
-            Biała Podlaska · Październik 2026
+            {t('footer.tagline')}<br />
+            {t('footer.location')}
           </p>
           <p className="text-gray-500 text-xs leading-relaxed mb-4">
             +48 513 874 782<br />
@@ -60,20 +64,16 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">Nawigacja</p>
+          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.navLabel')}</p>
           <div className="space-y-2">
-            {[
-              ['#edycje', 'Edycje'],
-              ['https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html', 'Rejestracja'],
-              ['/galeria', 'Galeria'],
-            ].map(([href, label]) => (
+            {navLinks.map(({ href, label }) => (
               <a key={label} href={href} className="block text-gray-400 hover:text-white transition-colors">{label}</a>
             ))}
           </div>
         </div>
 
         <div>
-          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">Poprzednie edycje</p>
+          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.prevLabel')}</p>
           <div className="space-y-2">
             {[
               ['https://rftime.pl/rftime-2024/', 'RFtime 2024'],
@@ -86,9 +86,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-800 text-xs text-gray-600 flex justify-between flex-wrap gap-2">
-        <span>© 2026 RFtime · Wszystkie prawa zastrzeżone</span>
-        <span>Pracownia Elektrofizjologii WSzS Biała Podlaska</span>
+      <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-800 text-xs text-gray-600 flex justify-between flex-wrap gap-2 items-center">
+        <span>{t('footer.copyright')}</span>
+        <div className="flex items-center gap-4">
+          <span>{t('footer.hospital')}</span>
+          <button
+            onClick={() => setLang(i18n.language === 'pl' ? 'en' : 'pl')}
+            className="text-gray-500 hover:text-gray-300 transition-colors cursor-pointer"
+          >
+            {t('footer.langButton')}
+          </button>
+        </div>
       </div>
     </footer>
   );

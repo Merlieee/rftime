@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function RegistrationCTA() {
+  const { t } = useTranslation();
   return (
     <section
       style={{
@@ -9,13 +12,12 @@ export default function RegistrationCTA() {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center gap-6">
         <div>
-          <p className="text-blue-200 text-sm font-medium mb-2 opacity-80">RFtime 2026 · Biała Podlaska</p>
+          <p className="text-blue-200 text-sm font-medium mb-2 opacity-80">{t('cta.label')}</p>
           <h2 className="text-3xl font-bold text-white tracking-tight mb-3">
-            Dołącz do kolejnej edycji
+            {t('cta.heading')}
           </h2>
           <p className="text-white/80 max-w-xl leading-relaxed">
-            Szczegóły programu zostaną ogłoszone wkrótce. Zostaw swoje dane, aby być pierwszym
-            poinformowanym o naborze uczestników na edycję 2026. Udział bezpłatny. Liczy się kolejność zgłoszeń.
+            {t('cta.desc')}
           </p>
         </div>
         <div>
@@ -23,10 +25,10 @@ export default function RegistrationCTA() {
             href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html"
             className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-blue-900 font-semibold text-sm px-6 py-3 rounded-md transition-colors shadow-sm"
           >
-            Zgłoś uczestnictwo
+            {t('cta.button')}
           </a>
           <p className="text-xs text-white/50 mt-2 text-center">
-            Rejestracja przez WSzS w Białej Podlaskiej · RODO
+            {t('cta.note')}
           </p>
         </div>
       </div>

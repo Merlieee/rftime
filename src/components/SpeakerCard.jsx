@@ -1,6 +1,6 @@
 export default function SpeakerCard({ speaker }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md hover:border-sky-200 transition-all">
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
       <div
         className="aspect-square bg-cover bg-top"
         style={{ backgroundImage: `url(${speaker.photo})` }}

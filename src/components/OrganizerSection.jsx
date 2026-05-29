@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
@@ -8,7 +9,6 @@ const patronLogos = [
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/Klub-30-PTK-RFtime.webp',                  alt: 'Klub 30 PTK' },
   { src: 'https://rftime.pl/wp-content/uploads/2024/09/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
-
 
 function DraggableTicker() {
   const wrapRef = useRef(null);
@@ -72,21 +72,18 @@ function DraggableTicker() {
 }
 
 export default function OrganizerSection() {
+  const { t } = useTranslation();
   return (
     <>
-      {/* Organizator */}
-      <section className="border-t border-gray-200 py-16 bg-white">
+      {/* Organizer */}
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">Organizator</p>
+          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">{t('organizer.label')}</p>
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h3 className="font-semibold text-gray-900 text-base mb-1">Pracownia Elektrofizjologii i Elektrostymulacji Serca</h3>
-              <p className="text-sm text-gray-500 mb-4">Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej</p>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                W Pracowni EP wykonywane są zarówno ablacje proste jak i złożone ablacje arytmii nadkomorowych i komorowych
-                z wykorzystaniem zaawansowanej technologii mapowania 3D. Jako jedna z nielicznych Pracowni EP w Polsce
-                wykonujemy ablacje u pacjentów z burzą elektryczną.
-              </p>
+              <h3 className="font-semibold text-gray-900 text-base mb-1">{t('organizer.name')}</h3>
+              <p className="text-sm text-gray-500 mb-4">{t('organizer.hospital')}</p>
+              <p className="text-sm text-gray-500 leading-relaxed">{t('organizer.desc')}</p>
             </div>
             <div className="rounded-xl flex items-center justify-center py-8">
               <img
@@ -99,10 +96,10 @@ export default function OrganizerSection() {
         </div>
       </section>
 
-      {/* Poprzedni patroni i punkty edukacyjne */}
-      <section className="border-t border-gray-200 py-16 bg-gray-50">
+      {/* Patrons */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 mb-8">
-          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">Poprzedni patroni i punkty edukacyjne</p>
+          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('organizer.patronsLabel')}</p>
         </div>
 
         <div className="relative">
