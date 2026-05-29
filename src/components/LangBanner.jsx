@@ -11,9 +11,10 @@ export default function LangBanner() {
 
   return (
     <div
-      className="flex items-center justify-between px-6 py-3 text-sm text-white"
+      className="py-3 text-sm text-white"
       style={{ backgroundColor: '#2A82CB' }}
     >
+    <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
       <span>
         {t('banner.message')}{' '}
         <button
@@ -30,6 +31,7 @@ export default function LangBanner() {
       >
         ×
       </button>
+    </div>
     </div>
   );
 }

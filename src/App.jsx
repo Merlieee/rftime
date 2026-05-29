@@ -4,12 +4,7 @@ import { useEffect } from 'react';
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    if (pathname === '/') {
-      const el = document.getElementById('carousel');
-      if (el) el.scrollIntoView({ behavior: 'instant' });
-    } else {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }, [pathname]);
   return null;
 }
