@@ -169,6 +169,8 @@ export default {
     firstEdition: 'Edycja pierwsza',
     tabSpeakers: 'Prelegenci',
     tabProgram: 'Program',
+    recordingsHeading: 'Nagrania z warsztatów',
+    seeMore: 'Zobacz więcej na naszym kanale YouTube',
   },
 
   // Organizer

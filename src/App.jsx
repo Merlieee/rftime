@@ -57,6 +57,7 @@ function Home() {
           highlights={highlights2025}
           program={e2025.program}
           accent="pink"
+          youtubeId="KT3phaaPyrQ"
         />
         <EditionSection
           edition="2024"
@@ -68,6 +69,7 @@ function Home() {
           highlights={highlights2024}
           program={e2024.program}
           accent="blue"
+          youtubeId="kt7QismiPa8"
         />
       </div>
       <OrganizerSection />

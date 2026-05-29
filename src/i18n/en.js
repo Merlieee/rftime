@@ -169,6 +169,8 @@ export default {
     firstEdition: 'First edition',
     tabSpeakers: 'Speakers',
     tabProgram: 'Programme',
+    recordingsHeading: 'Workshop recordings',
+    seeMore: 'See more on our YouTube channel',
   },
 
   // Organizer

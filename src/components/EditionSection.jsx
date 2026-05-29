@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next';
 import SpeakerCard from './SpeakerCard';
 import ProgramTable from './ProgramTable';
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index }) {
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId }) {
   const [tab, setTab] = useState('speakers');
+  const [playing, setPlaying] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -63,6 +64,54 @@ export default function EditionSection({ edition, date, location, theme, speaker
           </div>
         )}
         {tab === 'program' && <ProgramTable program={program} />}
+
+        {youtubeId && (
+          <div className="mt-10 pt-8 flex flex-col items-center text-center">
+            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-widest mb-5">
+              {t('edition.recordingsHeading')}
+            </h3>
+            <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-sm border border-gray-200">
+              {playing ? (
+                <div className="relative aspect-video">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                    title={`RFtime ${edition}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ) : (
+                <button
+                  onClick={() => setPlaying(true)}
+                  className="relative aspect-video w-full block group cursor-pointer"
+                  aria-label={`Play RFtime ${edition}`}
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
+                    alt={`RFtime ${edition}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <span className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-sky-700 transition-colors">
+                      <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                  </span>
+                </button>
+              )}
+            </div>
+            <a
+              href="https://www.youtube.com/@rftime"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-gray-500 hover:underline font-medium"
+            >
+              {t('edition.seeMore')} →
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
