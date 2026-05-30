@@ -57,8 +57,8 @@ export default function MediaSection() {
                   className="group flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3 bg-white"
                 >
                   <span className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
-                    style={{ background: '#0300b4' }}>
-                    <Play className="w-3.5 h-3.5 text-white ml-0.5" fill="currentColor" strokeWidth={0} />
+                    style={{ background: '#2A82CB' }}>
+                    <Play className="w-3.5 h-3.5 text-white" fill="currentColor" strokeWidth={0} />
                   </span>
                   <span className="flex-1 min-w-0">
                     <span className="text-sm font-medium text-gray-800 leading-snug line-clamp-1">{m.title}</span>
