@@ -37,7 +37,7 @@ export default function MediaSection() {
   const below = articles.slice(PRESS_VISIBLE);
 
   return (
-    <section className="py-10 bg-gray-50">
+    <section className="py-10 bg-white">
       <div className="max-w-6xl mx-auto px-6">
 
         <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">{t('media.label')}</p>
