@@ -48,15 +48,15 @@ export default function Footer() {
             ul. Terebelska 57-65, 21-500 Biała Podlaska
           </p>
           <div className="flex items-center gap-3">
-            <a href="https://www.facebook.com/RFtimepl" target="_blank" rel="noreferrer"
+            <a href="https://www.facebook.com/RFtimepl" target="_blank" rel="noopener noreferrer nofollow"
               className="text-gray-500 hover:text-white transition-colors" aria-label="Facebook">
               <FacebookIcon />
             </a>
-            <a href="https://www.instagram.com/rftime.pl/" target="_blank" rel="noreferrer"
+            <a href="https://www.instagram.com/rftime.pl/" target="_blank" rel="noopener noreferrer nofollow"
               className="text-gray-500 hover:text-white transition-colors" aria-label="Instagram">
               <InstagramIcon />
             </a>
-            <a href="https://www.youtube.com/@rftime" target="_blank" rel="noreferrer"
+            <a href="https://www.youtube.com/@rftime" target="_blank" rel="noopener noreferrer nofollow"
               className="text-gray-500 hover:text-white transition-colors" aria-label="YouTube">
               <YoutubeIcon />
             </a>
@@ -80,7 +80,7 @@ export default function Footer() {
               ['https://rftime.pl/rftime-2025/program-rftime-2025/', 'RFtime 2025'],
               ['https://rftime.pl', 'rftime.pl'],
             ].map(([href, label]) => (
-              <a key={label} href={href} target="_blank" rel="noreferrer" className="block text-gray-400 hover:text-white transition-colors">{label} ↗</a>
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer nofollow" className="block text-gray-400 hover:text-white transition-colors">{label} ↗</a>
             ))}
           </div>
         </div>

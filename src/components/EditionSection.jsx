@@ -105,7 +105,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
             <a
               href="https://www.youtube.com/@rftime"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-2 mt-4 text-sm text-gray-500 hover:underline font-medium"
             >
               {t('edition.seeMore')} →

@@ -23,6 +23,8 @@ export default function RegistrationCTA() {
         <div>
           <a
             href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-blue-900 font-semibold text-sm px-6 py-3 rounded-md transition-colors shadow-sm"
           >
             {t('cta.button')}

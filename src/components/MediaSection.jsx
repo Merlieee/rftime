@@ -10,7 +10,7 @@ function ArticleCard({ m, t }) {
     <a
       href={m.url}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       className="group flex items-start gap-3 border border-gray-200 rounded-lg px-4 py-3 bg-white"
     >
       <Newspaper className="w-3.5 h-3.5 text-gray-300 shrink-0 mt-0.5" strokeWidth={2} />
@@ -53,7 +53,7 @@ export default function MediaSection() {
                   key={m.url}
                   href={m.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="group flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3 bg-white"
                 >
                   <span className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center"
