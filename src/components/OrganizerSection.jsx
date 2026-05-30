@@ -2,12 +2,12 @@ import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const patronLogos = [
-  { src: 'https://rftime.pl/wp-content/uploads/2024/09/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
-  { src: 'https://rftime.pl/wp-content/uploads/2025/09/PTK-Punkty-Edukacyjne-RFtime-2025.png',   alt: 'PTK Punkty Edukacyjne' },
-  { src: 'https://rftime.pl/wp-content/uploads/2024/09/Oddzial-Lubelski-PTK-RFtime.webp',         alt: 'Oddział Lubelski PTK' },
-  { src: 'https://rftime.pl/wp-content/uploads/2024/09/Lubelska-Izba-Lekarska-RFtime.webp',       alt: 'Lubelska Izba Lekarska' },
-  { src: 'https://rftime.pl/wp-content/uploads/2024/09/Klub-30-PTK-RFtime.webp',                  alt: 'Klub 30 PTK' },
-  { src: 'https://rftime.pl/wp-content/uploads/2024/09/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
+  { src: '/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
+  { src: '/PTK-Punkty-Edukacyjne-RFtime-2025.png',   alt: 'PTK Punkty Edukacyjne' },
+  { src: '/Oddzial-Lubelski-PTK-RFtime.webp',         alt: 'Oddział Lubelski PTK' },
+  { src: '/Lubelska-Izba-Lekarska-RFtime.webp',       alt: 'Lubelska Izba Lekarska' },
+  { src: '/Klub-30-PTK-RFtime.webp',                  alt: 'Klub 30 PTK' },
+  { src: '/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
 
 function DraggableTicker() {
@@ -87,7 +87,7 @@ export default function OrganizerSection() {
             </div>
             <div className="rounded-xl flex items-center justify-center py-8">
               <img
-                src="https://rftime.pl/wp-content/uploads/2024/08/1-web-RFtime-2020-Szpital-Biala-Podlaska.webp"
+                src="/1-web-RFtime-2020-Szpital-Biala-Podlaska.webp"
                 alt="WSzS Biała Podlaska"
                 style={{ width: '70%' }}
               />

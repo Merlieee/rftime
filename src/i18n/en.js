@@ -182,6 +182,37 @@ export default {
     patronsLabel: 'Previous patrons & CME credits',
   },
 
+  // Media
+  media: {
+    label: 'Media',
+    heading: 'RFtime in the media',
+    intro: 'Television and press coverage of the RFtime workshops and the pioneering procedures performed by the team from Biała Podlaska.',
+    tvHeading: 'On television',
+    pressHeading: 'In the press',
+    tvLabel: 'TV report',
+    watch: 'Watch',
+    read: 'Read',
+    showMore: 'Show more',
+    collapse: 'Show less',
+    tags: {
+      e2024: 'Edition 2024',
+      e2025: 'Edition 2025',
+      pfa: 'First in Poland',
+    },
+    tv: [
+      { title: 'TV report from the RFtime 2025 workshop' },
+      { title: 'TV report from the RFtime 2024 workshop' },
+    ],
+    articles: [
+      { title: 'First ablation in Poland with the newest-generation catheter — state-of-the-art arrhythmia treatment' },
+      { title: 'RFtime 2025 — ablation workshop at the Biała Podlaska hospital' },
+      { title: 'Report from the RFtime ablation workshop — 3D mapping and complex RF ablations' },
+      { title: 'Doctors from Biała Podlaska first in Poland to perform procedures with new arrhythmia technology' },
+      { title: '3D mapping and RF ablation — RFtime as the theme of a conference at the Biała Podlaska hospital' },
+      { title: 'Pioneering procedure in Biała Podlaska — a breakthrough for patients with arrhythmia' },
+    ],
+  },
+
   // Registration CTA
   cta: {
     label: 'RFtime 2026 · Biała Podlaska',

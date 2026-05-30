@@ -20,3 +20,19 @@ export const speakerBase2025 = [
 
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
 export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
+
+// Media coverage — TV segments and press articles.
+// Titles live in i18n (media.tv / media.articles), merged by index.
+export const mediaTV = [
+  { url: 'https://www.facebook.com/reel/1176735267850886', tag: 'e2025' },
+  { url: 'https://www.facebook.com/reel/845743287704451',  tag: 'e2024' },
+];
+
+export const mediaArticles = [
+  { url: 'https://bialasiedzieje.pl/informacje-bialskie/biala-podlaska-pierwsza-ablacja-w-polsce-z-najnowszym-cewnikiem-najnowoczesniejsze-usuwanie-arytmii-serca/PIakyMHTQOvVAvK3iA2V', outlet: 'bialasiedzieje.pl', tag: 'e2025' },
+  { url: 'https://bp24.pl/artykul/biala-podlaska-bije-n2068239',                                                                                                          outlet: 'bp24.pl',           tag: 'e2025' },
+  { url: 'https://bialanews.pl/relacja-z-warsztatow-ablacyjnych-rftime-mapowanie-3d-i-zlozone-ablacje-rf/',                                                               outlet: 'bialanews.pl',      tag: 'e2024' },
+  { url: 'https://podlaski.info/2026/03/13/lekarze-z-bialej-podlaskiej-jako-pierwsi-w-polsce-wykonali-zabiegi-nowa-technologia-leczenia-arytmii/',                        outlet: 'podlaski.info',     tag: 'e2025' },
+  { url: 'https://radiobiper.info/2025/10/24/mapowanie-3d-i-ablacja-rf-rftime-tematem-konferencji-w-bialskim-szpitalu-galeria/',                                          outlet: 'radiobiper.info',   tag: 'e2025' },
+  { url: 'https://www.slowopodlasia.pl/artykul/39991,pionierski-zabieg-w-bialej-podlaskiej-przelom-dla-pacjentow-z-arytmia',                                              outlet: 'slowopodlasia.pl',  tag: 'e2025' },
+];

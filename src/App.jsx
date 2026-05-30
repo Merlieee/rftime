@@ -14,6 +14,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import EditionSection from './components/EditionSection';
 import OrganizerSection from './components/OrganizerSection';
+import MediaSection from './components/MediaSection';
 import RegistrationCTA from './components/RegistrationCTA';
 import PhotoCarousel from './components/PhotoCarousel';
 import ProgramAnnouncement from './components/ProgramAnnouncement';
@@ -67,6 +68,7 @@ function Home() {
           youtubeId="kt7QismiPa8"
         />
       </div>
+      <MediaSection />
       <OrganizerSection />
       <RegistrationCTA />
       <Footer />

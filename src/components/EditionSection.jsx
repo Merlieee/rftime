@@ -112,6 +112,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
             </a>
           </div>
         )}
+
       </div>
     </section>
   );

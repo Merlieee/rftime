@@ -182,6 +182,37 @@ export default {
     patronsLabel: 'Poprzedni patroni i punkty edukacyjne',
   },
 
+  // Media
+  media: {
+    label: 'Media',
+    heading: 'RFtime w mediach',
+    intro: 'Relacje telewizyjne i prasowe z warsztatów RFtime oraz pionierskich zabiegów wykonanych przez zespół z Białej Podlaskiej.',
+    tvHeading: 'W telewizji',
+    pressHeading: 'W prasie',
+    tvLabel: 'Materiał telewizyjny',
+    watch: 'Oglądaj',
+    read: 'Czytaj',
+    showMore: 'Zobacz więcej',
+    collapse: 'Zwiń',
+    tags: {
+      e2024: 'Edycja 2024',
+      e2025: 'Edycja 2025',
+      pfa: 'Pierwsze w Polsce',
+    },
+    tv: [
+      { title: 'Reportaż telewizyjny z warsztatów RFtime 2025' },
+      { title: 'Reportaż telewizyjny z warsztatów RFtime 2024' },
+    ],
+    articles: [
+      { title: 'Pierwsza w Polsce ablacja najnowszym cewnikiem — najnowocześniejsze usuwanie arytmii serca' },
+      { title: 'RFtime 2025 — warsztaty ablacyjne w bialskim szpitalu' },
+      { title: 'Relacja z warsztatów ablacyjnych RFtime — mapowanie 3D i złożone ablacje RF' },
+      { title: 'Lekarze z Białej Podlaskiej jako pierwsi w Polsce wykonali zabiegi nową technologią leczenia arytmii' },
+      { title: 'Mapowanie 3D i ablacja RF — RFtime tematem konferencji w bialskim szpitalu' },
+      { title: 'Pionierski zabieg w Białej Podlaskiej — przełom dla pacjentów z arytmią' },
+    ],
+  },
+
   // Registration CTA
   cta: {
     label: 'RFtime 2026 · Biała Podlaska',
