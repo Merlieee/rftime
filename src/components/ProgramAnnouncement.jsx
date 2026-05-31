@@ -10,7 +10,7 @@ export default function ProgramAnnouncement() {
 
   return (
     <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         {/* Header */}
         <div className="mb-12">
@@ -27,7 +27,7 @@ export default function ProgramAnnouncement() {
               <div key={label} className="border border-gray-200 rounded-lg p-5">
                 <Icon className="w-4 h-4 text-sky-600 mb-3" strokeWidth={1.75} />
                 <p className="text-sm font-semibold text-gray-900 mb-1">{label}</p>
-                <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+                <p className="text-2xs text-gray-500 leading-relaxed">{desc}</p>
               </div>
             );
           })}
@@ -43,11 +43,11 @@ export default function ProgramAnnouncement() {
             {schedule.map(({ day, date, items: dayItems }) => (
               <div key={day} className="border border-gray-200 rounded-lg p-6">
                 <p className="text-sm font-bold text-gray-900">{day}</p>
-                <p className="text-xs text-gray-400 mb-5">{date}</p>
+                <p className="text-2xs text-gray-400 mb-5">{date}</p>
                 <ul className="space-y-3">
                   {dayItems.map(({ time, label }) => (
                     <li key={time} className="flex items-start gap-3">
-                      <span className="font-mono text-sky-600 text-xs pt-px shrink-0 w-10">{time}</span>
+                      <span className="font-mono text-sky-600 text-2xs pt-px shrink-0 w-10">{time}</span>
                       <span className="text-sm text-gray-600">{label}</span>
                     </li>
                   ))}
@@ -61,15 +61,15 @@ export default function ProgramAnnouncement() {
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-sky-50 border border-sky-100 rounded-lg p-5">
             <p className="text-sm font-semibold text-sky-900 mb-1">{t('program.freeTitle')}</p>
-            <p className="text-xs text-sky-800 leading-relaxed">{t('program.freeDesc')}</p>
+            <p className="text-2xs text-sky-800 leading-relaxed">{t('program.freeDesc')}</p>
           </div>
           <div className="bg-amber-50 border border-amber-100 rounded-lg p-5">
             <p className="text-sm font-semibold text-amber-900 mb-1">{t('program.limitedTitle')}</p>
-            <p className="text-xs text-amber-800 leading-relaxed">{t('program.limitedDesc')}</p>
+            <p className="text-2xs text-amber-800 leading-relaxed">{t('program.limitedDesc')}</p>
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 mt-8">{t('program.footnote')}</p>
+        <p className="text-2xs text-gray-400 mt-8">{t('program.footnote')}</p>
 
       </div>
     </section>

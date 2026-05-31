@@ -11,7 +11,7 @@ function MediaRow({ item }) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="group flex items-center gap-6 py-5"
+        className="group flex items-center gap-6 py-6"
       >
         <span className="flex-1 min-w-0">
           <span className="text-base font-medium text-gray-900 leading-snug line-clamp-1">{item.title}</span>
@@ -49,7 +49,7 @@ export default function MediaSection() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-10">{t('media.label')}</p>
 

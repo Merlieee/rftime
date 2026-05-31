@@ -9,10 +9,10 @@ export default function ProgramTable({ program }) {
           <div className="divide-y divide-gray-100">
             {day.items.map((item, i) => (
               <div key={i} className="px-4 py-3 flex gap-4">
-                <span className="text-xs text-gray-400 shrink-0 w-24 pt-0.5 font-medium tabular-nums">{item.time}</span>
+                <span className="text-2xs text-gray-400 shrink-0 w-24 pt-0.5 font-medium tabular-nums">{item.time}</span>
                 <div>
                   <p className="text-sm text-gray-800 leading-snug">{item.title}</p>
-                  {item.speaker && <p className="text-xs text-gray-400 mt-0.5">{item.speaker}</p>}
+                  {item.speaker && <p className="text-2xs text-gray-400 mt-0.5">{item.speaker}</p>}
                 </div>
               </div>
             ))}

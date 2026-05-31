@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         <div className="grid md:grid-cols-2 gap-16 items-stretch">
           {/* Left */}
@@ -20,21 +20,21 @@ export default function About() {
             <p className="text-gray-500 leading-relaxed mb-6">{t('about.p2')}</p>
             <blockquote className="border-l-2 border-sky-500 pl-4 text-gray-600 italic text-sm leading-relaxed">
               {t('about.quote')}
-              <footer className="mt-2 text-xs text-gray-400 not-italic font-medium">
+              <footer className="mt-2 text-2xs text-gray-400 not-italic font-medium">
                 {t('about.quoteAuthor')}
               </footer>
             </blockquote>
           </div>
 
           {/* Right — feature grid */}
-          <div className="grid grid-cols-2 gap-4 content-stretch h-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 content-stretch h-full">
             {pillars.map(({ label, desc }, i) => {
               const Icon = icons[i];
               return (
                 <div key={label} className="bg-white border border-gray-200 rounded-lg p-5">
                   <Icon className="w-5 h-5 text-sky-600 mb-3" strokeWidth={1.75} />
                   <p className="font-semibold text-gray-900 text-sm mb-1">{label}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed">{desc}</p>
+                  <p className="text-2xs text-gray-500 leading-relaxed">{desc}</p>
                 </div>
               );
             })}

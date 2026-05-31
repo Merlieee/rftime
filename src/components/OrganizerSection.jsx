@@ -77,7 +77,7 @@ export default function OrganizerSection() {
     <>
       {/* Organizer */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">{t('organizer.label')}</p>
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
@@ -98,7 +98,7 @@ export default function OrganizerSection() {
 
       {/* Patrons */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 mb-8">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mb-8">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('organizer.patronsLabel')}</p>
         </div>
 

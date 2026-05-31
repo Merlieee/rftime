@@ -14,7 +14,7 @@ export default function LangBanner() {
       className="py-3 text-sm text-white"
       style={{ backgroundColor: '#2A82CB' }}
     >
-    <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+    <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 flex items-center justify-between">
       <span>
         {t('banner.message')}{' '}
         <button

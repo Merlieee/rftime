@@ -13,7 +13,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
       id={`edycja-${edition}`}
       className={`py-16 ${index % 2 !== 0 ? 'bg-gray-50' : 'bg-white'}`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
@@ -26,17 +26,17 @@ export default function EditionSection({ edition, date, location, theme, speaker
           </div>
           <div className="md:border md:border-gray-200 md:rounded-lg md:px-5 md:py-4 md:bg-white text-left md:text-right w-fit md:w-auto shrink-0">
             <p className="text-sm font-semibold text-gray-900">{date}</p>
-            <p className="text-xs text-gray-400 mt-1">{location}</p>
+            <p className="text-2xs text-gray-400 mt-1">{location}</p>
           </div>
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-10">
           {highlights.map(({ icon: Icon, label, desc }) => (
             <div key={label} className="border border-gray-200 rounded-lg p-4 bg-white">
               <Icon className="w-4 h-4 text-sky-600 mb-2" strokeWidth={1.75} />
               <p className="text-sm font-semibold text-gray-900">{label}</p>
-              <p className="text-xs text-gray-400 mt-1 leading-relaxed">{desc}</p>
+              <p className="text-2xs text-gray-400 mt-1 leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>

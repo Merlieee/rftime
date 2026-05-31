@@ -42,7 +42,7 @@ export default function PhotoCarousel() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6">
+    <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
     <div
       className="relative w-full overflow-hidden bg-gray-950 rounded-2xl shadow-xl"
       style={{ height: '70vh', touchAction: 'pan-y' }}
@@ -71,7 +71,7 @@ export default function PhotoCarousel() {
       {/* Bottom bar: year badge + counter + CTA */}
       <div className="absolute bottom-5 left-6 right-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-semibold bg-white/20 backdrop-blur-sm text-white px-2.5 py-1 rounded-full border border-white/20">
+          <span className="text-2xs font-semibold bg-white/20 backdrop-blur-sm text-white px-2.5 py-1 rounded-full border border-white/20">
             RFtime {allPhotos[current].year}
           </span>
         </div>

@@ -34,14 +34,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-10 text-sm">
         <div>
           <p className="text-white font-semibold text-lg mb-2">RFtime</p>
           <p className="text-gray-400 leading-relaxed mb-4">
             {t('footer.tagline')}<br />
             {t('footer.location')}
           </p>
-          <p className="text-gray-500 text-xs leading-relaxed mb-4">
+          <p className="text-gray-500 text-2xs leading-relaxed mb-4">
             +48 513 874 782<br />
             Pracownia Elektrofizjologii i Elektrostymulacji Serca<br />
             WSzS w Białej Podlaskiej<br />
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-800 text-xs text-gray-600 flex justify-between flex-wrap gap-2 items-center">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mt-10 pt-6 border-t border-gray-800 text-2xs text-gray-600 flex justify-between flex-wrap gap-2 items-center">
         <span>{t('footer.copyright')}</span>
         <div className="flex items-center gap-4">
           <span>{t('footer.hospital')}</span>

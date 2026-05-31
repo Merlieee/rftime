@@ -10,7 +10,7 @@ export default function RegistrationCTA() {
       }}
       className="py-20"
     >
-      <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center gap-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 flex flex-col items-center text-center gap-6">
         <div>
           <p className="text-blue-200 text-sm font-medium mb-2 opacity-80">{t('cta.label')}</p>
           <h2 className="text-3xl font-bold text-white tracking-tight mb-3">
@@ -29,7 +29,7 @@ export default function RegistrationCTA() {
           >
             {t('cta.button')}
           </a>
-          <p className="text-xs text-white/50 mt-2 text-center">
+          <p className="text-2xs text-white/50 mt-2 text-center">
             {t('cta.note')}
           </p>
         </div>

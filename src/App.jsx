@@ -38,10 +38,8 @@ function Home() {
 
   return (
     <div>
-      <div style={{ background: 'linear-gradient(to bottom, transparent 50%, #ffffff 72%), linear-gradient(to bottom right, #FF0A94 0%, rgba(27,6,170,0.9) 33%, rgba(2,158,255,0.8) 66%, rgba(12,233,200,0.9) 100%)' }}>
-        <Hero />
-        <div id="carousel" className="relative z-10 pb-10"><PhotoCarousel /></div>
-      </div>
+      <Hero />
+      <div id="carousel" className="pb-10 bg-white"><PhotoCarousel /></div>
       <About />
       <ProgramAnnouncement />
       <div id="edycje">
