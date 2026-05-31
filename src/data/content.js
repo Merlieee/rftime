@@ -13,7 +13,7 @@ export const speakerBase2025 = [
   { name: 'Maciej Wójcik',          title: 'dr hab. n. med.', photo: '/speakers/maciej-wojcik-lublin-poland-web.webp' },
   { name: 'Christopher Piorkowski', title: 'prof. dr',        photo: '/speakers/RFtime-Piorkowski-Christopher-webb-scaled.webp' },
   { name: 'Thomas Neumann',         title: 'prof. dr',        photo: '/speakers/rftime-Thomas-Neumann-webb.webp' },
-  { name: 'Ivo Roca-Luque',         title: 'prof. dr',        photo: '/speakers/Ivo-Roca-Luque.jpg' },
+  { name: 'Ivo Roca-Luque',         title: 'prof. dr',        photo: '/speakers/Ivo-Roca-Luque.webp' },
   { name: 'Andrzej Hoffmann',       title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
   { name: 'Radosław Kiedrowicz',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
 ];
