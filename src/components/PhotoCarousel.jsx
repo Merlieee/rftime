@@ -43,6 +43,8 @@ export default function PhotoCarousel() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+    <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-3">{t('gallery.label')}</p>
+    <h2 className="text-3xl font-bold text-gray-900 mb-5 tracking-tight">{t('gallery.heading')}</h2>
     <div
       className="relative w-full overflow-hidden bg-gray-950 rounded-2xl shadow-xl"
       style={{ height: '70vh', touchAction: 'pan-y' }}

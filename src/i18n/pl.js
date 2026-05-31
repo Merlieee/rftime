@@ -8,8 +8,9 @@ export default {
   // Hero
   hero: {
     date: '29–30 października 2026 · WSS Biała Podlaska',
-    subtitle: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów, Mapowanie 3D i Złożone Ablacje RF/PFA',
-    note: 'Rejestracja przez WSzS w Białej Podlaskiej · Udział bezpłatny',
+    subtitle: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów',
+    topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
+    note: 'Rejestracja przez WSzS w Białej Podlaskiej',
     register: 'Zgłoś uczestnictwo',
     editions: 'Poprzednie edycje',
   },
@@ -240,6 +241,8 @@ export default {
 
   // Gallery
   gallery: {
+    label: 'Galeria',
+    heading: 'Fotorelacja z warsztatów',
     back: 'RFtime 2026',
     title: 'Galeria',
     photos: 'zdjęć',

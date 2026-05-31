@@ -39,9 +39,9 @@ function Home() {
   return (
     <div>
       <Hero />
-      <div id="carousel" className="pb-10 bg-white"><PhotoCarousel /></div>
       <About />
       <ProgramAnnouncement />
+      <div id="carousel" className="pt-10 pb-10 bg-white"><PhotoCarousel /></div>
       <div id="edycje">
         <EditionSection
           edition="2025"

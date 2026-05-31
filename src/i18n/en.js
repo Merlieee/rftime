@@ -8,8 +8,9 @@ export default {
   // Hero
   hero: {
     date: 'October 29–30, 2026 · WSS Biała Podlaska',
-    subtitle: 'International Ablation Workshop for Electrophysiologists, 3D Mapping and Complex RF/PFA Ablations',
-    note: 'Registration via WSzS Biała Podlaska · Free admission',
+    subtitle: 'International Ablation Workshop for Electrophysiologists',
+    topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
+    note: 'Registration via WSzS Biała Podlaska',
     register: 'Register now',
     editions: 'Previous editions',
   },
@@ -240,6 +241,8 @@ export default {
 
   // Gallery
   gallery: {
+    label: 'Gallery',
+    heading: 'Photos from the workshops',
     back: 'RFtime 2026',
     title: 'Gallery',
     photos: 'photos',

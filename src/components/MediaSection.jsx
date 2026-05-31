@@ -48,7 +48,7 @@ export default function MediaSection() {
   const below = all.slice(INITIAL_VISIBLE);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-10">{t('media.label')}</p>

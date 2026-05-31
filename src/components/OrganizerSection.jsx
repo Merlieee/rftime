@@ -76,7 +76,7 @@ export default function OrganizerSection() {
   return (
     <>
       {/* Organizer */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">{t('organizer.label')}</p>
           <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -97,16 +97,16 @@ export default function OrganizerSection() {
       </section>
 
       {/* Patrons */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mb-8">
           <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('organizer.patronsLabel')}</p>
         </div>
 
         <div className="relative">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10"
-            style={{ background: 'linear-gradient(to right, #ffffff, transparent)' }} />
+            style={{ background: 'linear-gradient(to right, #f9fafb, transparent)' }} />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10"
-            style={{ background: 'linear-gradient(to left, #ffffff, transparent)' }} />
+            style={{ background: 'linear-gradient(to left, #f9fafb, transparent)' }} />
           <DraggableTicker />
         </div>
       </section>

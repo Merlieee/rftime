@@ -11,7 +11,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
   return (
     <section
       id={`edycja-${edition}`}
-      className={`py-16 ${index % 2 !== 0 ? 'bg-gray-50' : 'bg-white'}`}
+      className={`py-16 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 

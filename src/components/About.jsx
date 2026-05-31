@@ -8,7 +8,7 @@ export default function About() {
   const pillars = t('about.pillars', { returnObjects: true });
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         <div className="grid md:grid-cols-2 gap-16 items-stretch">

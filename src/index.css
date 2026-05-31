@@ -34,6 +34,25 @@
   }
 
   #root { width: 100%; }
+
+  /* Pointer cursor on anything clickable */
+  a[href],
+  button,
+  label,
+  summary,
+  select,
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"],
+  [onclick] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: default;
+  }
 }
 
 

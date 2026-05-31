@@ -9,7 +9,7 @@ export default function ProgramAnnouncement() {
   const schedule = t('program.schedule', { returnObjects: true });
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-gray-50 py-20">
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
 
         {/* Header */}
