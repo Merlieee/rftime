@@ -12,7 +12,7 @@ export default function RegistrationCTA() {
       {/* Line-art pattern scraped from rftime.pl — same as the hero, bookending the page. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none bg-no-repeat opacity-50"
+        className="absolute inset-0 pointer-events-none bg-no-repeat opacity-85"
         style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '100% auto', backgroundPosition: 'center 35%' }}
       />
 

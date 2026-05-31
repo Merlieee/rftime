@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Line-art pattern scraped from rftime.pl — sits over the gradient. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-50"
+        className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-85"
         style={{ backgroundImage: 'url(/hero-pattern.png)' }}
       />
 
