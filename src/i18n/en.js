@@ -8,7 +8,7 @@ export default {
   // Hero
   hero: {
     date: 'October 29–30, 2026 · WSS Biała Podlaska',
-    subtitle: 'International Ablation Workshop for Electrophysiologists',
+    subtitle: 'International Ablation Workshop\nfor Electrophysiologists',
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
     note: 'Registration via WSzS Biała Podlaska',
     register: 'Register now',
@@ -220,7 +220,7 @@ export default {
     heading: 'Join the next edition',
     desc: 'Programme details will be announced soon. Register to be the first to hear about participant enrolment for the 2026 edition. Free admission. First-come, first-served.',
     button: 'Register now',
-    note: 'Registration via WSzS Biała Podlaska · GDPR',
+    note: 'Registration via WSzS Biała Podlaska',
   },
 
   // Footer
@@ -233,7 +233,7 @@ export default {
       { href: 'https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html', label: 'Register' },
       { href: '/galeria',   label: 'Gallery' },
     ],
-    prevLabel: 'Previous editions',
+    socialLabel: 'Social media',
     copyright: '© 2026 RFtime · All rights reserved',
     hospital: 'EP Lab · WSzS Biała Podlaska',
     langButton: '🇵🇱 Polski',

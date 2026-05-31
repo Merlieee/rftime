@@ -5,17 +5,24 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[85vh] flex items-end"
+      className="relative min-h-[85vh] flex items-center justify-center"
       style={{
         background: 'linear-gradient(135deg, #FF0A94 0%, #1B06AA 38%, #2A82CB 68%, #0CE9C8 100%)',
       }}
     >
-      {/* Darkening scrim — strongest at the bottom where the text sits. Gradient untouched underneath. */}
+      {/* Line-art pattern scraped from rftime.pl — sits over the gradient. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-50"
+        style={{ backgroundImage: 'url(/hero-pattern.png)' }}
+      />
+
+      {/* Darkening scrim — symmetric, for centered text legibility. Gradient untouched underneath. */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(to top, rgba(8,6,40,0.48) 0%, rgba(8,6,40,0.18) 42%, rgba(8,6,40,0) 68%)',
+            'linear-gradient(to bottom, rgba(8,6,40,0.22) 0%, rgba(8,6,40,0.06) 45%, rgba(8,6,40,0.22) 100%)',
         }}
       />
 
@@ -29,20 +36,20 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
-        <p className="text-xs font-semibold tracking-widest uppercase text-white/55 mb-2">
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-6 md:px-8 lg:px-12 py-20 flex flex-col items-center text-center">
+        <p className="text-xs font-semibold tracking-widest uppercase text-white/55 mb-3">
           {t('hero.date')}
         </p>
 
-        <h1 className="text-7xl md:text-8xl font-black tracking-tight leading-[0.95] text-white mb-6 max-w-3xl select-none">
+        <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-[0.95] text-white mb-6 select-none">
           RFtime 2026
         </h1>
 
-        <p className="text-lg text-white/85 leading-relaxed mb-5">
+        <p className="text-lg text-white/85 leading-relaxed mb-5 whitespace-pre-line">
           {t('hero.subtitle')}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap justify-center gap-2 mb-24">
           {t('hero.topics', { returnObjects: true }).map(topic => (
             <span
               key={topic}
@@ -53,11 +60,7 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="text-xs text-white/40 font-medium tracking-wide uppercase mt-24 mb-6">
-          {t('hero.note')}
-        </p>
-
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           <a
             href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html"
             target="_blank"
@@ -77,6 +80,9 @@ export default function Hero() {
           </a>
         </div>
 
+        <p className="text-xs text-white/40 font-medium tracking-wide mt-4">
+          {t('hero.note')}
+        </p>
       </div>
     </section>
   );

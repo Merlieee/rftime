@@ -8,7 +8,7 @@ export default {
   // Hero
   hero: {
     date: '29–30 października 2026 · WSS Biała Podlaska',
-    subtitle: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów',
+    subtitle: 'Międzynarodowe Warsztaty Ablacyjne\ndla Elektrofizjologów',
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
     note: 'Rejestracja przez WSzS w Białej Podlaskiej',
     register: 'Zgłoś uczestnictwo',
@@ -220,7 +220,7 @@ export default {
     heading: 'Dołącz do kolejnej edycji',
     desc: 'Szczegóły programu zostaną ogłoszone wkrótce. Zostaw swoje dane, aby być pierwszym poinformowanym o naborze uczestników na edycję 2026. Udział bezpłatny. Liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
-    note: 'Rejestracja przez WSzS w Białej Podlaskiej · RODO',
+    note: 'Rejestracja przez WSzS w Białej Podlaskiej',
   },
 
   // Footer
@@ -233,7 +233,7 @@ export default {
       { href: 'https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html', label: 'Rejestracja' },
       { href: '/galeria',   label: 'Galeria' },
     ],
-    prevLabel: 'Poprzednie edycje',
+    socialLabel: 'Social media',
     copyright: '© 2026 RFtime · Wszystkie prawa zastrzeżone',
     hospital: 'Pracownia Elektrofizjologii WSzS Biała Podlaska',
     langButton: '🇬🇧 English',

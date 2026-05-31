@@ -47,20 +47,6 @@ export default function Footer() {
             WSzS w Białej Podlaskiej<br />
             ul. Terebelska 57-65, 21-500 Biała Podlaska
           </p>
-          <div className="flex items-center gap-3">
-            <a href="https://www.facebook.com/RFtimepl" target="_blank" rel="noopener noreferrer nofollow"
-              className="text-gray-500 hover:text-white transition-colors" aria-label="Facebook">
-              <FacebookIcon />
-            </a>
-            <a href="https://www.instagram.com/rftime.pl/" target="_blank" rel="noopener noreferrer nofollow"
-              className="text-gray-500 hover:text-white transition-colors" aria-label="Instagram">
-              <InstagramIcon />
-            </a>
-            <a href="https://www.youtube.com/@rftime" target="_blank" rel="noopener noreferrer nofollow"
-              className="text-gray-500 hover:text-white transition-colors" aria-label="YouTube">
-              <YoutubeIcon />
-            </a>
-          </div>
         </div>
 
         <div>
@@ -73,14 +59,16 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.prevLabel')}</p>
+          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.socialLabel')}</p>
           <div className="space-y-2">
             {[
-              ['https://rftime.pl/rftime-2024/', 'RFtime 2024'],
-              ['https://rftime.pl/rftime-2025/program-rftime-2025/', 'RFtime 2025'],
-              ['https://rftime.pl', 'rftime.pl'],
-            ].map(([href, label]) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer nofollow" className="block text-gray-400 hover:text-white transition-colors">{label} ↗</a>
+              ['https://www.facebook.com/RFtimepl', 'Facebook', FacebookIcon],
+              ['https://www.instagram.com/rftime.pl/', 'Instagram', InstagramIcon],
+              ['https://www.youtube.com/@rftime', 'YouTube', YoutubeIcon],
+            ].map(([href, label, Icon]) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                <Icon /> {label}
+              </a>
             ))}
           </div>
         </div>

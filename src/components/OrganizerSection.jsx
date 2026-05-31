@@ -2,11 +2,11 @@ import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const patronLogos = [
-  { src: '/ASR-RFtime-2024 1.png',                    alt: 'ASR PTH Rytm Serca' },
+  { src: '/ASR-RFtime-2024.webp',                    alt: 'ASR PTH Rytm Serca' },
   { src: '/PTK-Punkty-Edukacyjne-RFtime-2025.webp',  alt: 'PTK Punkty Edukacyjne' },
-  { src: '/Oddzial-Lubelski-PTK-RFtime 1.png',        alt: 'Oddział Lubelski PTK' },
+  { src: '/Oddzial-Lubelski-PTK-RFtime.webp',        alt: 'Oddział Lubelski PTK' },
   { src: '/Lubelska-Izba-Lekarska-RFtime.webp',       alt: 'Lubelska Izba Lekarska' },
-  { src: '/Klub-30-PTK-RFtime 1.png',                 alt: 'Klub 30 PTK' },
+  { src: '/Klub-30-PTK-RFtime.webp',                 alt: 'Klub 30 PTK' },
   { src: '/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
 
