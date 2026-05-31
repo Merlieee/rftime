@@ -24,8 +24,8 @@ export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
 // Media coverage — TV segments and press articles.
 // Titles live in i18n (media.tv / media.articles), merged by index.
 export const mediaTV = [
-  { url: 'https://www.facebook.com/reel/1176735267850886', tag: 'e2025' },
-  { url: 'https://www.facebook.com/reel/845743287704451',  tag: 'e2024' },
+  { url: 'https://www.facebook.com/reel/1176735267850886', outlet: 'facebook.com', tag: 'e2025' },
+  { url: 'https://www.facebook.com/reel/845743287704451',  outlet: 'facebook.com', tag: 'e2024' },
 ];
 
 export const mediaArticles = [

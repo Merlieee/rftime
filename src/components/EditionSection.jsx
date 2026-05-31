@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import SpeakerCard from './SpeakerCard';
 import ProgramTable from './ProgramTable';
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId }) {
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId }) {
   const [tab, setTab] = useState('speakers');
   const [playing, setPlaying] = useState(false);
   const { t } = useTranslation();
@@ -75,7 +75,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
                 <div className="relative aspect-video">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                    src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1${youtubeListId ? `&list=${youtubeListId}` : ''}`}
                     title={`RFtime ${edition}`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

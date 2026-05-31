@@ -38,8 +38,10 @@ function Home() {
 
   return (
     <div>
-      <Hero />
-      <div id="carousel"><PhotoCarousel /></div>
+      <div style={{ background: 'linear-gradient(to bottom, transparent 50%, #ffffff 72%), linear-gradient(to bottom right, #FF0A94 0%, rgba(27,6,170,0.9) 33%, rgba(2,158,255,0.8) 66%, rgba(12,233,200,0.9) 100%)' }}>
+        <Hero />
+        <div id="carousel" className="relative z-10 pb-10"><PhotoCarousel /></div>
+      </div>
       <About />
       <ProgramAnnouncement />
       <div id="edycje">
@@ -53,7 +55,7 @@ function Home() {
           highlights={highlights2025}
           program={e2025.program}
           accent="pink"
-          youtubeId="KT3phaaPyrQ"
+          youtubeId="biGPhWaod5k"
         />
         <EditionSection
           edition="2024"
@@ -65,7 +67,8 @@ function Home() {
           highlights={highlights2024}
           program={e2024.program}
           accent="blue"
-          youtubeId="kt7QismiPa8"
+          youtubeId="s0Zw036BM5w"
+          youtubeListId="PLo4-u68qkjwPxOJlq3H7zITSR3e-a304h"
         />
       </div>
       <MediaSection />

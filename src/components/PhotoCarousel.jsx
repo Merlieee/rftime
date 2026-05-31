@@ -64,7 +64,7 @@ export default function PhotoCarousel() {
         />
       ))}
 
-      {/* Bottom gradient */}
+{/* Bottom gradient */}
       <div className="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
         style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)' }} />
 

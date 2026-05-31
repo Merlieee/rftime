@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -41,6 +40,11 @@ function EditionGrid({ year, photos }) {
         close={() => setIndex(-1)}
         slides={photos}
         on={{ view: ({ index }) => setIndex(index) }}
+        controller={{ closeOnBackdropClick: true }}
+        styles={{
+          root: { '--yarl__color_backdrop': 'rgba(0, 0, 0, 0.6)', '--yarl__button_filter': 'none' },
+          slide: { padding: '3rem' },
+        }}
       />
     </section>
   );
@@ -50,17 +54,11 @@ export default function Gallery() {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-white">
-      <header className="border-b border-gray-100 sticky top-0 bg-white z-40">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            {t('gallery.back')}
-          </Link>
-          <span className="font-semibold text-gray-900 tracking-tight">
-            RFtime
-          </span>
-        </div>
-      </header>
+      <div className="max-w-6xl mx-auto px-6 pt-10 pb-0">
+        <Link to="/" className="text-sm text-gray-500 hover:underline w-fit">
+          ← {t('gallery.back')}
+        </Link>
+      </div>
 
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-6xl font-bold text-gray-900 tracking-tight mb-12">{t('gallery.title')}</h1>
