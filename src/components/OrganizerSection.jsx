@@ -2,11 +2,11 @@ import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const patronLogos = [
-  { src: '/ASR-RFtime-2024.webp',                     alt: 'ASR PTH Rytm Serca' },
+  { src: '/ASR-RFtime-2024 1.png',                    alt: 'ASR PTH Rytm Serca' },
   { src: '/PTK-Punkty-Edukacyjne-RFtime-2025.webp',  alt: 'PTK Punkty Edukacyjne' },
-  { src: '/Oddzial-Lubelski-PTK-RFtime.webp',         alt: 'Oddział Lubelski PTK' },
+  { src: '/Oddzial-Lubelski-PTK-RFtime 1.png',        alt: 'Oddział Lubelski PTK' },
   { src: '/Lubelska-Izba-Lekarska-RFtime.webp',       alt: 'Lubelska Izba Lekarska' },
-  { src: '/Klub-30-PTK-RFtime.webp',                  alt: 'Klub 30 PTK' },
+  { src: '/Klub-30-PTK-RFtime 1.png',                 alt: 'Klub 30 PTK' },
   { src: '/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
 
@@ -62,7 +62,7 @@ function DraggableTicker() {
     >
       <div ref={innerRef} className="flex gap-8 w-max items-center py-1" style={{ willChange: 'transform' }}>
         {[...patronLogos, ...patronLogos].map((logo, i) => (
-          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#ffffff', isolation: 'isolate' }}>
+          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
             <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" draggable={false} style={{ mixBlendMode: 'multiply' }} />
           </div>
         ))}

@@ -242,7 +242,7 @@ export default {
   // Gallery
   gallery: {
     label: 'Gallery',
-    heading: 'Photos from the workshops',
+    heading: 'Photos from previous editions',
     back: 'RFtime 2026',
     title: 'Gallery',
     photos: 'photos',

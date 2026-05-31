@@ -2,10 +2,18 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    const id = hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView();
+    }
+  }, [pathname, hash]);
   return null;
 }
 import { Agentation } from 'agentation';

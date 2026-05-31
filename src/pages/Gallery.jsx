@@ -55,7 +55,7 @@ export default function Gallery() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-6 pt-10 pb-0">
-        <Link to="/" className="text-sm text-gray-500 hover:underline w-fit">
+        <Link to="/#carousel" className="text-sm text-gray-500 hover:underline w-fit">
           ← {t('gallery.back')}
         </Link>
       </div>
