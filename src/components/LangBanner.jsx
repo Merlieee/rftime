@@ -11,8 +11,8 @@ export default function LangBanner() {
 
   return (
     <div
-      className="py-3 text-sm text-white"
-      style={{ backgroundColor: '#2A82CB' }}
+      className="py-3 text-sm"
+      style={{ backgroundColor: 'white', color: '#233889' }}
     >
     <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 flex items-center justify-between">
       <span>
@@ -26,7 +26,8 @@ export default function LangBanner() {
       </span>
       <button
         onClick={() => setDismissed(true)}
-        className="text-white/70 hover:text-white text-lg leading-none cursor-pointer ml-6"
+        className="text-lg leading-none cursor-pointer ml-6 opacity-70 hover:opacity-100"
+        style={{ color: '#233889' }}
         aria-label="Dismiss"
       >
         ×

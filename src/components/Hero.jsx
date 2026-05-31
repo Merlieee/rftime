@@ -10,11 +10,16 @@ export default function Hero() {
         background: 'linear-gradient(135deg, #FF0A94 0%, #1B06AA 38%, #2A82CB 68%, #0CE9C8 100%)',
       }}
     >
-      {/* Line-art pattern scraped from rftime.pl — sits over the gradient. */}
+      {/* Line-art pattern scraped from rftime.pl — split in two: left half drops down, right half rises up. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-85"
-        style={{ backgroundImage: 'url(/hero-pattern.png)' }}
+        className="absolute inset-y-0 left-0 w-1/2 pointer-events-none bg-no-repeat opacity-85"
+        style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '200% auto', backgroundPosition: 'left 0%' }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-y-0 right-0 w-1/2 pointer-events-none bg-no-repeat opacity-85"
+        style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '200% auto', backgroundPosition: 'right 100%' }}
       />
 
       {/* Darkening scrim — symmetric, for centered text legibility. Gradient untouched underneath. */}
