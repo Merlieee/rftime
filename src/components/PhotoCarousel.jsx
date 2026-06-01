@@ -51,17 +51,21 @@ export default function PhotoCarousel() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Slides */}
-      {allPhotos.map((photo, i) => (
+      {/* Slides — only render prev/current/next to avoid loading 350 images at once */}
+      {[
+        (current - 1 + allPhotos.length) % allPhotos.length,
+        current,
+        (current + 1) % allPhotos.length,
+      ].map((idx) => (
         <div
-          key={i}
+          key={idx}
           className="absolute inset-0 transition-opacity duration-700"
           style={{
-            backgroundImage: `url(${photo.src})`,
+            backgroundImage: `url(${allPhotos[idx].src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: i === current ? 1 : 0,
-            pointerEvents: i === current ? 'auto' : 'none',
+            opacity: idx === current ? 1 : 0,
+            pointerEvents: idx === current ? 'auto' : 'none',
           }}
         />
       ))}

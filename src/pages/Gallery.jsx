@@ -26,9 +26,12 @@ function EditionGrid({ year, photos }) {
             className="cursor-pointer rounded overflow-hidden group"
             style={{ aspectRatio: '4/3' }}
           >
-            <div
-              className="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-              style={{ backgroundImage: `url(${photo.src})` }}
+            <img
+              src={photo.src}
+              loading="lazy"
+              decoding="async"
+              alt=""
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ))}

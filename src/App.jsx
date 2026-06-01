@@ -11,12 +11,11 @@ function ScrollToTop() {
     const id = hash.slice(1);
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView();
+      el.scrollIntoView({ behavior: 'instant' });
     }
   }, [pathname, hash]);
   return null;
 }
-import { Agentation } from 'agentation';
 import LangBanner from './components/LangBanner';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -89,7 +88,6 @@ export default function App() {
   return (
     <>
     <ScrollToTop />
-    {import.meta.env.DEV && <Agentation endpoint="http://localhost:4747" />}
     <LangBanner />
     <Routes>
       <Route path="/" element={<Home />} />
