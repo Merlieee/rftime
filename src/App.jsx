@@ -19,6 +19,7 @@ function ScrollToTop() {
 import LangBanner from './components/LangBanner';
 import Hero from './components/Hero';
 import About from './components/About';
+import CookieConsent from './components/CookieConsent';
 import EditionSection from './components/EditionSection';
 import OrganizerSection from './components/OrganizerSection';
 import MediaSection from './components/MediaSection';
@@ -27,6 +28,7 @@ import PhotoCarousel from './components/PhotoCarousel';
 import ProgramAnnouncement from './components/ProgramAnnouncement';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import { useTranslation } from 'react-i18next';
 import {
   speakerBase2024, speakerBase2025,
@@ -92,7 +94,9 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/galeria" element={<Gallery />} />
+      <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
     </Routes>
+    <CookieConsent />
     </>
   );
 }

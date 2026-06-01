@@ -5,6 +5,69 @@ export default {
     switch: 'Switch →',
   },
 
+  // Privacy policy page
+  privacyPage: {
+    title: 'Polityka prywatności',
+    updated: 'Ostatnia aktualizacja: czerwiec 2026',
+    back: 'Powrót na stronę główną',
+    sections: [
+      {
+        heading: 'Administrator danych',
+        body: [
+          'Administratorem danych jest Pracownia Elektrofizjologii i Elektrostymulacji Serca Wojewódzkiego Szpitala Specjalistycznego w Białej Podlaskiej, ul. Terebelska 57-65, 21-500 Biała Podlaska.',
+          'W sprawach dotyczących ochrony danych osobowych możesz skontaktować się z nami telefonicznie pod numerem +48 513 874 782.',
+        ],
+      },
+      {
+        heading: 'Jakie dane zbieramy',
+        body: [
+          'Strona RFtime ma charakter wyłącznie informacyjny. Nie prowadzimy na niej rejestracji konta, nie udostępniamy formularzy kontaktowych ani sekcji komentarzy, dlatego nie zbieramy bezpośrednio Twoich danych osobowych.',
+          'Rejestracja na warsztaty odbywa się na osobnej stronie Wojewódzkiego Szpitala Specjalistycznego w Białej Podlaskiej i podlega polityce prywatności tego serwisu.',
+        ],
+      },
+      {
+        heading: 'Pliki cookies i pamięć lokalna',
+        body: [
+          'Korzystamy wyłącznie z funkcjonalnej pamięci lokalnej przeglądarki (localStorage), aby zapamiętać Twoje preferencje — wybrany język oraz decyzję dotyczącą komunikatu o plikach cookies. Dane te są przechowywane na Twoim urządzeniu i nie są przesyłane na nasze serwery.',
+          'Nie stosujemy własnych plików cookies śledzących ani narzędzi analitycznych profilujących użytkowników.',
+          'Zapisane preferencje możesz w każdej chwili usunąć, czyszcząc dane przeglądarki dla tej witryny.',
+        ],
+      },
+      {
+        heading: 'Treści osadzone z innych witryn',
+        body: [
+          'Na stronie osadzamy materiały wideo z serwisu YouTube. Po odtworzeniu takiego materiału YouTube (Google) może zapisać własne pliki cookies i zbierać dane zgodnie ze swoją polityką prywatności.',
+          'Strona zawiera również odnośniki do serwisów zewnętrznych (m.in. Facebook, Instagram, YouTube oraz portali prasowych). Po przejściu na te strony obowiązują ich własne polityki prywatności.',
+        ],
+      },
+      {
+        heading: 'Twoje prawa',
+        body: [
+          'Zgodnie z RODO przysługuje Ci prawo dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, a także prawo do wniesienia sprzeciwu oraz skargi do Prezesa Urzędu Ochrony Danych Osobowych.',
+          'Ponieważ ta witryna nie gromadzi danych osobowych, realizacja powyższych praw dotyczy danych przetwarzanych w związku z rejestracją na warsztaty lub kontaktem telefonicznym.',
+        ],
+      },
+      {
+        heading: 'Kontakt',
+        body: [
+          'Pracownia Elektrofizjologii i Elektrostymulacji Serca',
+          'Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej',
+          'ul. Terebelska 57-65, 21-500 Biała Podlaska',
+          'tel. +48 513 874 782',
+        ],
+      },
+    ],
+  },
+
+  // Cookie consent
+  cookies: {
+    title: 'Pliki cookies',
+    message: 'Używamy plików cookies i pamięci lokalnej, aby zapamiętać Twoje preferencje (np. wybrany język).',
+    privacy: 'Polityka prywatności',
+    accept: 'Akceptuję',
+    reject: 'Odrzuć',
+  },
+
   // Hero
   hero: {
     date: '29–30 października 2026 · WSS Biała Podlaska',
@@ -237,6 +300,7 @@ export default {
     ],
     socialLabel: 'Social media',
     copyright: '© 2026 RFtime · Wszystkie prawa zastrzeżone',
+    privacy: 'Polityka prywatności',
     hospital: 'Pracownia Elektrofizjologii WSzS Biała Podlaska',
     langButton: '🇬🇧 English',
   },

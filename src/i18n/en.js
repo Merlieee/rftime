@@ -5,6 +5,69 @@ export default {
     switch: 'Przejdź →',
   },
 
+  // Privacy policy page
+  privacyPage: {
+    title: 'Privacy policy',
+    updated: 'Last updated: June 2026',
+    back: 'Back to homepage',
+    sections: [
+      {
+        heading: 'Data controller',
+        body: [
+          'The data controller is the Electrophysiology and Cardiac Pacing Lab of the Provincial Specialist Hospital in Biała Podlaska, ul. Terebelska 57-65, 21-500 Biała Podlaska, Poland.',
+          'For any matters regarding the protection of personal data, you can contact us by phone at +48 513 874 782.',
+        ],
+      },
+      {
+        heading: 'What data we collect',
+        body: [
+          'The RFtime website is purely informational. It has no account registration, no contact forms and no comment section, so we do not collect your personal data directly.',
+          'Registration for the workshop takes place on a separate website of the Provincial Specialist Hospital in Biała Podlaska and is subject to that website’s privacy policy.',
+        ],
+      },
+      {
+        heading: 'Cookies and local storage',
+        body: [
+          'We only use the browser’s functional local storage (localStorage) to remember your preferences — your selected language and your choice regarding the cookie notice. This information is stored on your device and is not sent to our servers.',
+          'We do not use our own tracking cookies or analytics tools that profile users.',
+          'You can delete the stored preferences at any time by clearing your browser data for this site.',
+        ],
+      },
+      {
+        heading: 'Embedded content from other websites',
+        body: [
+          'We embed video content from YouTube. Once you play such content, YouTube (Google) may set its own cookies and collect data in accordance with its privacy policy.',
+          'The site also contains links to external services (including Facebook, Instagram, YouTube and news outlets). Once you visit those sites, their own privacy policies apply.',
+        ],
+      },
+      {
+        heading: 'Your rights',
+        body: [
+          'Under the GDPR you have the right to access your data, rectify it, erase it or restrict its processing, as well as the right to object and to lodge a complaint with the President of the Personal Data Protection Office.',
+          'Because this website does not collect personal data, the exercise of these rights concerns data processed in connection with workshop registration or phone contact.',
+        ],
+      },
+      {
+        heading: 'Contact',
+        body: [
+          'Electrophysiology and Cardiac Pacing Lab',
+          'Provincial Specialist Hospital in Biała Podlaska',
+          'ul. Terebelska 57-65, 21-500 Biała Podlaska, Poland',
+          'phone +48 513 874 782',
+        ],
+      },
+    ],
+  },
+
+  // Cookie consent
+  cookies: {
+    title: 'Cookies',
+    message: 'We use cookies and local storage to remember your preferences (e.g. your selected language).',
+    privacy: 'Privacy policy',
+    accept: 'Accept',
+    reject: 'Reject',
+  },
+
   // Hero
   hero: {
     date: 'October 29–30, 2026 · WSS Biała Podlaska',
@@ -237,6 +300,7 @@ export default {
     ],
     socialLabel: 'Social media',
     copyright: '© 2026 RFtime · All rights reserved',
+    privacy: 'Privacy policy',
     hospital: 'EP Lab · WSzS Biała Podlaska',
     langButton: '🇵🇱 Polski',
   },

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { setLang } from '../i18n/index.js';
 
@@ -43,7 +44,8 @@ export default function Footer() {
           </p>
           <p className="text-gray-500 text-2xs leading-relaxed mb-4">
             +48 513 874 782<br />
-            Pracownia Elektrofizjologii i Elektrostymulacji Serca<br />
+            Pracownia Elektrofizjologii<br />
+            i Elektrostymulacji Serca<br />
             WSzS w Białej Podlaskiej<br />
             ul. Terebelska 57-65, 21-500 Biała Podlaska
           </p>
@@ -75,7 +77,15 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mt-10 pt-6 border-t border-gray-800 text-2xs text-gray-600 flex justify-between flex-wrap gap-2 items-center">
-        <span>{t('footer.copyright')}</span>
+        <div className="flex items-center gap-4">
+          <span>{t('footer.copyright')}</span>
+          <Link
+            to="/polityka-prywatnosci"
+            className="text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            {t('footer.privacy')}
+          </Link>
+        </div>
         <div className="flex items-center gap-4">
           <span>{t('footer.hospital')}</span>
           <button
