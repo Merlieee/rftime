@@ -8,8 +8,12 @@ const isPolishBrowser = () => {
   return langs.some((l) => l.toLowerCase().startsWith('pl'));
 };
 
+const urlLang = new URLSearchParams(window.location.search).get('lang');
+const fromUrl = urlLang === 'pl' || urlLang === 'en' ? urlLang : null;
+if (fromUrl) localStorage.setItem('rftime-lang', fromUrl);
+
 const saved = localStorage.getItem('rftime-lang');
-const defaultLang = saved ?? (isPolishBrowser() ? 'pl' : 'en');
+const defaultLang = fromUrl ?? saved ?? (isPolishBrowser() ? 'pl' : 'en');
 
 i18n
   .use(initReactI18next)
