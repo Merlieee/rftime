@@ -36,7 +36,7 @@ export default {
     label: 'RFtime 2026 · October 29–30',
     heading: 'Preliminary workshop programme*',
     intro: 'The next RFtime edition will take place at WSS Biała Podlaska. The programme includes live procedures performed with various technologies — RF, PFA (TactiFlex Duo, Volt, Affera) — transmissions from European centres, expert lectures, case presentations, and EP simulator sessions. Arrival possible from Wednesday evening.',
-    scheduleHeading: 'Schedule overview',
+    scheduleHeading: 'Workshop schedule',
     freeTitle: 'Free admission',
     freeDesc: 'The workshop is completely free of charge. The dinner (EP Night Meeting) is free for faculty and case presenters; cost for other participants is being finalised.',
     limitedTitle: 'Limited seats',
@@ -55,6 +55,7 @@ export default {
         date: 'October 29, 2026',
         items: [
           { time: '8:30',  label: 'Workshop opening' },
+          { time: '',      label: 'We’re finalizing the workshop schedule. It will appear here soon.', placeholder: true },
           { time: '19:00', label: 'End of session' },
           { time: '21:00', label: 'EP Night Meeting — Uroczysko Zaborek' },
         ],
@@ -64,6 +65,7 @@ export default {
         date: 'October 30, 2026',
         items: [
           { time: '9:00',  label: 'Workshop opening' },
+          { time: '',      label: 'We’re finalizing the workshop schedule. It will appear here soon.', placeholder: true },
           { time: '15:00', label: 'Planned end' },
         ],
       },

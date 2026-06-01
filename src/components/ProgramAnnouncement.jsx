@@ -45,10 +45,10 @@ export default function ProgramAnnouncement() {
                 <p className="text-sm font-bold text-gray-900">{day}</p>
                 <p className="text-2xs text-gray-400 mb-5">{date}</p>
                 <ul className="space-y-3">
-                  {dayItems.map(({ time, label }) => (
-                    <li key={time} className="flex items-start gap-3">
+                  {dayItems.map(({ time, label, placeholder }) => (
+                    <li key={time || label} className="flex items-start gap-3">
                       <span className="font-mono text-sky-600 text-2xs pt-px shrink-0 w-10">{time}</span>
-                      <span className="text-sm text-gray-600">{label}</span>
+                      <span className={placeholder ? 'text-sm text-gray-400 italic' : 'text-sm text-gray-600'}>{label}</span>
                     </li>
                   ))}
                 </ul>
