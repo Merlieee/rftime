@@ -8,6 +8,12 @@ export default function EditionSection({ edition, date, location, theme, speaker
   const [playing, setPlaying] = useState(false);
   const { t } = useTranslation();
 
+  const tabLabels = {
+    speakers: t('edition.tabSpeakers'),
+    program: t('edition.tabProgram'),
+    organizer: t('organizer.label'),
+  };
+
   return (
     <section
       id={`edycja-${edition}`}
@@ -43,7 +49,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
 
         {/* Tabs */}
         <div className="flex border-b border-gray-200 mb-8">
-          {['speakers', 'program'].map((tab_key) => (
+          {['speakers', 'organizer', 'program'].map((tab_key) => (
             <button
               key={tab_key}
               onClick={() => setTab(tab_key)}
@@ -53,7 +59,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
-              {tab_key === 'speakers' ? t('edition.tabSpeakers') : t('edition.tabProgram')}
+              {tabLabels[tab_key]}
             </button>
           ))}
         </div>
@@ -64,6 +70,22 @@ export default function EditionSection({ edition, date, location, theme, speaker
           </div>
         )}
         {tab === 'program' && <ProgramTable program={program} />}
+        {tab === 'organizer' && (
+          <div className="flex flex-col sm:flex-row sm:items-stretch gap-8 sm:gap-16 rounded-2xl border border-gray-200 bg-white p-8">
+            <div>
+              <h3 className="font-semibold text-gray-900 text-base">{t('organizer.name')}</h3>
+              <p className="text-sm text-gray-500 mt-1">{t('organizer.hospital')}</p>
+              <p className="text-sm text-gray-400 leading-relaxed mt-4">{t('organizer.desc')}</p>
+            </div>
+            <div className="flex items-center justify-center sm:w-96 shrink-0">
+              <img
+                src="/szpital-logo.webp"
+                alt={t('organizer.hospital')}
+                className="h-32 sm:h-full max-h-full w-auto object-contain"
+              />
+            </div>
+          </div>
+        )}
 
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
@@ -90,7 +112,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
                   <img
                     src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
                     alt={`RFtime ${edition}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover scale-[1.02]"
                   />
                   <span className="absolute inset-0 flex items-center justify-center">
                     <span className="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-sky-700 transition-colors">
@@ -112,6 +134,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
             </a>
           </div>
         )}
+
 
       </div>
     </section>

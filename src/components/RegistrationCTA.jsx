@@ -55,10 +55,6 @@ export default function RegistrationCTA() {
         >
           {t('cta.button')}
         </a>
-
-        <p className="text-2xs text-white/45 font-medium tracking-wide mt-3">
-          {t('cta.note')}
-        </p>
       </div>
     </section>
   );

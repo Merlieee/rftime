@@ -96,12 +96,12 @@ export default {
 
   // Program Announcement
   program: {
-    label: 'RFtime 2026 · 29–30 października',
+    label: 'RFtime 2026',
     heading: 'Wstępny program warsztatów*',
-    intro: 'Kolejna edycja RFtime odbędzie się w WSS Biała Podlaska. W programie zabiegi live wykonywane różnymi technologiami — RF, PFA (TactiFlex Duo, Volt, Affera) — transmisje z europejskich ośrodków, wykłady eksperckie, prezentacje przypadków oraz sesje na symulatorach EP. Przyjazd możliwy już od środy wieczorem.',
+    intro: 'W programie zabiegi live wykonywane różnymi technologiami — RF, PFA (TactiFlex Duo, Volt, Affera) — transmisje z europejskich ośrodków, wykłady eksperckie, prezentacje przypadków oraz sesje na symulatorach EP. Przyjazd możliwy już od środy wieczorem.',
     scheduleHeading: 'Plan warsztatów',
     freeTitle: 'Udział bezpłatny',
-    freeDesc: 'Warsztaty są całkowicie bezpłatne. Kolacja (Nocne Spotkanie EP) jest bezpłatna dla wykładowców i osób prezentujących przypadki; koszt dla pozostałych uczestników jest w trakcie ustalania.',
+    freeDesc: 'Warsztaty są całkowicie bezpłatne.',
     limitedTitle: 'Ograniczona liczba miejsc',
     limitedDesc: 'Liczba miejsc na sali wykładowej oraz miejsc noclegowych jest ograniczona. O udziale decyduje kolejność zgłoszeń.',
     footnote: '* Ostateczny program warsztatów zostanie opublikowany w czerwcu 2026.',
@@ -118,9 +118,7 @@ export default {
         date: '29 października 2026',
         items: [
           { time: '8:30',  label: 'Rozpoczęcie warsztatów' },
-          { time: '',      label: 'Pracujemy nad ostatecznym planem warsztatów. Już wkrótce pojawi się w tym miejscu.', placeholder: true },
           { time: '19:00', label: 'Zakończenie sesji' },
-          { time: '21:00', label: 'Nocne Spotkanie EP — Uroczysko Zaborek' },
         ],
       },
       {
@@ -128,7 +126,6 @@ export default {
         date: '30 października 2026',
         items: [
           { time: '9:00',  label: 'Rozpoczęcie warsztatów' },
-          { time: '',      label: 'Pracujemy nad ostatecznym planem warsztatów. Już wkrótce pojawi się w tym miejscu.', placeholder: true },
           { time: '15:00', label: 'Planowane zakończenie' },
         ],
       },
@@ -290,7 +287,7 @@ export default {
 
   // Footer
   footer: {
-    tagline: 'Warsztaty Ablacyjne dla Elektrofizjologów',
+    tagline: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów',
     location: 'Biała Podlaska · Październik 2026',
     navLabel: 'Nawigacja',
     navLinks: [

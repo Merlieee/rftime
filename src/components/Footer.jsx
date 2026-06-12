@@ -37,17 +37,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-400 py-12">
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-10 text-sm">
         <div>
-          <p className="text-white font-semibold text-lg mb-2">RFtime</p>
+          <p className="text-white font-semibold text-lg mb-2 relative -top-1">RFtime</p>
           <p className="text-gray-400 leading-relaxed mb-4">
-            {t('footer.tagline')}<br />
-            {t('footer.location')}
-          </p>
-          <p className="text-gray-500 text-2xs leading-relaxed mb-4">
-            +48 513 874 782<br />
-            Pracownia Elektrofizjologii<br />
-            i Elektrostymulacji Serca<br />
-            WSzS w Białej Podlaskiej<br />
-            ul. Terebelska 57-65, 21-500 Biała Podlaska
+            {t('footer.tagline')}
           </p>
         </div>
 
@@ -87,7 +79,6 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex items-center gap-4">
-          <span>{t('footer.hospital')}</span>
           <button
             onClick={() => setLang(i18n.language === 'pl' ? 'en' : 'pl')}
             className="text-gray-500 hover:text-gray-300 transition-colors cursor-pointer"

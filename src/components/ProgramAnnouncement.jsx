@@ -1,4 +1,4 @@
-import { Activity, Radio, Mic, Users, Cpu, Calendar } from 'lucide-react';
+import { Activity, Radio, Mic, Users, Cpu } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const itemIcons = [Activity, Radio, Mic, Users, Cpu];
@@ -6,7 +6,6 @@ const itemIcons = [Activity, Radio, Mic, Users, Cpu];
 export default function ProgramAnnouncement() {
   const { t } = useTranslation();
   const items = t('program.items', { returnObjects: true });
-  const schedule = t('program.schedule', { returnObjects: true });
 
   return (
     <section className="bg-gray-50 py-20">
@@ -31,30 +30,6 @@ export default function ProgramAnnouncement() {
               </div>
             );
           })}
-        </div>
-
-        {/* Schedule */}
-        <div className="mb-10">
-          <h3 className="text-base font-semibold text-gray-900 mb-5 flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-sky-600" strokeWidth={1.75} />
-            {t('program.scheduleHeading')}
-          </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {schedule.map(({ day, date, items: dayItems }) => (
-              <div key={day} className="border border-gray-200 rounded-lg p-6">
-                <p className="text-sm font-bold text-gray-900">{day}</p>
-                <p className="text-2xs text-gray-400 mb-5">{date}</p>
-                <ul className="space-y-3">
-                  {dayItems.map(({ time, label, placeholder }) => (
-                    <li key={time || label} className="flex items-start gap-3">
-                      <span className="font-mono text-sky-600 text-2xs pt-px shrink-0 w-10">{time}</span>
-                      <span className={placeholder ? 'text-sm text-gray-400 italic' : 'text-sm text-gray-600'}>{label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Notes */}

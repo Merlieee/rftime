@@ -42,10 +42,6 @@ export default function Hero() {
       />
 
       <div className="relative z-10 w-full max-w-3xl mx-auto px-6 md:px-8 lg:px-12 py-20 flex flex-col items-center text-center">
-        <p className="text-xs font-semibold tracking-widest uppercase text-white/55 mb-3">
-          {t('hero.date')}
-        </p>
-
         <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-[0.95] text-white mb-6 select-none">
           RFtime 2026
         </h1>
@@ -84,10 +80,6 @@ export default function Hero() {
             {t('hero.editions')}
           </a>
         </div>
-
-        <p className="text-xs text-white/40 font-medium tracking-wide mt-4">
-          {t('hero.note')}
-        </p>
       </div>
     </section>
   );

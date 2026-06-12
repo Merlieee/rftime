@@ -62,7 +62,7 @@ function DraggableTicker() {
     >
       <div ref={innerRef} className="flex gap-8 w-max items-center py-1" style={{ willChange: 'transform' }}>
         {[...patronLogos, ...patronLogos].map((logo, i) => (
-          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#f9fafb', isolation: 'isolate' }}>
+          <div key={i} className="flex items-center justify-center shrink-0" style={{ height: '80px', width: '180px', backgroundColor: '#ffffff', isolation: 'isolate' }}>
             <img src={logo.src} alt={logo.alt} className="object-contain max-h-full max-w-full" draggable={false} style={{ mixBlendMode: 'multiply' }} />
           </div>
         ))}
@@ -71,45 +71,21 @@ function DraggableTicker() {
   );
 }
 
-export default function OrganizerSection() {
+export default function PatronsSection() {
   const { t } = useTranslation();
   return (
-    <>
-      {/* Organizer */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
-          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest mb-6">{t('organizer.label')}</p>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h3 className="font-semibold text-gray-900 text-base mb-1">{t('organizer.name')}</h3>
-              <p className="text-sm text-gray-500 mb-4">{t('organizer.hospital')}</p>
-              <p className="text-sm text-gray-500 leading-relaxed">{t('organizer.desc')}</p>
-            </div>
-            <div className="rounded-xl flex items-center justify-center py-8">
-              <img
-                src="/szpital-logo.webp"
-                alt="WSzS Biała Podlaska"
-                style={{ width: '70%' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mb-8">
+        <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('organizer.patronsLabel')}</p>
+      </div>
 
-      {/* Patrons */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mb-8">
-          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('organizer.patronsLabel')}</p>
-        </div>
-
-        <div className="relative">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10"
-            style={{ background: 'linear-gradient(to right, #f9fafb, transparent)' }} />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10"
-            style={{ background: 'linear-gradient(to left, #f9fafb, transparent)' }} />
-          <DraggableTicker />
-        </div>
-      </section>
-    </>
+      <div className="relative">
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10"
+          style={{ background: 'linear-gradient(to right, #ffffff, transparent)' }} />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10"
+          style={{ background: 'linear-gradient(to left, #ffffff, transparent)' }} />
+        <DraggableTicker />
+      </div>
+    </section>
   );
 }

@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Agentation } from 'agentation';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -21,7 +22,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import CookieConsent from './components/CookieConsent';
 import EditionSection from './components/EditionSection';
-import OrganizerSection from './components/OrganizerSection';
+import PatronsSection from './components/PatronsSection';
 import MediaSection from './components/MediaSection';
 import RegistrationCTA from './components/RegistrationCTA';
 import PhotoCarousel from './components/PhotoCarousel';
@@ -79,7 +80,7 @@ function Home() {
         />
       </div>
       <MediaSection />
-      <OrganizerSection />
+      <PatronsSection />
       <RegistrationCTA />
       <Footer />
     </div>
@@ -97,6 +98,7 @@ export default function App() {
       <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
     </Routes>
     <CookieConsent />
+    {import.meta.env.DEV && <Agentation />}
     </>
   );
 }
