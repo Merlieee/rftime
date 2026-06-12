@@ -99,7 +99,6 @@ export default {
     label: 'RFtime 2026',
     heading: 'Preliminary workshop programme*',
     intro: 'The programme includes live procedures performed with various technologies — RF, PFA (TactiFlex Duo, Volt, Affera) — transmissions from European centres, expert lectures, case presentations, and EP simulator sessions. Arrival possible from Wednesday evening.',
-    scheduleHeading: 'Workshop schedule',
     freeTitle: 'Free admission',
     freeDesc: 'The workshop is completely free of charge.',
     limitedTitle: 'Limited seats',
@@ -111,24 +110,6 @@ export default {
       { label: '4–5 expert lectures',        desc: 'Presentations by invited specialists from leading cardiology centres.' },
       { label: 'Case presentations',         desc: 'Interesting EP cases and procedures prepared by workshop participants.' },
       { label: 'EP simulators',              desc: 'Transseptal puncture, epicardial puncture, and virtual ablation on high-fidelity simulators.' },
-    ],
-    schedule: [
-      {
-        day: 'Thursday',
-        date: 'October 29, 2026',
-        items: [
-          { time: '8:30',  label: 'Workshop opening' },
-          { time: '19:00', label: 'End of session' },
-        ],
-      },
-      {
-        day: 'Friday',
-        date: 'October 30, 2026',
-        items: [
-          { time: '9:00',  label: 'Workshop opening' },
-          { time: '15:00', label: 'Planned end' },
-        ],
-      },
     ],
   },
 

@@ -99,7 +99,6 @@ export default {
     label: 'RFtime 2026',
     heading: 'Wstępny program warsztatów*',
     intro: 'W programie zabiegi live wykonywane różnymi technologiami — RF, PFA (TactiFlex Duo, Volt, Affera) — transmisje z europejskich ośrodków, wykłady eksperckie, prezentacje przypadków oraz sesje na symulatorach EP. Przyjazd możliwy już od środy wieczorem.',
-    scheduleHeading: 'Plan warsztatów',
     freeTitle: 'Udział bezpłatny',
     freeDesc: 'Warsztaty są całkowicie bezpłatne.',
     limitedTitle: 'Ograniczona liczba miejsc',
@@ -111,24 +110,6 @@ export default {
       { label: '4–5 wykładów eksperckich', desc: 'Prelekcje zaproszonych specjalistów z czołowych ośrodków kardiologicznych.' },
       { label: 'Prezentacje przypadków',   desc: 'Ciekawe przypadki i zabiegi EP przygotowane przez uczestników warsztatów.' },
       { label: 'Symulatory EP',            desc: 'Nakłucie transeptalne, nakłucie epikardialne i wirtualna ablacja na symulatorach wysokiej wierności.' },
-    ],
-    schedule: [
-      {
-        day: 'Czwartek',
-        date: '29 października 2026',
-        items: [
-          { time: '8:30',  label: 'Rozpoczęcie warsztatów' },
-          { time: '19:00', label: 'Zakończenie sesji' },
-        ],
-      },
-      {
-        day: 'Piątek',
-        date: '30 października 2026',
-        items: [
-          { time: '9:00',  label: 'Rozpoczęcie warsztatów' },
-          { time: '15:00', label: 'Planowane zakończenie' },
-        ],
-      },
     ],
   },
 
