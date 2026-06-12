@@ -103,7 +103,7 @@ export default {
     freeDesc: 'The workshop is completely free of charge.',
     limitedTitle: 'Limited seats',
     limitedDesc: 'The number of seats in the lecture hall and accommodation is limited. Participation is granted on a first-come, first-served basis.',
-    footnote: '* Final workshop programme will be published in June 2026.',
+    footnote: '* Final workshop programme will be published soon.',
     items: [
       { label: '5 live procedures',          desc: 'Performed in the cath lab by experienced electrophysiologists using various ablation technologies.' },
       { label: '1–2 European transmissions', desc: 'Live cases from partner European centres — real-time multi-centre connections.' },
@@ -217,6 +217,22 @@ export default {
     seeMore: 'See more on our YouTube channel',
   },
 
+  // Committees
+  committee: {
+    scientificTab: 'Scientific Committee',
+    organizingTab: 'Organizing Committee',
+    chair: 'Committee Chair',
+    // Same organizing committee across all editions
+    organizing: [
+      { name: 'Maciej Wójcik',        title: 'Assoc. Prof., MD PhD' },
+      { name: 'Radosław Kiedrowicz',  title: 'Assoc. Prof., MD PhD' },
+      { name: 'Andrzej Hoffmann',     title: 'MD PhD' },
+      { name: 'Paweł Błaszkiewicz',   title: 'MD PhD' },
+      { name: 'Sebastian Wójcik',     title: 'MD' },
+      { name: 'Katarzyna Makarewicz', title: 'MSc' },
+    ],
+  },
+
   // Organizer
   organizer: {
     label: 'Organiser',
@@ -273,7 +289,6 @@ export default {
     navLabel: 'Navigation',
     navLinks: [
       { href: '#edycje',    label: 'Previous editions' },
-      { href: 'https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html', label: 'Register' },
       { href: '/galeria',   label: 'Gallery' },
     ],
     socialLabel: 'Social media',

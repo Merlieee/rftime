@@ -81,7 +81,7 @@ function Home() {
       </div>
       <MediaSection />
       <PatronsSection />
-      <RegistrationCTA />
+      {/* <RegistrationCTA /> */}
       <Footer />
     </div>
   );

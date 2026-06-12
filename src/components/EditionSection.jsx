@@ -4,15 +4,22 @@ import SpeakerCard from './SpeakerCard';
 import ProgramTable from './ProgramTable';
 
 export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId }) {
-  const [tab, setTab] = useState('speakers');
+  const [tab, setTab] = useState('program');
   const [playing, setPlaying] = useState(false);
   const { t } = useTranslation();
 
   const tabLabels = {
     speakers: t('edition.tabSpeakers'),
-    program: t('edition.tabProgram'),
+    scientific: t('committee.scientificTab'),
+    organizing: t('committee.organizingTab'),
     organizer: t('organizer.label'),
+    program: t('edition.tabProgram'),
   };
+
+  // Scientific committee = this edition's faculty, chaired by Maciej Wójcik.
+  // Organizing committee is fixed across editions (from i18n).
+  const scientificMembers = speakers.map((s) => ({ name: s.name, title: s.title }));
+  const organizingMembers = t('committee.organizing', { returnObjects: true });
 
   return (
     <section
@@ -48,8 +55,8 @@ export default function EditionSection({ edition, date, location, theme, speaker
         </div>
 
         {/* Tabs */}
-        <div className="flex border-b border-gray-200 mb-8">
-          {['speakers', 'organizer', 'program'].map((tab_key) => (
+        <div className="flex flex-wrap border-b border-gray-200 mb-8">
+          {['program', 'speakers', 'scientific', 'organizing', 'organizer'].map((tab_key) => (
             <button
               key={tab_key}
               onClick={() => setTab(tab_key)}
@@ -69,6 +76,8 @@ export default function EditionSection({ edition, date, location, theme, speaker
             {speakers.map((s) => <SpeakerCard key={s.name} speaker={s} />)}
           </div>
         )}
+        {tab === 'scientific' && <CommitteeList members={scientificMembers} chairName="Maciej Wójcik" chairLabel={t('committee.chair')} />}
+        {tab === 'organizing' && <CommitteeList members={organizingMembers} chairIndex={0} chairLabel={t('committee.chair')} />}
         {tab === 'program' && <ProgramTable program={program} />}
         {tab === 'organizer' && (
           <div className="flex flex-col sm:flex-row sm:items-stretch gap-8 sm:gap-16 rounded-2xl border border-gray-200 bg-white p-8">
@@ -138,5 +147,30 @@ export default function EditionSection({ edition, date, location, theme, speaker
 
       </div>
     </section>
+  );
+}
+
+// Plain name list shared by the Scientific and Organizing committee tabs.
+// Chair is flagged either by name (scientific) or by index (organizing).
+function CommitteeList({ members, chairName, chairIndex, chairLabel }) {
+  return (
+    <ul className="rounded-2xl border border-gray-200 bg-white divide-y divide-gray-100">
+      {members.map((m, i) => {
+        const isChair = m.name === chairName || i === chairIndex;
+        return (
+          <li key={m.name} className="flex items-center justify-between gap-4 px-6 py-4">
+            <div>
+              <p className="text-sm font-semibold text-gray-900">{m.name}</p>
+              <p className="text-2xs text-sky-600 font-medium mt-0.5">{m.title}</p>
+            </div>
+            {isChair && (
+              <span className="shrink-0 text-2xs font-semibold text-sky-600 uppercase tracking-widest">
+                {chairLabel}
+              </span>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

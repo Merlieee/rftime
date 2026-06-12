@@ -103,7 +103,7 @@ export default {
     freeDesc: 'Warsztaty są całkowicie bezpłatne.',
     limitedTitle: 'Ograniczona liczba miejsc',
     limitedDesc: 'Liczba miejsc na sali wykładowej oraz miejsc noclegowych jest ograniczona. O udziale decyduje kolejność zgłoszeń.',
-    footnote: '* Ostateczny program warsztatów zostanie opublikowany w czerwcu 2026.',
+    footnote: '* Ostateczny program warsztatów zostanie opublikowany wkrótce.',
     items: [
       { label: '5 zabiegów live',          desc: 'Wykonywanych w pracowni przez doświadczonych elektrofizjologów z różnymi technologiami ablacji.' },
       { label: '1–2 transmisje z Europy',  desc: 'Zabiegi live z partnerskich ośrodków europejskich — połączenia wieloośrodkowe w czasie rzeczywistym.' },
@@ -217,6 +217,22 @@ export default {
     seeMore: 'Zobacz więcej na naszym kanale YouTube',
   },
 
+  // Committees
+  committee: {
+    scientificTab: 'Komitet naukowy',
+    organizingTab: 'Komitet organizacyjny',
+    chair: 'Przewodniczący komitetu',
+    // Same organizing committee across all editions
+    organizing: [
+      { name: 'Maciej Wójcik',        title: 'dr hab. n. med.' },
+      { name: 'Radosław Kiedrowicz',  title: 'dr hab. n. med.' },
+      { name: 'Andrzej Hoffmann',     title: 'dr n. med.' },
+      { name: 'Paweł Błaszkiewicz',   title: 'dr n. med.' },
+      { name: 'Sebastian Wójcik',     title: 'lek. med.' },
+      { name: 'Katarzyna Makarewicz', title: 'mgr' },
+    ],
+  },
+
   // Organizer
   organizer: {
     label: 'Organizator',
@@ -273,7 +289,6 @@ export default {
     navLabel: 'Nawigacja',
     navLinks: [
       { href: '#edycje',    label: 'Poprzednie edycje' },
-      { href: 'https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html', label: 'Rejestracja' },
       { href: '/galeria',   label: 'Galeria' },
     ],
     socialLabel: 'Social media',
