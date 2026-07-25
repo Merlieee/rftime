@@ -6,7 +6,7 @@ import ProgramTable from './ProgramTable';
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
 export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel }) {
-  const [tab, setTab] = useState('program');
+  const [tab, setTab] = useState('speakers');
   const [scheduleOpen, setScheduleOpen] = useState(false);
   const [scheduleMaxH, setScheduleMaxH] = useState(COLLAPSED_HEIGHT);
   const [playing, setPlaying] = useState(false);
@@ -76,7 +76,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
 
         {/* Tabs */}
         <div className="flex flex-wrap border-b border-gray-200 mb-8">
-          {['program', 'speakers', 'scientific', 'organizing', 'organizer'].map((tab_key) => (
+          {['speakers', 'program', 'scientific', 'organizing', 'organizer'].map((tab_key) => (
             <button
               key={tab_key}
               onClick={() => setTab(tab_key)}
