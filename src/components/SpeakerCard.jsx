@@ -1,10 +1,16 @@
+import { useTranslation } from 'react-i18next';
+
 export default function SpeakerCard({ speaker }) {
+  const { t } = useTranslation();
   const affiliations = Array.isArray(speaker.location) ? speaker.location : [speaker.location];
   return (
     <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-      <div
-        className="aspect-square bg-cover bg-top"
-        style={{ backgroundImage: `url(${speaker.photo})` }}
+      <img
+        src={speaker.photo}
+        alt={`${speaker.name} — ${t('edition.speakerAlt')}`}
+        loading="lazy"
+        decoding="async"
+        className="aspect-square w-full object-cover object-top"
       />
       <div className="p-4">
         <p className="font-semibold text-gray-900 text-sm">{speaker.name}</p>

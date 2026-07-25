@@ -4,8 +4,13 @@ import { useTranslation } from 'react-i18next';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-const photos2024 = Array.from({ length: 130 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.webp` }));
-const photos2025 = Array.from({ length: 220 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.webp` }));
+// Grid tiles load lightweight thumbnails; the lightbox (slide `src`) uses the full-res original.
+const makePhotos = (year, n) => Array.from({ length: n }, (_, i) => ({
+  src: `/gallery/${year}/${i + 1}.webp`,
+  thumb: `/gallery/${year}/thumb/${i + 1}.webp`,
+}));
+const photos2024 = makePhotos('2024', 130);
+const photos2025 = makePhotos('2025', 220);
 
 function EditionGrid({ year, photos }) {
   const [index, setIndex] = useState(-1);
@@ -27,7 +32,7 @@ function EditionGrid({ year, photos }) {
             style={{ aspectRatio: '4/3' }}
           >
             <img
-              src={photo.src}
+              src={photo.thumb}
               loading="lazy"
               decoding="async"
               alt=""

@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const photos2024 = Array.from({ length: 130 }, (_, i) => ({ src: `/gallery/2024/${i + 1}.webp`, year: '2024' }));
-const photos2025 = Array.from({ length: 220 }, (_, i) => ({ src: `/gallery/2025/${i + 1}.webp`, year: '2025' }));
+const photos2024 = Array.from({ length: 130 }, (_, i) => ({ src: `/gallery/2024/md/${i + 1}.webp`, year: '2024' }));
+const photos2025 = Array.from({ length: 220 }, (_, i) => ({ src: `/gallery/2025/md/${i + 1}.webp`, year: '2025' }));
 
 function shuffle(arr) {
   const a = [...arr];

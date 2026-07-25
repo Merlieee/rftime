@@ -89,7 +89,7 @@ export default {
     quoteAuthor: 'Assoc. Prof. Maciej Wójcik, MD, PhD',
     pillars: [
       { label: 'Live procedures',        desc: 'Ablation transmissions from the cath lab, including multi-centre connections with Barcelona, the US, and Germany.' },
-      { label: 'World-class faculty',    desc: 'Invited specialists from leading cardiology centres across 3 continents.' },
+      { label: 'International expert faculty', desc: 'Specialists from leading electrophysiology centres.' },
       { label: 'High-density 3D mapping', desc: 'Substrate-guided RF ablation based on 3D mapping — pure electrophysiology with the latest technology.' },
       { label: 'Free admission',         desc: 'The workshop is fully free of charge for all registered participants.' },
     ],
@@ -100,23 +100,23 @@ export default {
   editions: {
     e2026: {
       date: 'October 29–30, 2026',
-      theme: '2nd-gen Volt PFA, VT ablation (S3 protocol, dual-energy), EP anatomy',
+      theme: 'Anatomy for electrophysiologists, 3D mapping and complex RF/PFA ablations',
       highlights: [
         { label: '7 live procedures',      desc: 'RF and PFA ablations — Volt, Afferra, TactiFlex Duo, dual-energy PFA/RF' },
         { label: '3 live transmissions',   desc: 'Frankfurt, Barcelona, and Lublin — in real time' },
         { label: '5 expert lectures',      desc: 'Volt PFA, EP anatomy, VT ablation in the S3 protocol' },
-        { label: 'Young EP Corner',        desc: 'Case presentations by young RFtime participants' },
+        { label: 'Case presentations',  desc: 'Interesting EP case presentations by RFtime participants' },
       ],
       speakers: [
-        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland', 'EP Laboratory, Provincial Specialist Hospital, Biała Podlaska, Poland'], talks: ['Follow-up of RFtime 2025 procedures', 'Leading the workshop and live procedures'] },
-        { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Germany'], talks: ['Anatomy for Electrophysiologists, part 1', 'Anatomy for Electrophysiologists, part 2'] },
-        { title: 'Prof., MD, PhD, FEHRA', location: ['CCB at Agaplesion Markus Hospital, Frankfurt am Main, Germany'], talks: ['Live procedure from Frankfurt (Frankfurt approach)', 'AF ablation with the 2nd-generation Volt PFA system'] },
-        { title: 'Prof., MD, PhD', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Germany'], talks: ['How to perform ablation with the Volt PFA catheter — Revolutionary Registry data', 'Live procedure from Frankfurt: AF ablation with the 2nd-gen Volt PFA system'] },
-        { title: 'Prof., MD, PhD, FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Germany', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Germany'], talks: ['PFA ablation of premature ventricular contractions'] },
-        { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, University of Barcelona, Spain'], talks: ['VT ablation in the S3 protocol with a dual-energy PFA/RF catheter', 'Live procedure transmitted from Barcelona'] },
-        { title: 'Assoc. Prof., MD, PhD (Prof. MU Lublin)', location: ['Regional Consultant in Cardiology for the Lublin Province', 'Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland'], talks: ['Live procedure from Lublin: AF ablation — OPAL HDx + FARAVIEW'] },
-        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'], talks: ['Re-ablation of atypical AFL with the TactiFlex Duo catheter', 'Live-procedure operator'] },
-        { title: 'MD, PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre, Medical University of Silesia, Katowice, Poland'], talks: ['AF substrate ablation with the Afferra catheter', 'Live-procedure operator'] },
+        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland', 'EP Laboratory, Provincial Specialist Hospital, Biała Podlaska, Poland'] },
+        { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Germany'] },
+        { title: 'Prof., MD, PhD, FEHRA', location: ['CCB at Agaplesion Markus Hospital, Frankfurt am Main, Germany'] },
+        { title: 'Prof., MD, PhD', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Germany'] },
+        { title: 'Prof., MD, PhD, FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Germany', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Germany'] },
+        { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, University of Barcelona, Spain'] },
+        { title: 'Assoc. Prof., MD, PhD (Prof. MU Lublin)', location: ['Regional Consultant in Cardiology for the Lublin Province', 'Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland'] },
+        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'] },
+        { title: 'MD, PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre, Medical University of Silesia, Katowice, Poland'] },
       ],
       program: [
         {
@@ -162,12 +162,12 @@ export default {
         { label: 'Clinical competition',     desc: 'Special competition for participants with prizes' },
       ],
       speakers: [
-        { title: 'Assoc. Prof., MD, PhD', location: 'UM Lublin / WSS Biała Podlaska',       talks: ['RFtime 2024 procedure follow-up', 'Workshop and live procedure lead'] },
-        { title: 'Prof., MD, PhD',        location: 'Minneapolis, USA',                      talks: ['PFA 2nd generation: Volt™ PFA Catheter, EnSite™ X', 'Epicardial substrate mapping and ablation in complex AF/AT'] },
-        { title: 'Prof., MD, PhD',        location: 'Kerckoff Klinik, Bad Nauheim, Germany', talks: ['Is PFA really the Holy Grail? Complications associated with PFA ablations'] },
-        { title: 'Prof., MD, PhD',        location: 'Universitat de Barcelona, Spain',       talks: ['VT ablation — S3 protocol', 'Live procedure transmitted from Barcelona'] },
-        { title: 'MD, PhD',               location: 'Poland',                                talks: ['Moderator and live procedure operator'] },
-        { title: 'Assoc. Prof., MD, PhD', location: 'Poland',                                talks: ['Moderator and live procedure operator'] },
+        { title: 'Assoc. Prof., MD, PhD', location: 'UM Lublin / WSS Biała Podlaska' },
+        { title: 'Prof., MD, PhD',        location: 'Minneapolis, USA' },
+        { title: 'Prof., MD, PhD',        location: 'Kerckoff Klinik, Bad Nauheim, Germany' },
+        { title: 'Prof., MD, PhD',        location: 'Universitat de Barcelona, Spain' },
+        { title: 'MD, PhD',               location: 'Poland' },
+        { title: 'Assoc. Prof., MD, PhD', location: 'Poland' },
       ],
       program: [
         {
@@ -208,12 +208,12 @@ export default {
         { label: 'Evening meeting',         desc: 'Networking at Uroczysko Zaborek' },
       ],
       speakers: [
-        { title: 'Assoc. Prof., MD, PhD', location: 'UM Lublin / WSS Biała Podlaska',                         talks: ['Development of RF ablation methods', 'Workshop and live procedure lead'] },
-        { title: 'Prof., MD, PhD',        location: 'St. Vincenz Hospital Paderborn / Uni Magdeburg, Germany', talks: ['Atrial Cardiomyopathy (ESC 2024)', 'Live procedure: electrical isolation of the left atrium'] },
-        { title: 'Prof., MD, PhD',        location: 'Minneapolis, USA',                                        talks: ['Clinical Outcomes of Low Voltage Targeted Ablation of AF', 'Left-Right Atrial Separation & LAAO in End-Stage Atrial Myopathy'] },
-        { title: 'Prof., MD, PhD',        location: 'China',                                                   talks: ['Co-author ERASE-AF trial', 'Live procedure operator'] },
-        { title: 'MD, PhD',               location: 'Poland',                                                  talks: ['Moderator and live procedure operator'] },
-        { title: 'Assoc. Prof., MD, PhD', location: 'Poland',                                                  talks: ['Moderator and live procedure operator'] },
+        { title: 'Assoc. Prof., MD, PhD', location: 'UM Lublin / WSS Biała Podlaska' },
+        { title: 'Prof., MD, PhD',        location: 'St. Vincenz Hospital Paderborn / Uni Magdeburg, Germany' },
+        { title: 'Prof., MD, PhD',        location: 'Minneapolis, USA' },
+        { title: 'Prof., MD, PhD',        location: 'China' },
+        { title: 'MD, PhD',               location: 'Poland' },
+        { title: 'Assoc. Prof., MD, PhD', location: 'Poland' },
       ],
       program: [
         {
@@ -251,6 +251,7 @@ export default {
     firstEdition: 'First edition',
     tabSpeakers: 'Speakers',
     tabProgram: 'Programme',
+    speakerAlt: 'RFtime speaker',
     scheduleExpand: 'Show full programme',
     scheduleCollapse: 'Collapse programme',
     recordingsHeading: 'Workshop recordings',
@@ -316,8 +317,8 @@ export default {
   // Registration CTA
   cta: {
     label: 'RFtime 2026 · Biała Podlaska',
-    heading: 'Join the next edition',
-    desc: 'Programme details will be announced soon. Register to be the first to hear about participant enrolment for the 2026 edition. Free admission. First-come, first-served.',
+    heading: 'Join RFtime 2026',
+    desc: 'Workshop admission is free, places allocated on a first-come, first-served basis.',
     button: 'Register now',
     note: 'Registration via WSzS Biała Podlaska',
   },
@@ -325,16 +326,15 @@ export default {
   // Footer
   footer: {
     tagline: 'International Ablation Workshop for Electrophysiologists',
-    location: 'Biała Podlaska · October 2026',
     navLabel: 'Navigation',
     navLinks: [
       { href: '#edycje',    label: 'Previous editions' },
       { href: '/galeria',   label: 'Gallery' },
     ],
+    contactLabel: 'Contact',
     socialLabel: 'Social media',
     copyright: '© 2026 RFtime · All rights reserved',
     privacy: 'Privacy policy',
-    hospital: 'EP Lab · WSzS Biała Podlaska',
     langButton: '🇵🇱 Polski',
   },
 

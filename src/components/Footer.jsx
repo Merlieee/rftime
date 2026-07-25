@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Phone, Mail } from 'lucide-react';
 import { setLang } from '../i18n/index.js';
 
 function FacebookIcon() {
@@ -35,10 +36,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-10 text-sm">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-4 gap-10 text-sm">
         <div>
           <p className="text-white font-semibold text-lg mb-2 relative -top-1">RFtime</p>
-          <p className="text-gray-400 leading-relaxed mb-4">
+          <p className="text-gray-400 leading-relaxed">
             {t('footer.tagline')}
           </p>
         </div>
@@ -49,6 +50,18 @@ export default function Footer() {
             {navLinks.map(({ href, label }) => (
               <a key={label} href={href} className="block text-gray-400 hover:text-white transition-colors">{label}</a>
             ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.contactLabel')}</p>
+          <div className="space-y-2">
+            <a href="tel:+48513874782" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+              <Phone className="w-4 h-4" strokeWidth={1.75} /> +48 513 874 782
+            </a>
+            <a href="mailto:rftime@szpitalbp.pl" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+              <Mail className="w-4 h-4" strokeWidth={1.75} /> rftime@szpitalbp.pl
+            </a>
           </div>
         </div>
 

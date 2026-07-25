@@ -27,9 +27,13 @@ i18n
     interpolation: { escapeValue: false },
   });
 
+// Keep <html lang> in sync so screen readers and search engines see the right language.
+document.documentElement.lang = defaultLang;
+
 export function setLang(lang) {
   localStorage.setItem('rftime-lang', lang);
   i18n.changeLanguage(lang);
+  document.documentElement.lang = lang;
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 

@@ -89,7 +89,7 @@ export default {
     quoteAuthor: 'Dr hab. n. med. Maciej Wójcik',
     pillars: [
       { label: 'Zabiegi na żywo',          desc: 'Transmisje ablacji z sali zabiegowej, w tym połączenia wieloośrodkowe z Barceloną, USA i Niemcami.' },
-      { label: 'Eksperci z całego świata',  desc: 'Zapraszani specjaliści z czołowych ośrodków kardiologicznych na 3 kontynentach.' },
+      { label: 'Międzynarodowe grono ekspertów',  desc: 'Specjaliści z czołowych ośrodków elektrofizjologicznych.' },
       { label: 'Gęste mapowanie 3D',        desc: 'Celowana ablacja RF oparta na mapowaniu substratu — czysta elektrofizjologia z najnowszą technologią.' },
       { label: 'Udział bezpłatny',          desc: 'Warsztaty w pełni bezpłatne dla wszystkich zarejestrowanych uczestników.' },
     ],
@@ -100,23 +100,23 @@ export default {
   editions: {
     e2026: {
       date: '29–30 października 2026',
-      theme: 'Volt PFA II gen., ablacja VT (protokół S3, dual-energy), anatomia EP',
+      theme: 'Anatomia dla elektrofizjologów, mapowanie 3D i złożone ablacje RF/PFA',
       highlights: [
         { label: '7 zabiegów live',        desc: 'Ablacje RF i PFA — Volt, Afferra, TactiFlex Duo, dual-energy PFA/RF' },
         { label: '3 transmisje live',      desc: 'Frankfurt, Barcelona i Lublin — w czasie rzeczywistym' },
         { label: '5 wykładów eksperckich', desc: 'Volt PFA, anatomia EP, ablacja VT w protokole S3' },
-        { label: 'Kącik Młodego Elektrofizjologa', desc: 'Prezentacje przypadków młodych uczestników RFtime' },
+        { label: 'Prezentacje przypadków', desc: 'Prezentacje ciekawych przypadków EP przez uczestników RFtime' },
       ],
       speakers: [
-        { title: 'dr hab. n. med.', location: ['Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska', 'Pracownia EP, Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej, Polska'], talks: ['Follow-up zabiegów RFtime 2025', 'Prowadzenie warsztatów i zabiegów live'] },
-        { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Niemcy'], talks: ['Anatomia dla Elektrofizjologów, część 1-sza', 'Anatomia dla Elektrofizjologów, część 2-ga'] },
-        { title: 'prof. dr hab. n. med., FEHRA', location: ['CCB am Agaplesion Markus Krankenhaus, Frankfurt am Main, Niemcy'], talks: ['Zabieg live z Frankfurtu (Frankfurt approach)', 'Ablacja AF systemem Volt PFA 2-giej generacji'] },
-        { title: 'prof. dr hab. n. med.', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Niemcy'], talks: ['Jak wykonać ablacje cewnikiem Volt PFA — dane Rejestru Revolutionary', 'Zabieg live z Frankfurtu: Ablacja AF systemem Volt PFA 2-giej gen.'] },
-        { title: 'prof. dr hab. n. med., FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Niemcy', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Niemcy'], talks: ['Ablacja PFA dodatkowych pobudzeń komorowych'] },
-        { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, Universitat de Barcelona, Hiszpania'], talks: ['Ablacja VT w protokole S3 cewnikiem dual-energy PFA/RF', 'Zabieg live transmitowany z Barcelony'] },
-        { title: 'dr hab. n. med., prof. UM w Lublinie', location: ['Lubelski konsultant wojewódzki w dziedzinie kardiologii', 'Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska'], talks: ['Zabieg live z Lublina: Ablacja AF — OPAL HDx + FARAVIEW'] },
-        { title: 'dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'], talks: ['Re-ablacja atypowego AFL cewnikiem TactiFlex Duo', 'Operator zabiegów live'] },
-        { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'], talks: ['Ablacja substratu AF cewnikiem Afferra', 'Operator zabiegów live'] },
+        { title: 'dr hab. n. med.', location: ['Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska', 'Pracownia EP, Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej, Polska'] },
+        { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Niemcy'] },
+        { title: 'prof. dr hab. n. med., FEHRA', location: ['CCB am Agaplesion Markus Krankenhaus, Frankfurt am Main, Niemcy'] },
+        { title: 'prof. dr hab. n. med.', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Niemcy'] },
+        { title: 'prof. dr hab. n. med., FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Niemcy', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Niemcy'] },
+        { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, Universitat de Barcelona, Hiszpania'] },
+        { title: 'dr hab. n. med., prof. UM w Lublinie', location: ['Lubelski konsultant wojewódzki w dziedzinie kardiologii', 'Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska'] },
+        { title: 'dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'] },
+        { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'] },
       ],
       program: [
         {
@@ -162,12 +162,12 @@ export default {
         { label: 'Konkurs kliniczny',         desc: 'Specjalny konkurs dla uczestników z nagrodami' },
       ],
       speakers: [
-        { title: 'dr hab. n. med.', location: 'UM Lublin / WSS Biała Podlaska',       talks: ['Follow-up zabiegów RFtime 2024', 'Prowadzenie warsztatów i zabiegów live'] },
-        { title: 'prof. dr',        location: 'Minneapolis, USA',                      talks: ['PFA 2nd generation: Volt™ PFA Catheter, EnSite™ X', 'Epicardial substrate mapping and ablation in complex AF/AT'] },
-        { title: 'prof. dr',        location: 'Kerckoff Klinik, Bad Nauheim, Niemcy', talks: ['Is PFA really the Holy Grail? Complications associated with PFA ablations'] },
-        { title: 'prof. dr',        location: 'Universitat de Barcelona, Hiszpania',  talks: ['Ablacja VT w protokole S3', 'Zabieg live transmitowany z Barcelony'] },
-        { title: 'dr n. med.',      location: 'Polska',                                talks: ['Moderator i operator zabiegów live'] },
-        { title: 'dr hab. n. med.', location: 'Polska',                                talks: ['Moderator i operator zabiegów live'] },
+        { title: 'dr hab. n. med.', location: 'UM Lublin / WSS Biała Podlaska' },
+        { title: 'prof. dr',        location: 'Minneapolis, USA' },
+        { title: 'prof. dr',        location: 'Kerckoff Klinik, Bad Nauheim, Niemcy' },
+        { title: 'prof. dr',        location: 'Universitat de Barcelona, Hiszpania' },
+        { title: 'dr n. med.',      location: 'Polska' },
+        { title: 'dr hab. n. med.', location: 'Polska' },
       ],
       program: [
         {
@@ -208,12 +208,12 @@ export default {
         { label: 'Wieczorne spotkanie',   desc: 'Networking w Uroczysku Zaborek' },
       ],
       speakers: [
-        { title: 'dr hab. n. med.', location: 'UM Lublin / WSS Biała Podlaska',                          talks: ['Rozwój metod ablacji RF', 'Prowadzenie warsztatów i zabiegów live'] },
-        { title: 'prof. dr',        location: 'St. Vincenz Hospital Paderborn / Uni Magdeburg, Niemcy',  talks: ['Atrial Cardiomyopathy (ESC 2024)', 'Zabieg live: izolacja elektryczna lewego przedsionka'] },
-        { title: 'prof. dr',        location: 'Minneapolis, USA',                                        talks: ['Clinical Outcomes of Low Voltage Targeted Ablation of AF', 'Left-Right Atrial Separation & LAAO in End-Stage Atrial Myopathy'] },
-        { title: 'prof. dr',        location: 'Chiny',                                                   talks: ['Co-autor ERASE-AF trial', 'Operator zabiegów live'] },
-        { title: 'dr n. med.',      location: 'Polska',                                                  talks: ['Moderator i operator zabiegów live'] },
-        { title: 'dr hab. n. med.', location: 'Polska',                                                  talks: ['Moderator i operator zabiegów live'] },
+        { title: 'dr hab. n. med.', location: 'UM Lublin / WSS Biała Podlaska' },
+        { title: 'prof. dr',        location: 'St. Vincenz Hospital Paderborn / Uni Magdeburg, Niemcy' },
+        { title: 'prof. dr',        location: 'Minneapolis, USA' },
+        { title: 'prof. dr',        location: 'Chiny' },
+        { title: 'dr n. med.',      location: 'Polska' },
+        { title: 'dr hab. n. med.', location: 'Polska' },
       ],
       program: [
         {
@@ -251,6 +251,7 @@ export default {
     firstEdition: 'Edycja pierwsza',
     tabSpeakers: 'Prelegenci',
     tabProgram: 'Program',
+    speakerAlt: 'prelegent RFtime',
     scheduleExpand: 'Pokaż pełny program',
     scheduleCollapse: 'Zwiń program',
     recordingsHeading: 'Nagrania z warsztatów',
@@ -316,8 +317,8 @@ export default {
   // Registration CTA
   cta: {
     label: 'RFtime 2026 · Biała Podlaska',
-    heading: 'Dołącz do kolejnej edycji',
-    desc: 'Szczegóły programu zostaną ogłoszone wkrótce. Zostaw swoje dane, aby być pierwszym poinformowanym o naborze uczestników na edycję 2026. Udział bezpłatny. Liczy się kolejność zgłoszeń.',
+    heading: 'Dołącz do RFtime 2026',
+    desc: 'Udział w warsztatach bezpłatny, liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
     note: 'Rejestracja przez WSzS w Białej Podlaskiej',
   },
@@ -325,16 +326,15 @@ export default {
   // Footer
   footer: {
     tagline: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów',
-    location: 'Biała Podlaska · Październik 2026',
     navLabel: 'Nawigacja',
     navLinks: [
       { href: '#edycje',    label: 'Poprzednie edycje' },
       { href: '/galeria',   label: 'Galeria' },
     ],
+    contactLabel: 'Kontakt',
     socialLabel: 'Social media',
     copyright: '© 2026 RFtime · Wszystkie prawa zastrzeżone',
     privacy: 'Polityka prywatności',
-    hospital: 'Pracownia Elektrofizjologii WSzS Biała Podlaska',
     langButton: '🇬🇧 English',
   },
 

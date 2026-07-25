@@ -56,6 +56,7 @@ function Home() {
         edition="2026"
         index={0}
         editionLabel={t('edition.thirdEdition')}
+        speakersFirst
         date={e2026.date}
         location="WSS Biała Podlaska"
         theme={e2026.theme}
