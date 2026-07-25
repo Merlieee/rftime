@@ -67,7 +67,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap justify-center gap-3 mt-10">
           <a
-            href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html"
+            href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl.html"
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3.5 rounded-lg transition-colors"
