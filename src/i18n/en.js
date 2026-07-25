@@ -71,6 +71,7 @@ export default {
   // Hero
   hero: {
     date: 'October 29–30, 2026 · WSS Biała Podlaska',
+    dateShort: 'October 29–30, 2026',
     subtitle: 'International Ablation Workshop\nfor Electrophysiologists',
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
     note: 'Registration via WSzS Biała Podlaska',
@@ -95,26 +96,62 @@ export default {
   },
 
   // Program Announcement
-  program: {
-    label: 'RFtime 2026',
-    heading: 'Preliminary workshop programme*',
-    intro: 'The programme includes live procedures performed with various technologies — RF, PFA (TactiFlex Duo, Volt, Affera) — transmissions from European centres, expert lectures, case presentations, and EP simulator sessions. Arrival possible from Wednesday evening.',
-    freeTitle: 'Free admission',
-    freeDesc: 'The workshop is completely free of charge.',
-    limitedTitle: 'Limited seats',
-    limitedDesc: 'The number of seats in the lecture hall and accommodation is limited. Participation is granted on a first-come, first-served basis.',
-    footnote: '* Final workshop programme will be published soon.',
-    items: [
-      { label: '5 live procedures',          desc: 'Performed in the cath lab by experienced electrophysiologists using various ablation technologies.' },
-      { label: '1–2 European transmissions', desc: 'Live cases from partner European centres — real-time multi-centre connections.' },
-      { label: '4–5 expert lectures',        desc: 'Presentations by invited specialists from leading cardiology centres.' },
-      { label: 'Case presentations',         desc: 'Interesting EP cases and procedures prepared by workshop participants.' },
-      { label: 'EP simulators',              desc: 'Transseptal puncture, epicardial puncture, and virtual ablation on high-fidelity simulators.' },
-    ],
-  },
-
   // Edition data (speakers, highlights, program)
   editions: {
+    e2026: {
+      date: 'October 29–30, 2026',
+      theme: '2nd-gen Volt PFA, VT ablation (S3 protocol, dual-energy), EP anatomy',
+      highlights: [
+        { label: '7 live procedures',      desc: 'RF and PFA ablations — Volt, Afferra, TactiFlex Duo, dual-energy PFA/RF' },
+        { label: '3 live transmissions',   desc: 'Frankfurt, Barcelona, and Lublin — in real time' },
+        { label: '5 expert lectures',      desc: 'Volt PFA, EP anatomy, VT ablation in the S3 protocol' },
+        { label: 'Young EP Corner',        desc: 'Case presentations by young RFtime participants' },
+      ],
+      speakers: [
+        { title: 'Assoc. Prof., MD PhD', location: ['Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland', 'EP Laboratory, Provincial Specialist Hospital, Biała Podlaska, Poland'], talks: ['Follow-up of RFtime 2025 procedures', 'Leading the workshop and live procedures'] },
+        { title: 'Assoc. Prof., MD, PhD, FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Germany'], talks: ['Anatomy for Electrophysiologists, part 1', 'Anatomy for Electrophysiologists, part 2'] },
+        { title: 'Prof., MD, FEHRA', location: ['CCB at Agaplesion Markus Hospital, Frankfurt am Main, Germany'], talks: ['Live procedure from Frankfurt (Frankfurt approach)', 'AF ablation with the 2nd-generation Volt PFA system'] },
+        { title: 'Prof., MD', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Germany'], talks: ['How to perform ablation with the Volt PFA catheter — Revolutionary Registry data', 'Live procedure from Frankfurt: AF ablation with the 2nd-gen Volt PFA system'] },
+        { title: 'Prof., MD, FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Germany', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Germany'], talks: ['PFA ablation of premature ventricular contractions'] },
+        { title: 'MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute', 'Hospital Clínic, University of Barcelona, Spain'], talks: ['VT ablation in the S3 protocol with a dual-energy PFA/RF catheter', 'Live procedure transmitted from Barcelona'] },
+        { title: 'Assoc. Prof., MD PhD (Prof. MU Lublin)', location: ['Regional Consultant in Cardiology for the Lublin Province', 'Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland'], talks: ['Live procedure from Lublin: AF ablation — OPAL HDx + FARAVIEW'] },
+        { title: 'Assoc. Prof., MD PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'], talks: ['Re-ablation of atypical AFL with the TactiFlex Duo catheter', 'Live-procedure operator'] },
+        { title: 'MD PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre', 'Medical University of Silesia, Katowice, Poland'], talks: ['AF substrate ablation with the Afferra catheter', 'Live-procedure operator'] },
+      ],
+      program: [
+        {
+          day: 'Thursday 29.10',
+          items: [
+            { time: '9:00–9:15',   title: 'Workshop opening',                                                                    speaker: 'M. Wójcik, WSzS Management' },
+            { time: '9:15–9:30',   title: 'Follow-up of RFtime 2025 procedures (one-year)',                                       speaker: 'P. Błaszkiewicz, M. Wójcik' },
+            { time: '9:30–10:00',  title: 'Lecture: How to perform Volt PFA ablation (Revolutionary Registry data)',             speaker: 'B. Schmidt, J. Chun' },
+            { time: '10:00–11:30', title: 'Live from Frankfurt (transmitted): AF ablation with the 2nd-gen Volt PFA system',     speaker: 'J. Chun, B. Schmidt' },
+            { time: '10:30–12:45', title: 'Live procedure: Beyond-PVI ablation with the 2nd-generation Volt PFA system',         speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '12:45–13:30', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
+            { time: '13:30–14:15', title: 'Lecture: Anatomy for Electrophysiologists, part 1',                                  speaker: 'M. Didenko' },
+            { time: '14:15–14:30', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
+            { time: '14:30–15:15', title: 'Lecture: Anatomy for Electrophysiologists, part 2',                                  speaker: 'M. Didenko' },
+            { time: '15:15–16:30', title: 'Live procedure: Re-ablation of atypical AFL with the TactiFlex Duo catheter',        speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz' },
+            { time: '16:30–17:00', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
+            { time: '17:00–19:00', title: 'Live procedure: AF substrate ablation with the Afferra catheter',                    speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
+            { time: '19:00–20:00', title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
+            { time: '21:00',       title: 'RFtime Evening Gathering',                                                           speaker: 'Uroczysko Zaborek' },
+          ],
+        },
+        {
+          day: 'Friday 30.10',
+          items: [
+            { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                        speaker: 'R. Tilz' },
+            { time: '10:00–10:15', title: 'Lecture: VT ablation in the S3 protocol with a dual-energy PFA/RF catheter',         speaker: 'I. Roca-Luque' },
+            { time: '10:15–12:00', title: 'Live from Barcelona: VT ablation — S3 protocol with a dual-energy PFA/RF catheter',  speaker: 'I. Roca-Luque' },
+            { time: '10:45–13:00', title: 'Live Biała Podlaska: VT ablation or AF/AT substrate re-ablation',                    speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '13:00–14:30', title: 'Live from Lublin: AF ablation — OPAL HDx Software 7.0 + FARAVIEW',                    speaker: 'A. Głowniak' },
+            { time: '14:30–15:30', title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
+            { time: '15:30–16:00', title: 'Summary and closing of the workshop',                                               speaker: 'M. Wójcik, R. Kiedrowicz, A. Hoffmann' },
+          ],
+        },
+      ],
+    },
     e2025: {
       date: '23–24 October 2025',
       theme: 'PFA 2nd gen., VT ablation, epicardial mapping',
@@ -209,10 +246,13 @@ export default {
 
   // Edition Section
   edition: {
+    thirdEdition: 'Third edition',
     secondEdition: 'Second edition',
     firstEdition: 'First edition',
     tabSpeakers: 'Speakers',
     tabProgram: 'Programme',
+    scheduleExpand: 'Show full programme',
+    scheduleCollapse: 'Collapse programme',
     recordingsHeading: 'Workshop recordings',
     seeMore: 'See more on our YouTube channel',
   },

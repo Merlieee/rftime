@@ -1,12 +1,32 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import SpeakerCard from './SpeakerCard';
 import ProgramTable from './ProgramTable';
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId }) {
+const COLLAPSED_HEIGHT = 448; // ~28rem preview
+
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel }) {
   const [tab, setTab] = useState('program');
+  const [scheduleOpen, setScheduleOpen] = useState(false);
+  const [scheduleMaxH, setScheduleMaxH] = useState(COLLAPSED_HEIGHT);
   const [playing, setPlaying] = useState(false);
+  const scheduleRef = useRef(null);
+  const sectionBg = index % 2 === 0 ? 'from-gray-50' : 'from-white';
   const { t } = useTranslation();
+
+  // Animate max-height between the collapsed preview and the measured full height,
+  // the same smooth reveal as the media section's "show more" CTA.
+  const toggleSchedule = () => {
+    const full = scheduleRef.current?.scrollHeight ?? COLLAPSED_HEIGHT;
+    if (scheduleOpen) {
+      setScheduleMaxH(full);
+      requestAnimationFrame(() => setScheduleMaxH(COLLAPSED_HEIGHT));
+      setScheduleOpen(false);
+    } else {
+      setScheduleMaxH(full);
+      setScheduleOpen(true);
+    }
+  };
 
   const tabLabels = {
     speakers: t('edition.tabSpeakers'),
@@ -32,7 +52,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
           <div>
             <span className="inline-block text-xs font-semibold text-sky-600 uppercase tracking-widest mb-2">
-              {index === 0 ? t('edition.secondEdition') : t('edition.firstEdition')}
+              {editionLabel ?? (index === 0 ? t('edition.secondEdition') : t('edition.firstEdition'))}
             </span>
             <h2 className="text-3xl font-bold text-gray-900 tracking-tight">RFtime {edition}</h2>
             <p className="text-gray-500 text-sm mt-1">{theme}</p>
@@ -78,7 +98,28 @@ export default function EditionSection({ edition, date, location, theme, speaker
         )}
         {tab === 'scientific' && <CommitteeList members={scientificMembers} chairName="Maciej Wójcik" chairLabel={t('committee.chair')} />}
         {tab === 'organizing' && <CommitteeList members={organizingMembers} chairIndex={0} chairLabel={t('committee.chair')} />}
-        {tab === 'program' && <ProgramTable program={program} />}
+        {tab === 'program' && (
+          <div>
+            <div
+              className="relative overflow-hidden transition-[max-height] duration-300 ease-in-out"
+              style={{ maxHeight: scheduleMaxH === 'none' ? 'none' : `${scheduleMaxH}px` }}
+              onTransitionEnd={() => { if (scheduleOpen) setScheduleMaxH('none'); }}
+            >
+              <div ref={scheduleRef}>
+                <ProgramTable program={program} />
+              </div>
+              {!scheduleOpen && (
+                <div className={`absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t ${sectionBg} to-transparent pointer-events-none`} />
+              )}
+            </div>
+            <button
+              onClick={toggleSchedule}
+              className="mt-1 w-full flex items-center justify-center gap-2 py-4 border-t border-gray-100 text-sm font-medium text-gray-400 hover:underline cursor-pointer"
+            >
+              {scheduleOpen ? t('edition.scheduleCollapse') : t('edition.scheduleExpand')}&nbsp;&nbsp;{scheduleOpen ? '↑' : '↓'}
+            </button>
+          </div>
+        )}
         {tab === 'organizer' && (
           <div className="flex flex-col sm:flex-row sm:items-stretch gap-8 sm:gap-16 rounded-2xl border border-gray-200 bg-white p-8">
             <div>

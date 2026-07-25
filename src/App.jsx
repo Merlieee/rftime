@@ -26,23 +26,25 @@ import PatronsSection from './components/PatronsSection';
 import MediaSection from './components/MediaSection';
 import RegistrationCTA from './components/RegistrationCTA';
 import PhotoCarousel from './components/PhotoCarousel';
-import ProgramAnnouncement from './components/ProgramAnnouncement';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { useTranslation } from 'react-i18next';
 import {
-  speakerBase2024, speakerBase2025,
-  highlightIcons2024, highlightIcons2025,
+  speakerBase2024, speakerBase2025, speakerBase2026,
+  highlightIcons2024, highlightIcons2025, highlightIcons2026,
 } from './data/content';
 
 function Home() {
   const { t } = useTranslation();
+  const e2026 = t('editions.e2026', { returnObjects: true });
   const e2025 = t('editions.e2025', { returnObjects: true });
   const e2024 = t('editions.e2024', { returnObjects: true });
 
+  const speakers2026   = speakerBase2026.map((s, i) => ({ ...s, ...e2026.speakers[i] }));
   const speakers2025   = speakerBase2025.map((s, i) => ({ ...s, ...e2025.speakers[i] }));
   const speakers2024   = speakerBase2024.map((s, i) => ({ ...s, ...e2024.speakers[i] }));
+  const highlights2026 = e2026.highlights.map((h, i) => ({ ...h, icon: highlightIcons2026[i] }));
   const highlights2025 = e2025.highlights.map((h, i) => ({ ...h, icon: highlightIcons2025[i] }));
   const highlights2024 = e2024.highlights.map((h, i) => ({ ...h, icon: highlightIcons2024[i] }));
 
@@ -50,7 +52,18 @@ function Home() {
     <div>
       <Hero />
       <About />
-      <ProgramAnnouncement />
+      <EditionSection
+        edition="2026"
+        index={0}
+        editionLabel={t('edition.thirdEdition')}
+        date={e2026.date}
+        location="WSS Biała Podlaska"
+        theme={e2026.theme}
+        speakers={speakers2026}
+        highlights={highlights2026}
+        program={e2026.program}
+        accent="pink"
+      />
       <div id="carousel" className="pt-10 pb-10 bg-white"><PhotoCarousel /></div>
       <div id="edycje">
         <EditionSection
@@ -81,7 +94,7 @@ function Home() {
       </div>
       <MediaSection />
       <PatronsSection />
-      {/* <RegistrationCTA /> */}
+      <RegistrationCTA />
       <Footer />
     </div>
   );

@@ -1,4 +1,16 @@
-import { Video, Globe, ClipboardCheck, Users, Zap, Activity, Trophy } from 'lucide-react';
+import { Video, Globe, ClipboardCheck, Users, Zap, Activity, Trophy, Radio, Mic } from 'lucide-react';
+
+export const speakerBase2026 = [
+  { name: 'Maciej Wójcik',       title: 'dr hab. n. med.', photo: '/speakers/maciej-wojcik-lublin-poland-web.webp' },
+  { name: 'Maxim Didenko',       title: 'dr n. med.',      photo: '/speakers/RFtime-Max-Didenko.webp' },
+  { name: 'Julian Chun',         title: 'prof. dr',        photo: '/speakers/RFtime-Julian-Chun.webp' },
+  { name: 'Boris Schmidt',       title: 'prof. dr',        photo: '/speakers/RFtime-Boris-Schmidt.webp' },
+  { name: 'Roland Tilz',         title: 'prof. dr',        photo: '/speakers/RFtime-Roland-Tilz.webp' },
+  { name: 'Ivo Roca-Luque',      title: 'prof. dr',        photo: '/speakers/RFtime-Ivo-Roca.webp' },
+  { name: 'Andrzej Głowniak',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Andrzej-Glowniak.webp' },
+  { name: 'Radosław Kiedrowicz', title: 'dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
+  { name: 'Andrzej Hoffmann',    title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
+];
 
 export const speakerBase2024 = [
   { name: 'Maciej Wójcik',          title: 'dr hab. n. med.', photo: '/speakers/maciej-wojcik-lublin-poland-web.webp' },
@@ -20,6 +32,7 @@ export const speakerBase2025 = [
 
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
 export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
+export const highlightIcons2026 = [Activity, Radio, Mic, Users];
 
 // Media coverage — TV segments and press articles.
 // Titles live in i18n (media.tv / media.articles), merged by index.

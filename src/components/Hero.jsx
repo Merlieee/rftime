@@ -42,6 +42,10 @@ export default function Hero() {
       />
 
       <div className="relative z-10 w-full max-w-3xl mx-auto px-6 md:px-8 lg:px-12 py-16 flex flex-col items-center text-center">
+        <p className="text-sm font-semibold tracking-[0.2em] uppercase text-white/80 mb-4">
+          {t('hero.dateShort')}
+        </p>
+
         <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-[0.95] text-white mb-6 select-none">
           RFtime 2026
         </h1>
@@ -61,10 +65,25 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Hero CTAs hidden — register (hero.register) and editions (hero.editions) buttons.
-            Restore the flex container with both <a> links to re-enable.
-            register href: https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html
-            editions href: #edycje */}
+        <div className="flex flex-wrap justify-center gap-3 mt-10">
+          <a
+            href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl_2026.html"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3.5 rounded-lg transition-colors"
+            style={{ background: 'white', color: '#233889' }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.88)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'white'}
+          >
+            {t('hero.register')}
+          </a>
+          <a
+            href="#edycje"
+            className="inline-flex items-center gap-2 border border-white/50 text-white text-sm font-medium px-7 py-3.5 rounded-lg transition-colors hover:border-white hover:bg-white/10"
+          >
+            {t('hero.editions')}
+          </a>
+        </div>
       </div>
     </section>
   );

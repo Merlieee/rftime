@@ -71,6 +71,7 @@ export default {
   // Hero
   hero: {
     date: '29–30 października 2026 · WSS Biała Podlaska',
+    dateShort: '29–30 października 2026',
     subtitle: 'Międzynarodowe Warsztaty Ablacyjne\ndla Elektrofizjologów',
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
     note: 'Rejestracja przez WSzS w Białej Podlaskiej',
@@ -95,26 +96,62 @@ export default {
   },
 
   // Program Announcement
-  program: {
-    label: 'RFtime 2026',
-    heading: 'Wstępny program warsztatów*',
-    intro: 'W programie zabiegi live wykonywane różnymi technologiami — RF, PFA (TactiFlex Duo, Volt, Affera) — transmisje z europejskich ośrodków, wykłady eksperckie, prezentacje przypadków oraz sesje na symulatorach EP. Przyjazd możliwy już od środy wieczorem.',
-    freeTitle: 'Udział bezpłatny',
-    freeDesc: 'Warsztaty są całkowicie bezpłatne.',
-    limitedTitle: 'Ograniczona liczba miejsc',
-    limitedDesc: 'Liczba miejsc na sali wykładowej oraz miejsc noclegowych jest ograniczona. O udziale decyduje kolejność zgłoszeń.',
-    footnote: '* Ostateczny program warsztatów zostanie opublikowany wkrótce.',
-    items: [
-      { label: '5 zabiegów live',          desc: 'Wykonywanych w pracowni przez doświadczonych elektrofizjologów z różnymi technologiami ablacji.' },
-      { label: '1–2 transmisje z Europy',  desc: 'Zabiegi live z partnerskich ośrodków europejskich — połączenia wieloośrodkowe w czasie rzeczywistym.' },
-      { label: '4–5 wykładów eksperckich', desc: 'Prelekcje zaproszonych specjalistów z czołowych ośrodków kardiologicznych.' },
-      { label: 'Prezentacje przypadków',   desc: 'Ciekawe przypadki i zabiegi EP przygotowane przez uczestników warsztatów.' },
-      { label: 'Symulatory EP',            desc: 'Nakłucie transeptalne, nakłucie epikardialne i wirtualna ablacja na symulatorach wysokiej wierności.' },
-    ],
-  },
-
   // Edition data (speakers, highlights, program)
   editions: {
+    e2026: {
+      date: '29–30 października 2026',
+      theme: 'Volt PFA II gen., ablacja VT (protokół S3, dual-energy), anatomia EP',
+      highlights: [
+        { label: '7 zabiegów live',        desc: 'Ablacje RF i PFA — Volt, Afferra, TactiFlex Duo, dual-energy PFA/RF' },
+        { label: '3 transmisje live',      desc: 'Frankfurt, Barcelona i Lublin — w czasie rzeczywistym' },
+        { label: '5 wykładów eksperckich', desc: 'Volt PFA, anatomia EP, ablacja VT w protokole S3' },
+        { label: 'Kącik Młodego Elektrofizjologa', desc: 'Prezentacje przypadków młodych uczestników RFtime' },
+      ],
+      speakers: [
+        { title: 'dr hab. n. med.', location: ['Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska', 'Pracownia EP, Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej, Polska'], talks: ['Follow-up zabiegów RFtime 2025', 'Prowadzenie warsztatów i zabiegów live'] },
+        { title: 'dr hab. n. med., FESC, FEHRA', location: ['Principal Training/Education Specialist, Training Academy CAS EurAsia, Niemcy'], talks: ['Anatomia dla Elektrofizjologów, część 1-sza', 'Anatomia dla Elektrofizjologów, część 2-ga'] },
+        { title: 'prof. dr med., FEHRA', location: ['CCB am Agaplesion Markus Krankenhaus, Frankfurt am Main, Niemcy'], talks: ['Zabieg live z Frankfurtu (Frankfurt approach)', 'Ablacja AF systemem Volt PFA 2-giej generacji'] },
+        { title: 'prof. dr med.', location: ['MVZ CCB Frankfurt und Main-Taunus GbR, Frankfurt am Main, Niemcy'], talks: ['Jak wykonać ablacje cewnikiem Volt PFA — dane Rejestru Revolutionary', 'Zabieg live z Frankfurtu: Ablacja AF systemem Volt PFA 2-giej gen.'] },
+        { title: 'prof. dr med., FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Niemcy', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Niemcy'], talks: ['Ablacja PFA dodatkowych pobudzeń komorowych'] },
+        { title: 'MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute', 'Hospital Clínic, Universitat de Barcelona, Hiszpania'], talks: ['Ablacja VT w protokole S3 cewnikiem dual-energy PFA/RF', 'Zabieg live transmitowany z Barcelony'] },
+        { title: 'dr hab. n. med., prof. UM w Lublinie', location: ['Lubelski konsultant wojewódzki w dziedzinie kardiologii', 'Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska'], talks: ['Zabieg live z Lublina: Ablacja AF — OPAL HDx + FARAVIEW'] },
+        { title: 'dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'], talks: ['Re-ablacja atypowego AFL cewnikiem TactiFlex Duo', 'Operator zabiegów live'] },
+        { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca', 'Śląski Uniwersytet Medyczny w Katowicach, Polska'], talks: ['Ablacja substratu AF cewnikiem Afferra', 'Operator zabiegów live'] },
+      ],
+      program: [
+        {
+          day: 'Czwartek 29.10',
+          items: [
+            { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                                                          speaker: 'M. Wójcik, Dyrekcja WSzS' },
+            { time: '9:15–9:30',   title: 'Follow-up zabiegów RFtime 2025 (roczny)',                                                                       speaker: 'P. Błaszkiewicz, M. Wójcik' },
+            { time: '9:30–10:00',  title: 'Wykład: Jak wykonać ablacje cewnikiem Volt PFA (dane Rejestru Revolutionary)',                                  speaker: 'B. Schmidt, J. Chun' },
+            { time: '10:00–11:30', title: 'Zabieg live z Frankfurtu (transmitowany): Ablacja AF systemem Volt PFA 2-giej gen.',                            speaker: 'J. Chun, B. Schmidt' },
+            { time: '10:30–12:45', title: 'Zabieg na żywo: Ablacja poza PVI systemem Volt PFA 2-giej generacji',                                            speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '12:45–13:30', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
+            { time: '13:30–14:15', title: 'Wykład: Anatomia dla Elektrofizjologów, część 1-sza',                                                            speaker: 'M. Didenko' },
+            { time: '14:15–14:30', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
+            { time: '14:30–15:15', title: 'Wykład: Anatomia dla Elektrofizjologów, część 2-ga',                                                             speaker: 'M. Didenko' },
+            { time: '15:15–16:30', title: 'Zabieg live: Re-ablacja atypowego AFL cewnikiem TactiFlex Duo',                                                  speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz' },
+            { time: '16:30–17:00', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
+            { time: '17:00–19:00', title: 'Zabieg live: Ablacja substratu AF cewnikiem Afferra',                                                            speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
+            { time: '19:00–20:00', title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                     speaker: 'Moderatorzy: TBC' },
+            { time: '21:00',       title: 'Wieczorne Spotkanie RFtime',                                                                                     speaker: 'Uroczysko Zaborek' },
+          ],
+        },
+        {
+          day: 'Piątek 30.10',
+          items: [
+            { time: '9:30–10:00',  title: 'Wykład: Ablacja PFA dodatkowych pobudzeń komorowych',                                                            speaker: 'R. Tilz' },
+            { time: '10:00–10:15', title: 'Wykład: Ablacja VT w protokole S3 cewnikiem dual-energy PFA/RF',                                                 speaker: 'I. Roca-Luque' },
+            { time: '10:15–12:00', title: 'Zabieg live z Barcelony: Ablacja VT — protokół S3 z cewnikiem dual-energy PFA/RF',                               speaker: 'I. Roca-Luque' },
+            { time: '10:45–13:00', title: 'Zabieg live Biała Podlaska: Ablacja VT lub re-ablacja substratu AF/AT',                                          speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '13:00–14:30', title: 'Zabieg live z Lublina: Ablacja AF — OPAL HDx Software 7.0 + FARAVIEW',                                            speaker: 'A. Głowniak' },
+            { time: '14:30–15:30', title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                     speaker: 'Moderatorzy: TBC' },
+            { time: '15:30–16:00', title: 'Podsumowanie i zakończenie warsztatów',                                                                          speaker: 'M. Wójcik, R. Kiedrowicz, A. Hoffmann' },
+          ],
+        },
+      ],
+    },
     e2025: {
       date: '23–24 października 2025',
       theme: 'PFA II gen., ablacja VT, mapowanie epikardialne',
@@ -209,10 +246,13 @@ export default {
 
   // Edition Section
   edition: {
+    thirdEdition: 'Edycja trzecia',
     secondEdition: 'Edycja druga',
     firstEdition: 'Edycja pierwsza',
     tabSpeakers: 'Prelegenci',
     tabProgram: 'Program',
+    scheduleExpand: 'Pokaż pełny program',
+    scheduleCollapse: 'Zwiń program',
     recordingsHeading: 'Nagrania z warsztatów',
     seeMore: 'Zobacz więcej na naszym kanale YouTube',
   },
