@@ -1,8 +1,8 @@
 export default {
   // Document head — kept in sync with <title> and <meta name="description"> in index.html
   meta: {
-    title: 'RFtime 2026 — Warsztaty Ablacyjne dla Elektrofizjologów',
-    description: 'RFtime 2026 — Warsztaty Ablacyjne dla Elektrofizjologów. Biała Podlaska, październik 2026.',
+    title: 'RFtime 2026 — Międzynarodowe Warsztaty Ablacyjne',
+    description: 'RFtime 2026 — Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów. Biała Podlaska, październik 2026.',
   },
 
   // Banner

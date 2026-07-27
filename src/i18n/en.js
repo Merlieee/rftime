@@ -1,7 +1,7 @@
 export default {
   // Document head — kept in sync with the English share page at public/en/index.html
   meta: {
-    title: 'RFtime 2026 — International Ablation Workshop for Electrophysiologists',
+    title: 'RFtime 2026 — International Ablation Workshop',
     description: 'RFtime 2026 — International Ablation Workshop for Electrophysiologists. Biała Podlaska, October 2026.',
   },
 
