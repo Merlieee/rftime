@@ -1,4 +1,10 @@
 export default {
+  // Document head — kept in sync with the English share page at public/en/index.html
+  meta: {
+    title: 'RFtime 2026 — International Ablation Workshop for Electrophysiologists',
+    description: 'RFtime 2026 — International Ablation Workshop for Electrophysiologists. Biała Podlaska, October 2026.',
+  },
+
   // Banner
   banner: {
     message: 'Ta strona jest dostępna po polsku.',

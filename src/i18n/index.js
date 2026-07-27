@@ -27,13 +27,21 @@ i18n
     interpolation: { escapeValue: false },
   });
 
-// Keep <html lang> in sync so screen readers and search engines see the right language.
-document.documentElement.lang = defaultLang;
+// Keep <html lang>, the tab title and the description in sync so screen readers,
+// bookmarks and search engines see the right language. Link previews are unaffected —
+// scrapers never run this, they read the static tags in index.html and /en/index.html.
+function applyLangToDocument(lang) {
+  document.documentElement.lang = lang;
+  document.title = i18n.t('meta.title', { lng: lang });
+  document.querySelector('meta[name="description"]')?.setAttribute('content', i18n.t('meta.description', { lng: lang }));
+}
+
+applyLangToDocument(defaultLang);
 
 export function setLang(lang) {
   localStorage.setItem('rftime-lang', lang);
   i18n.changeLanguage(lang);
-  document.documentElement.lang = lang;
+  applyLangToDocument(lang);
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
