@@ -80,7 +80,7 @@ export default {
     dateShort: '29–30 października 2026',
     subtitle: 'Międzynarodowe Warsztaty Ablacyjne\ndla Elektrofizjologów',
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
-    note: 'Rejestracja przez WSzS w Białej Podlaskiej',
+    note: 'Rejestracja przez WSS w Białej Podlaskiej',
     register: 'Zgłoś uczestnictwo',
     editions: 'Poprzednie edycje',
   },
@@ -128,15 +128,16 @@ export default {
         {
           day: 'Czwartek 29.10',
           items: [
-            { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                                                          speaker: 'M. Wójcik, Dyrekcja WSzS' },
+            { time: '8:00–9:00',   title: 'Rejestracja uczestników',                                                                                      speaker: '' },
+            { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                                                          speaker: 'M. Wójcik, Dyrekcja WSS' },
             { time: '9:15–9:30',   title: 'Follow-up zabiegów RFtime 2025 (roczny)',                                                                       speaker: 'P. Błaszkiewicz, M. Wójcik' },
-            { time: '9:30–10:00',  title: 'Wykład: Jak wykonać ablacje cewnikiem Volt™ PFA (dane Rejestru Revolutionary)',                                 speaker: 'B. Schmidt, J. Chun' },
-            { time: '10:00–11:30', title: 'Zabieg live z Frankfurtu (transmitowany): Ablacja AF systemem Volt™ PFA 2-giej gen.',                           speaker: 'J. Chun, B. Schmidt' },
-            { time: '10:30–12:45', title: 'Zabieg na żywo: Ablacja poza PVI systemem Volt™ PFA 2-giej generacji',                                           speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '9:30–10:00',  title: 'Wykład: Jak wykonać ablację cewnikiem Volt™ PFA (dane Rejestru Revolutionary)',                                 speaker: 'B. Schmidt, J. Chun' },
+            { time: '10:00–11:30', title: 'Zabieg live z Frankfurtu: Ablacja AF systemem Volt™ PFA II generacji',                                          speaker: 'J. Chun, B. Schmidt' },
+            { time: '10:30–12:45', title: 'Zabieg live: Ablacja poza PVI systemem Volt™ PFA II generacji',                                                  speaker: 'M. Wójcik, P. Błaszkiewicz' },
             { time: '12:45–13:30', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
-            { time: '13:30–14:15', title: 'Wykład: Anatomia dla Elektrofizjologów, część 1-sza',                                                            speaker: 'M. Didenko' },
+            { time: '13:30–14:15', title: 'Wykład: Anatomia dla elektrofizjologów, część 1',                                                                speaker: 'M. Didenko' },
             { time: '14:15–14:30', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
-            { time: '14:30–15:15', title: 'Wykład: Anatomia dla Elektrofizjologów, część 2-ga',                                                             speaker: 'M. Didenko' },
+            { time: '14:30–15:15', title: 'Wykład: Anatomia dla elektrofizjologów, część 2',                                                                speaker: 'M. Didenko' },
             { time: '15:15–16:30', title: 'Zabieg live: Re-ablacja atypowego AFL cewnikiem TactiFlex™ Duo',                                                 speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz' },
             { time: '16:30–17:00', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
             { time: '17:00–19:00', title: 'Zabieg live: Ablacja substratu AF cewnikiem Affera™',                                                           speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
@@ -179,7 +180,7 @@ export default {
         {
           day: 'Czwartek 23.10',
           items: [
-            { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                     speaker: 'M. Wójcik, Dyrekcja WSzS' },
+            { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                     speaker: 'M. Wójcik, Dyrekcja WSS' },
             { time: '9:15–9:30',   title: 'Follow-up zabiegów RFtime 2024 (roczny)',                                  speaker: 'P. Błaszkiewicz, M. Wójcik' },
             { time: '9:30–10:00',  title: 'Wykład: PFA II gen. — Volt™ PFA Catheter, EnSite™ X',                     speaker: 'C. Piorkowski' },
             { time: '10:00–13:30', title: 'Zabiegi live: Ablacja AF systemem PFA 2-giej generacji',                  speaker: 'O: Wójcik, Dąbkowski, Błaszkiewicz' },
@@ -326,7 +327,7 @@ export default {
     heading: 'Dołącz do RFtime 2026',
     desc: 'Udział w warsztatach bezpłatny, liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
-    note: 'Rejestracja przez WSzS w Białej Podlaskiej',
+    note: 'Rejestracja przez WSS w Białej Podlaskiej',
   },
 
   // Footer

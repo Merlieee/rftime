@@ -80,7 +80,7 @@ export default {
     dateShort: 'October 29–30, 2026',
     subtitle: 'International Ablation Workshop\nfor Electrophysiologists',
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
-    note: 'Registration via WSzS Biała Podlaska',
+    note: 'Registration via WSS Biała Podlaska',
     register: 'Register now',
     editions: 'Previous editions',
   },
@@ -128,15 +128,16 @@ export default {
         {
           day: 'Thursday 29.10',
           items: [
-            { time: '9:00–9:15',   title: 'Workshop opening',                                                                    speaker: 'M. Wójcik, WSzS Management' },
+            { time: '8:00–9:00',   title: 'Participant registration',                                                            speaker: '' },
+            { time: '9:00–9:15',   title: 'Workshop opening',                                                                    speaker: 'M. Wójcik, WSS Management' },
             { time: '9:15–9:30',   title: 'Follow-up of RFtime 2025 procedures (one-year)',                                       speaker: 'P. Błaszkiewicz, M. Wójcik' },
             { time: '9:30–10:00',  title: 'Lecture: How to perform Volt™ PFA ablation (Revolutionary Registry data)',            speaker: 'B. Schmidt, J. Chun' },
-            { time: '10:00–11:30', title: 'Live from Frankfurt (transmitted): AF ablation with the 2nd-gen Volt™ PFA system',    speaker: 'J. Chun, B. Schmidt' },
+            { time: '10:00–11:30', title: 'Live procedure from Frankfurt: AF ablation with the 2nd-generation Volt™ PFA system', speaker: 'J. Chun, B. Schmidt' },
             { time: '10:30–12:45', title: 'Live procedure: Beyond-PVI ablation with the 2nd-generation Volt™ PFA system',        speaker: 'M. Wójcik, P. Błaszkiewicz' },
             { time: '12:45–13:30', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
-            { time: '13:30–14:15', title: 'Lecture: Anatomy for Electrophysiologists, part 1',                                  speaker: 'M. Didenko' },
+            { time: '13:30–14:15', title: 'Lecture: Anatomy for electrophysiologists, part 1',                                  speaker: 'M. Didenko' },
             { time: '14:15–14:30', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
-            { time: '14:30–15:15', title: 'Lecture: Anatomy for Electrophysiologists, part 2',                                  speaker: 'M. Didenko' },
+            { time: '14:30–15:15', title: 'Lecture: Anatomy for electrophysiologists, part 2',                                  speaker: 'M. Didenko' },
             { time: '15:15–16:30', title: 'Live procedure: Re-ablation of atypical AFL with the TactiFlex™ Duo catheter',       speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz' },
             { time: '16:30–17:00', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
             { time: '17:00–19:00', title: 'Live procedure: AF substrate ablation with the Affera™ catheter',                    speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
@@ -149,9 +150,9 @@ export default {
           items: [
             { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                        speaker: 'R. Tilz' },
             { time: '10:00–10:15', title: 'Lecture: VT ablation in the S3 protocol with a dual-energy PFA/RF catheter',         speaker: 'I. Roca-Luque' },
-            { time: '10:15–12:00', title: 'Live from Barcelona: VT ablation — S3 protocol with a dual-energy PFA/RF catheter',  speaker: 'I. Roca-Luque' },
-            { time: '10:45–13:00', title: 'Live Biała Podlaska: VT ablation or AF/AT substrate re-ablation',                    speaker: 'M. Wójcik, P. Błaszkiewicz' },
-            { time: '13:00–14:30', title: 'Live from Lublin: AF ablation — OPAL HDx™ Software 7.0 + FARAVIEW™',                  speaker: 'A. Głowniak' },
+            { time: '10:15–12:00', title: 'Live procedure from Barcelona: VT ablation — S3 protocol with a dual-energy PFA/RF catheter', speaker: 'I. Roca-Luque' },
+            { time: '10:45–13:00', title: 'Live procedure from Biała Podlaska: VT ablation or AF/AT substrate re-ablation',      speaker: 'M. Wójcik, P. Błaszkiewicz' },
+            { time: '13:00–14:30', title: 'Live procedure from Lublin: AF ablation — OPAL HDx™ Software 7.0 + FARAVIEW™',        speaker: 'A. Głowniak' },
             { time: '14:30–15:30', title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
             { time: '15:30–16:00', title: 'Summary and closing of the workshop',                                               speaker: 'M. Wójcik, R. Kiedrowicz, A. Hoffmann' },
           ],
@@ -179,7 +180,7 @@ export default {
         {
           day: 'Thursday 23.10',
           items: [
-            { time: '9:00–9:15',   title: 'Workshop opening',                                                   speaker: 'M. Wójcik, WSzS Management' },
+            { time: '9:00–9:15',   title: 'Workshop opening',                                                   speaker: 'M. Wójcik, WSS Management' },
             { time: '9:15–9:30',   title: 'RFtime 2024 procedure follow-up (annual)',                           speaker: 'P. Błaszkiewicz, M. Wójcik' },
             { time: '9:30–10:00',  title: 'Lecture: PFA 2nd gen. — Volt™ PFA Catheter, EnSite™ X',             speaker: 'C. Piorkowski' },
             { time: '10:00–13:30', title: 'Live procedures: AF ablation with 2nd generation PFA system',        speaker: 'O: Wójcik, Dąbkowski, Błaszkiewicz' },
@@ -326,7 +327,7 @@ export default {
     heading: 'Join RFtime 2026',
     desc: 'Workshop admission is free, places allocated on a first-come, first-served basis.',
     button: 'Register now',
-    note: 'Registration via WSzS Biała Podlaska',
+    note: 'Registration via WSS Biała Podlaska',
   },
 
   // Footer
