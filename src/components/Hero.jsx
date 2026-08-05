@@ -65,6 +65,7 @@ export default function Hero() {
           ))}
         </div>
 
+        {/* Hero CTAs hidden until sign-ups open.
         <div className="flex flex-wrap justify-center gap-3 mt-10">
           <a
             href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl.html"
@@ -84,6 +85,7 @@ export default function Hero() {
             {t('hero.editions')}
           </a>
         </div>
+        */}
       </div>
     </section>
   );

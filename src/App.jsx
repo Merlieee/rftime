@@ -24,7 +24,7 @@ import CookieConsent from './components/CookieConsent';
 import EditionSection from './components/EditionSection';
 import PatronsSection from './components/PatronsSection';
 import MediaSection from './components/MediaSection';
-import RegistrationCTA from './components/RegistrationCTA';
+// import RegistrationCTA from './components/RegistrationCTA';
 import PhotoCarousel from './components/PhotoCarousel';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
@@ -95,7 +95,7 @@ function Home() {
       </div>
       <MediaSection />
       <PatronsSection />
-      <RegistrationCTA />
+      {/* <RegistrationCTA /> */}
       <Footer />
     </div>
   );
