@@ -107,7 +107,7 @@ export default {
             'Oficjalna strona internetowa Warsztatów prowadzona jest pod adresem: rftime.pl.',
             'Warsztaty mają charakter naukowo-szkoleniowy. Ich celem jest poszerzanie wiedzy i umiejętności w zakresie kardiologii.',
             'Udział w programie naukowo-szkoleniowym Warsztatów jest dla zakwalifikowanych uczestników całkowicie bezpłatny — Organizator nie pobiera opłat wpisowych.',
-            'Udział w wieczornym spotkaniu towarzyszącym („Wieczorne Spotkanie RFtime”) jest opcjonalny i odpłatny — uczestnicy pokrywają jego koszt we własnym zakresie. Spotkanie nie stanowi części programu naukowo-szkoleniowego i nie jest finansowane ze środków Organizatora ani firm członkowskich Izby POLMED lub MedTech Polska.',
+            'Udział w wieczornym spotkaniu towarzyszącym („Wieczorne Spotkanie RFtime”) jest opcjonalny i odpłatny — uczestnicy pokrywają jego koszt we własnym zakresie. Spotkanie nie stanowi części programu naukowo-szkoleniowego i nie jest finansowane ze środków firm członkowskich Izby POLMED lub MedTech Polska.',
           ] },
         ],
       },

@@ -107,7 +107,7 @@ export default {
             'The official website of the Workshop is: rftime.pl.',
             'The Workshop is scientific and educational in nature. Its purpose is to broaden knowledge and skills in the field of cardiology.',
             'Participation in the scientific and training programme of the Workshop is entirely free of charge for qualified participants — the Organizer charges no entry fees.',
-            'Participation in the accompanying evening gathering (the “RFtime Evening Gathering”) is optional and paid — participants cover its cost themselves. The gathering does not form part of the scientific and training programme and is not funded by the Organizer or by member companies of the POLMED Chamber or MedTech Polska.',
+            'Participation in the accompanying evening gathering (the “RFtime Evening Gathering”) is optional and paid — participants cover its cost themselves. The gathering does not form part of the scientific and training programme and is not funded by member companies of the POLMED Chamber or MedTech Polska.',
           ] },
         ],
       },
