@@ -5,14 +5,14 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, openOnLoad, organizerKey = 'wss' }) {
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
   const tabOrder = speakersFirst
     ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
     : ['program', 'speakers', 'scientific', 'organizing', 'organizer'];
   // Past editions start with every tab shut and stay that way until the reader picks one;
-  // picking the open one closes it again. `openOnLoad` is for the current edition, which
-  // leads with its first tab already showing.
-  const [tab, setTab] = useState(openOnLoad ? tabOrder[0] : null);
+  // picking the open one closes it again. The current edition leads with its first tab
+  // already showing.
+  const [tab, setTab] = useState(current ? tabOrder[0] : null);
   const [scheduleOpen, setScheduleOpen] = useState(false);
   const [scheduleMaxH, setScheduleMaxH] = useState(COLLAPSED_HEIGHT);
   const [playing, setPlaying] = useState(false);
@@ -39,7 +39,9 @@ export default function EditionSection({ edition, date, location, theme, speaker
     scientific: t('committee.scientificTab'),
     organizing: t('committee.organizingTab'),
     organizer: t('organizer.label'),
-    program: t('edition.tabProgram'),
+    // Past editions name the year on the programme tab — scrolled this far down the page,
+    // a bare "Program" gives the reader no way to tell which one they are opening.
+    program: current ? t('edition.tabProgram') : t('edition.tabProgramNamed', { edition }),
   };
 
   // Scientific committee = this edition's faculty, chaired by Maciej Wójcik.

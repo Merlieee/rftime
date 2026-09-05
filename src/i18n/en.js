@@ -384,6 +384,7 @@ export default {
     firstEdition: 'First edition',
     tabSpeakers: 'Speakers',
     tabProgram: 'Programme',
+    tabProgramNamed: 'RFtime {{edition}} programme',
     speakerAlt: 'RFtime speaker',
     scheduleExpand: 'Show full RFtime {{edition}} programme',
     scheduleCollapse: 'Collapse RFtime {{edition}} programme',
