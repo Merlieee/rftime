@@ -246,7 +246,7 @@ export default {
       ],
       program: [
         {
-          day: 'Thursday 29.10',
+          day: 'Thursday 29.10.2026',
           items: [
             { time: '8:00–9:00',   title: 'Participant registration',                                                            speaker: '' },
             { time: '9:00–9:15',   title: 'Workshop opening',                                                                    speaker: 'M. Wójcik, WSS Management' },
@@ -271,7 +271,7 @@ export default {
           ],
         },
         {
-          day: 'Friday 30.10',
+          day: 'Friday 30.10.2026',
           items: [
             { time: '9:00–9:30',   title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
             { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                        speaker: 'R. Tilz' },

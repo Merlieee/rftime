@@ -246,7 +246,7 @@ export default {
       ],
       program: [
         {
-          day: 'Czwartek 29.10',
+          day: 'Czwartek 29.10.2026',
           items: [
             { time: '8:00–9:00',   title: 'Rejestracja uczestników',                                                                                      speaker: '' },
             { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                                                          speaker: 'M. Wójcik, Dyrekcja WSS' },
@@ -271,7 +271,7 @@ export default {
           ],
         },
         {
-          day: 'Piątek 30.10',
+          day: 'Piątek 30.10.2026',
           items: [
             { time: '9:00–9:30',   title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                   speaker: 'Moderatorzy: TBC' },
             { time: '9:30–10:00',  title: 'Wykład: Ablacja PFA dodatkowych pobudzeń komorowych',                                                            speaker: 'R. Tilz' },
