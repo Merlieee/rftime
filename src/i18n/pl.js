@@ -92,7 +92,7 @@ export default {
   // is conditional on a decision that had not arrived when this was written.
   termsPage: {
     title: 'Regulamin Warsztatów naukowo-szkoleniowych RFtime 2026',
-    updated: 'Ostatnia aktualizacja: 1 września 2026 r.',
+    updated: 'Ostatnia aktualizacja: 5 września 2026 r.',
     back: 'Powrót na stronę główną',
     note: '',
     intro: 'Wersja z warunkowymi zapisami dotyczącymi akredytacji PTK — do stosowania do czasu otrzymania decyzji Polskiego Towarzystwa Kardiologicznego.',
@@ -106,7 +106,8 @@ export default {
             'Organizatorem Warsztatów jest **Elkardia Sp. z o.o.** z siedzibą w Lublinie (20-091), ul. Rotmistrza Witolda Pileckiego 23/20, wpisana do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego, prowadząca działalność m.in. w zakresie edukacji (PKD 85), zwana dalej „Organizatorem”.',
             'Oficjalna strona internetowa Warsztatów prowadzona jest pod adresem: rftime.pl.',
             'Warsztaty mają charakter naukowo-szkoleniowy. Ich celem jest poszerzanie wiedzy i umiejętności w zakresie kardiologii.',
-            'Udział w Warsztatach dla zakwalifikowanych uczestników jest całkowicie bezpłatny. Organizator nie pobiera opłat wpisowych.',
+            'Udział w programie naukowo-szkoleniowym Warsztatów jest dla zakwalifikowanych uczestników całkowicie bezpłatny — Organizator nie pobiera opłat wpisowych.',
+            'Udział w wieczornym spotkaniu towarzyszącym („Wieczorne Spotkanie RFtime”) jest opcjonalny i odpłatny — uczestnicy pokrywają jego koszt we własnym zakresie. Spotkanie nie stanowi części programu naukowo-szkoleniowego i nie jest finansowane ze środków Organizatora ani firm członkowskich Izby POLMED lub MedTech Polska.',
           ] },
         ],
       },

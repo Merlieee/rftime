@@ -92,7 +92,7 @@ export default {
   // arrived when this was written.
   termsPage: {
     title: 'Terms and conditions of the RFtime 2026 scientific and training workshop',
-    updated: 'Last updated: 1 September 2026',
+    updated: 'Last updated: 5 September 2026',
     back: 'Back to homepage',
     note: 'This English version is provided for convenience. The Polish version of these terms is the legally binding text; in the event of any discrepancy, the Polish version prevails.',
     intro: 'Version with conditional provisions concerning PTK accreditation — to be applied until the decision of the Polish Cardiac Society is received.',
@@ -106,7 +106,8 @@ export default {
             'The organizer of the Workshop is **Elkardia Sp. z o.o.**, seated in Lublin (20-091), ul. Rotmistrza Witolda Pileckiego 23/20, Poland, entered in the Register of Entrepreneurs of the National Court Register, operating among others in the field of education (PKD 85), hereinafter the “Organizer”.',
             'The official website of the Workshop is: rftime.pl.',
             'The Workshop is scientific and educational in nature. Its purpose is to broaden knowledge and skills in the field of cardiology.',
-            'Participation in the Workshop is entirely free of charge for qualified participants. The Organizer charges no entry fees.',
+            'Participation in the scientific and training programme of the Workshop is entirely free of charge for qualified participants — the Organizer charges no entry fees.',
+            'Participation in the accompanying evening gathering (the “RFtime Evening Gathering”) is optional and paid — participants cover its cost themselves. The gathering does not form part of the scientific and training programme and is not funded by the Organizer or by member companies of the POLMED Chamber or MedTech Polska.',
           ] },
         ],
       },
