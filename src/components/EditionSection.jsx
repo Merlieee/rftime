@@ -5,11 +5,14 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, organizerKey = 'wss' }) {
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, openOnLoad, organizerKey = 'wss' }) {
   const tabOrder = speakersFirst
     ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
     : ['program', 'speakers', 'scientific', 'organizing', 'organizer'];
-  const [tab, setTab] = useState(tabOrder[0]);
+  // Past editions start with every tab shut and stay that way until the reader picks one;
+  // picking the open one closes it again. `openOnLoad` is for the current edition, which
+  // leads with its first tab already showing.
+  const [tab, setTab] = useState(openOnLoad ? tabOrder[0] : null);
   const [scheduleOpen, setScheduleOpen] = useState(false);
   const [scheduleMaxH, setScheduleMaxH] = useState(COLLAPSED_HEIGHT);
   const [playing, setPlaying] = useState(false);
@@ -78,11 +81,12 @@ export default function EditionSection({ edition, date, location, theme, speaker
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap border-b border-gray-200 mb-8">
+        <div className={`flex flex-wrap border-b border-gray-200 ${tab ? 'mb-8' : ''}`}>
           {tabOrder.map((tab_key) => (
             <button
               key={tab_key}
-              onClick={() => setTab(tab_key)}
+              onClick={() => setTab((open) => (open === tab_key ? null : tab_key))}
+              aria-expanded={tab === tab_key}
               className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors cursor-pointer ${
                 tab === tab_key
                   ? 'border-sky-600 text-sky-600'
@@ -119,7 +123,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
               onClick={toggleSchedule}
               className="mt-1 w-full flex items-center justify-center gap-2 py-4 border-t border-gray-100 text-sm font-medium text-gray-400 hover:underline cursor-pointer"
             >
-              {scheduleOpen ? t('edition.scheduleCollapse') : t('edition.scheduleExpand')}&nbsp;&nbsp;{scheduleOpen ? '↑' : '↓'}
+              {t(scheduleOpen ? 'edition.scheduleCollapse' : 'edition.scheduleExpand', { edition })}&nbsp;&nbsp;{scheduleOpen ? '↑' : '↓'}
             </button>
           </div>
         )}
@@ -146,7 +150,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-widest mb-5">
-              {t('edition.recordingsHeading')}
+              {t('edition.recordingsHeading', { edition })}
             </h3>
             <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-sm border border-gray-200">
               {playing ? (

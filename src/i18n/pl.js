@@ -304,7 +304,7 @@ export default {
       ],
       program: [
         {
-          day: 'Czwartek 23.10',
+          day: 'Czwartek 23.10.2025',
           items: [
             { time: '9:00–9:15',   title: 'Otwarcie warsztatów',                                                     speaker: 'M. Wójcik, Dyrekcja WSS' },
             { time: '9:15–9:30',   title: 'Follow-up zabiegów RFtime 2024 (roczny)',                                  speaker: 'P. Błaszkiewicz, M. Wójcik' },
@@ -318,7 +318,7 @@ export default {
           ],
         },
         {
-          day: 'Piątek 24.10',
+          day: 'Piątek 24.10.2025',
           items: [
             { time: '9:30–10:00',  title: 'Wykład: Ablacja VT w protokole S3',                              speaker: 'Prof. I. Roca-Luque' },
             { time: '10:00–13:30', title: 'Zabieg live z Barcelony: Ablacja VT — protokół S3',               speaker: 'O: I. Roca-Luque' },
@@ -350,7 +350,7 @@ export default {
       ],
       program: [
         {
-          day: 'Czwartek 3.10',
+          day: 'Czwartek 3.10.2024',
           items: [
             { time: '13:00–14:00', title: 'Rejestracja i poczęstunek',                              speaker: '' },
             { time: '14:10–14:30', title: 'Wykład: Rozwój metod ablacji RF',                        speaker: 'M. Wójcik, P. Błaszkiewicz' },
@@ -362,7 +362,7 @@ export default {
           ],
         },
         {
-          day: 'Piątek 4.10',
+          day: 'Piątek 4.10.2024',
           items: [
             { time: '9:30–10:00',  title: 'Wykład: Atrial Cardiomyopathy (ESC 2024)',                        speaker: 'Prof. A. Goette' },
             { time: '10:00–12:30', title: 'Zabieg live: Izolacja elektryczna lewego przedsionka',            speaker: 'O: Wójcik, Huo, Błaszkiewicz' },
@@ -385,9 +385,9 @@ export default {
     tabSpeakers: 'Prelegenci',
     tabProgram: 'Program',
     speakerAlt: 'prelegent RFtime',
-    scheduleExpand: 'Pokaż pełny program',
-    scheduleCollapse: 'Zwiń program',
-    recordingsHeading: 'Nagrania z warsztatów',
+    scheduleExpand: 'Pokaż pełny program RFtime {{edition}}',
+    scheduleCollapse: 'Zwiń program RFtime {{edition}}',
+    recordingsHeading: 'Nagrania z warsztatów RFtime {{edition}}',
     seeMore: 'Zobacz więcej na naszym kanale YouTube',
   },
 

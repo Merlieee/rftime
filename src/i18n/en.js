@@ -304,7 +304,7 @@ export default {
       ],
       program: [
         {
-          day: 'Thursday 23.10',
+          day: 'Thursday 23.10.2025',
           items: [
             { time: '9:00–9:15',   title: 'Workshop opening',                                                   speaker: 'M. Wójcik, WSS Management' },
             { time: '9:15–9:30',   title: 'RFtime 2024 procedure follow-up (annual)',                           speaker: 'P. Błaszkiewicz, M. Wójcik' },
@@ -318,7 +318,7 @@ export default {
           ],
         },
         {
-          day: 'Friday 24.10',
+          day: 'Friday 24.10.2025',
           items: [
             { time: '9:30–10:00',  title: 'Lecture: VT ablation — S3 protocol',                              speaker: 'Prof. I. Roca-Luque' },
             { time: '10:00–13:30', title: 'Live procedure from Barcelona: VT ablation — S3 protocol',         speaker: 'O: I. Roca-Luque' },
@@ -350,7 +350,7 @@ export default {
       ],
       program: [
         {
-          day: 'Thursday 3.10',
+          day: 'Thursday 3.10.2024',
           items: [
             { time: '13:00–14:00', title: 'Registration and refreshments',                      speaker: '' },
             { time: '14:10–14:30', title: 'Lecture: Development of RF ablation methods',         speaker: 'M. Wójcik, P. Błaszkiewicz' },
@@ -362,7 +362,7 @@ export default {
           ],
         },
         {
-          day: 'Friday 4.10',
+          day: 'Friday 4.10.2024',
           items: [
             { time: '9:30–10:00',  title: 'Lecture: Atrial Cardiomyopathy (ESC 2024)',                        speaker: 'Prof. A. Goette' },
             { time: '10:00–12:30', title: 'Live procedure: Electrical isolation of the left atrium',          speaker: 'O: Wójcik, Huo, Błaszkiewicz' },
@@ -385,9 +385,9 @@ export default {
     tabSpeakers: 'Speakers',
     tabProgram: 'Programme',
     speakerAlt: 'RFtime speaker',
-    scheduleExpand: 'Show full programme',
-    scheduleCollapse: 'Collapse programme',
-    recordingsHeading: 'Workshop recordings',
+    scheduleExpand: 'Show full RFtime {{edition}} programme',
+    scheduleCollapse: 'Collapse RFtime {{edition}} programme',
+    recordingsHeading: 'RFtime {{edition}} workshop recordings',
     seeMore: 'See more on our YouTube channel',
   },
 
