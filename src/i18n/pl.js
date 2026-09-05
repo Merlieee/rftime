@@ -1,4 +1,4 @@
-import { POLICY_URL } from '../config';
+import { POLICY_URL, REGISTRATION_URL } from '../config';
 
 export default {
   // Document head — kept in sync with <title> and <meta name="description"> in index.html
@@ -81,6 +81,105 @@ export default {
         heading: '7. Zmiany Polityki prywatności',
         body: [
           'Administrator może aktualizować niniejszą Politykę. Aktualna wersja jest zawsze dostępna na tej podstronie.',
+        ],
+      },
+    ],
+  },
+
+  // Terms & conditions page — transcription of docs/regulamin_rftime_2026.md, itself a
+  // copy of elkardia.pl/rftime-2026-regulamin. That published version is the binding one;
+  // keep all three in sync, and re-check §3 once PTK rules on accreditation — the wording
+  // is conditional on a decision that had not arrived when this was written.
+  termsPage: {
+    title: 'Regulamin Warsztatów naukowo-szkoleniowych RFtime 2026',
+    updated: 'Ostatnia aktualizacja: 1 września 2026 r.',
+    back: 'Powrót na stronę główną',
+    note: '',
+    intro: 'Wersja z warunkowymi zapisami dotyczącymi akredytacji PTK — do stosowania do czasu otrzymania decyzji Polskiego Towarzystwa Kardiologicznego.',
+    lead: `Rejestracja na Warsztaty prowadzona jest pod adresem [elkardia.pl/rftime2026-rejestracja](${REGISTRATION_URL}); przesłanie formularza wymaga akceptacji niniejszego Regulaminu. Zasady przetwarzania danych zgłoszeniowych opisuje [Polityka prywatności Warsztatów RFtime 2026](${POLICY_URL}).`,
+    sections: [
+      {
+        heading: '§ 1. Postanowienia ogólne',
+        body: [
+          { ol: [
+            'Niniejszy Regulamin (zwany dalej „Regulaminem”) określa warunki uczestnictwa, zasady rejestracji oraz prawa i obowiązki uczestników warsztatów naukowo-szkoleniowych „RFtime” (zwanych dalej „Warsztatami”).',
+            'Organizatorem Warsztatów jest **Elkardia Sp. z o.o.** z siedzibą w Lublinie (20-091), ul. Rotmistrza Witolda Pileckiego 23/20, wpisana do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego, prowadząca działalność m.in. w zakresie edukacji (PKD 85), zwana dalej „Organizatorem”.',
+            'Oficjalna strona internetowa Warsztatów prowadzona jest pod adresem: rftime.pl.',
+            'Warsztaty mają charakter naukowo-szkoleniowy. Ich celem jest poszerzanie wiedzy i umiejętności w zakresie kardiologii.',
+            'Udział w Warsztatach dla zakwalifikowanych uczestników jest całkowicie bezpłatny. Organizator nie pobiera opłat wpisowych.',
+          ] },
+        ],
+      },
+      {
+        heading: '§ 2. Warunki uczestnictwa i rejestracja',
+        body: [
+          { ol: [
+            { text: 'Warsztaty skierowane są wyłącznie do:', ul: [
+              'lekarzy posiadających prawo wykonywania zawodu na terytorium Rzeczypospolitej Polskiej,',
+              'studentów kierunków lekarskich uczelni medycznych.',
+            ] },
+            { text: 'Warunkiem wzięcia udziału w Warsztatach jest:', ul: [
+              'prawidłowe wypełnienie i przesłanie formularza rejestracyjnego dostępnego pod adresem elkardia.pl/rftime2026-rejestracja (link do formularza znajduje się także na stronie rftime.pl),',
+              'akceptacja niniejszego Regulaminu,',
+              'otrzymanie od Organizatora drogą elektroniczną potwierdzenia kwalifikacji na listę uczestników (liczba miejsc może być ograniczona).',
+            ] },
+            'W formularzu rejestracyjnym uczestnik zobowiązany jest podać prawdziwe dane: imię, nazwisko, adres e-mail, status uczestnika (lekarz / student medycyny), nazwę uczelni (w przypadku studentów), miejsce pracy — ośrodek EP oraz tytuł naukowy (w przypadku lekarzy), a także numer Prawa Wykonywania Zawodu (PWZ) — w przypadku lekarzy ubiegających się o punkty edukacyjne.',
+            'Podanie numeru PWZ jest dobrowolne, lecz niezbędne do ubiegania się o punkty edukacyjne, o których mowa w § 3.',
+          ] },
+        ],
+      },
+      {
+        heading: '§ 3. Punkty edukacyjne i certyfikaty',
+        body: [
+          { ol: [
+            'Organizator informuje, że **trwa procedura ubiegania się o przyznanie Warsztatom akredytacji oraz punktów edukacyjnych Polskiego Towarzystwa Kardiologicznego (PTK)**. Przyznanie punktów uczestnikom będącym lekarzami uzależnione jest od pozytywnej decyzji PTK. O wyniku procedury Organizator poinformuje na stronie rftime.pl.',
+            { text: 'W przypadku przyznania akredytacji, warunkiem uzyskania punktów edukacyjnych PTK oraz certyfikatu z punktami przez lekarza jest:', ul: [
+              'podanie poprawnego numeru PWZ w procesie rejestracji,',
+              'osobista obecność na Warsztatach, zweryfikowana zgodnie z procedurą Organizatora.',
+            ] },
+            'Uczestnikom o statusie studenta medycyny wydawany jest certyfikat uczestnictwa bez punktów edukacyjnych PTK.',
+            'Certyfikaty w formacie cyfrowym zostaną przesłane uczestnikom na adres e-mail podany podczas rejestracji, w terminie do 14 dni od dnia zakończenia Warsztatów.',
+          ] },
+        ],
+      },
+      {
+        heading: '§ 4. Prawa i obowiązki uczestnika',
+        body: [
+          { ol: [
+            'Uczestnik ma prawo do udziału w sesjach wykładowych i warsztatowych zgodnie z oficjalnym programem opublikowanym na stronie rftime.pl.',
+            'Uczestnik jest zobowiązany do przestrzegania zasad bezpieczeństwa oraz porządku obowiązującego w miejscu odbywania się Warsztatów.',
+            'Organizator nie pokrywa kosztów dojazdu ani zakwaterowania uczestników.',
+          ] },
+        ],
+      },
+      {
+        heading: '§ 5. Ochrona danych osobowych (RODO)',
+        body: [
+          { ol: [
+            'Administratorem danych osobowych uczestników Warsztatów jest **Elkardia Sp. z o.o.** z siedzibą w Lublinie przy ul. Rotmistrza Witolda Pileckiego 23/20 (20-091 Lublin). Kontakt w sprawach ochrony danych osobowych: e-mail rodo@elkardia.pl.',
+            { text: 'Dane osobowe uczestników przetwarzane są w celu:', ul: [
+              'rejestracji, organizacji, przeprowadzenia i obsługi logistycznej Warsztatów oraz wystawienia i przesłania certyfikatów uczestnictwa (podstawa: art. 6 ust. 1 lit. b RODO — realizacja umowy zgłoszenia udziału),',
+              'weryfikacji statusu uczestnika (lekarz / student medycyny) oraz — **w przypadku przyznania akredytacji przez PTK** — przyznania punktów edukacyjnych i rozliczenia akredytacji naukowej przed Polskim Towarzystwem Kardiologicznym (podstawa: art. 6 ust. 1 lit. b RODO oraz art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes Organizatora i podmiotu trzeciego, polegający na rzetelnym rozliczeniu programu edukacyjnego),',
+              'ustalenia, dochodzenia lub obrony przed ewentualnymi roszczeniami związanymi z organizacją Warsztatów (podstawa: art. 6 ust. 1 lit. f RODO).',
+            ] },
+            'Odbiorcą danych osobowych lekarzy ubiegających się o punkty edukacyjne (imię, nazwisko, numer PWZ) będzie **Polskie Towarzystwo Kardiologiczne** z siedzibą w Warszawie — **pod warunkiem i wyłącznie w celu rejestracji punktów po uzyskaniu pozytywnej decyzji akredytacyjnej PTK**. Dane mogą być ponadto powierzane podmiotom świadczącym dla Organizatora usługi techniczne (m.in. hosting strony i formularza, obsługa poczty elektronicznej) na podstawie umów powierzenia przetwarzania danych.',
+            'Dane osobowe uczestników będą przechowywane przez okres niezbędny do przeprowadzenia, rozliczenia i udokumentowania Warsztatów, a także przez czas wymagany przepisami prawa powszechnie obowiązującego, wytycznymi PTK dotyczącymi sprawozdawczości programów edukacyjnych oraz przez okres przedawnienia ewentualnych roszczeń.',
+            'Uczestnikowi przysługuje prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz prawo wniesienia sprzeciwu wobec przetwarzania opartego na art. 6 ust. 1 lit. f RODO. Prawa te można realizować poprzez kontakt na adres: rodo@elkardia.pl.',
+            'Uczestnikowi przysługuje prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa), jeżeli uzna, że przetwarzanie jego danych narusza przepisy RODO.',
+            'Podanie danych jest dobrowolne, lecz niezbędne do rejestracji i udziału w Warsztatach; podanie numeru PWZ jest niezbędne wyłącznie do ubiegania się o punkty edukacyjne.',
+            'Dane osobowe zebrane w formularzu **nie będą wykorzystywane do celów marketingowych** Organizatora ani podmiotów trzecich (w tym sponsorów i partnerów Warsztatów), nie będą przekazywane do państw trzecich ani nie będą podlegały zautomatyzowanemu podejmowaniu decyzji, w tym profilowaniu.',
+            `Pełny zakres informacji o przetwarzaniu danych osobowych znajduje się w [Polityce prywatności Warsztatów RFtime 2026](${POLICY_URL}).`,
+          ] },
+        ],
+      },
+      {
+        heading: '§ 6. Postanowienia końcowe',
+        body: [
+          { ol: [
+            'Organizator zastrzega sobie prawo do zmian w programie Warsztatów z przyczyn od niego niezależnych.',
+            'W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy Kodeksu cywilnego oraz RODO.',
+            'Regulamin wchodzi w życie z dniem opublikowania na stronie rftime.pl.',
+          ] },
         ],
       },
     ],
@@ -378,6 +477,7 @@ export default {
   footer: {
     tagline: 'Międzynarodowe Warsztaty Ablacyjne dla Elektrofizjologów',
     navLabel: 'Nawigacja',
+    register: 'Rejestracja',
     navLinks: [
       { href: '#edycje',    label: 'Poprzednie edycje' },
       { href: '/galeria',   label: 'Galeria' },
@@ -385,6 +485,7 @@ export default {
     contactLabel: 'Kontakt',
     socialLabel: 'Social media',
     copyright: '© 2026 RFtime · Wszystkie prawa zastrzeżone',
+    terms: 'Regulamin',
     privacy: 'Polityka prywatności',
     langButton: '🇬🇧 English',
   },

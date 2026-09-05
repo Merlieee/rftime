@@ -36,43 +36,57 @@ function Block({ block }) {
       </ul>
     );
   }
+  // An ordered item is either a string, or { text, ul } when the clause opens a
+  // sub-list — the numbering has to keep running across those.
   if (block.ol) {
     return (
       <ol className="list-decimal pl-5 space-y-2 mb-3 marker:text-gray-400">
-        {block.ol.map((item, i) => <li key={i} className={listItem}><Inline text={item} /></li>)}
+        {block.ol.map((item, i) => (
+          <li key={i} className={listItem}>
+            <Inline text={typeof item === 'string' ? item : item.text} />
+            {item.ul && (
+              <ul className="list-disc pl-5 mt-1.5 space-y-1.5 marker:text-gray-400">
+                {item.ul.map((sub, j) => <li key={j}><Inline text={sub} /></li>)}
+              </ul>
+            )}
+          </li>
+        ))}
       </ol>
     );
   }
   return null;
 }
 
-export default function PrivacyPolicy() {
+// One layout for both legal pages; `ns` picks which i18n block to render.
+export default function LegalPage({ ns }) {
   const { t } = useTranslation();
-  const sections = t('privacyPage.sections', { returnObjects: true });
-  const lead = t('privacyPage.lead');
-  const note = t('privacyPage.note', { defaultValue: '' });
+  const sections = t(`${ns}.sections`, { returnObjects: true });
+  const lead = t(`${ns}.lead`, { defaultValue: '' });
+  const note = t(`${ns}.note`, { defaultValue: '' });
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <div className="max-w-3xl w-full mx-auto px-6 pt-10">
         <Link to="/" className="text-2xs text-gray-500 hover:underline w-fit">
-          ← {t('privacyPage.back')}
+          ← {t(`${ns}.back`)}
         </Link>
       </div>
 
       <div className="max-w-3xl w-full mx-auto px-6 py-12 flex-1">
         <h1 className="text-4xl font-bold text-gray-900 tracking-tight mb-2">
-          {t('privacyPage.title')}
+          {t(`${ns}.title`)}
         </h1>
-        <p className="text-2xs text-gray-400 mb-8">{t('privacyPage.updated')}</p>
+        <p className="text-2xs text-gray-400 mb-8">{t(`${ns}.updated`)}</p>
 
-        <p className="text-sm text-gray-600 leading-relaxed mb-6">{t('privacyPage.intro')}</p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-6">{t(`${ns}.intro`)}</p>
 
-        {/* Where the registration data actually lives — the one thing a reader who came
-            here from the "Register" button needs, so it sits above the fold, boxed. */}
-        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 mb-8">
-          <p className="text-sm text-gray-600 leading-relaxed"><Inline text={lead} /></p>
-        </div>
+        {/* The one pointer a reader needs before the clauses — where the data actually
+            lives, or where to sign up — so it sits above the fold, boxed. */}
+        {lead && (
+          <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 mb-8">
+            <p className="text-sm text-gray-600 leading-relaxed"><Inline text={lead} /></p>
+          </div>
+        )}
 
         {note && (
           <p className="text-2xs text-gray-500 leading-relaxed mb-10 border-l-2 border-gray-200 pl-4">

@@ -29,7 +29,7 @@ import { REGISTRATION_OPEN } from './config.js';
 import PhotoCarousel from './components/PhotoCarousel';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import LegalPage from './pages/LegalPage';
 import NotFound from './pages/NotFound';
 import { useTranslation } from 'react-i18next';
 import {
@@ -112,7 +112,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/galeria" element={<Gallery />} />
-      <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
+      <Route path="/polityka-prywatnosci" element={<LegalPage ns="privacyPage" />} />
+      <Route path="/regulamin" element={<LegalPage ns="termsPage" />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <CookieConsent />

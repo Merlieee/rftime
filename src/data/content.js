@@ -2,7 +2,7 @@ import { Video, Globe, ClipboardCheck, Users, Zap, Activity, Trophy, Radio, Mic 
 
 export const speakerBase2026 = [
   { name: 'Maciej Wójcik',       title: 'dr hab. n. med.', photo: '/speakers/maciej-wojcik-lublin-poland-web.webp' },
-  { name: 'Maxim Didenko',       title: 'dr n. med.',      photo: '/speakers/RFtime-Max-Didenko.webp' },
+  { name: 'Maxim Didenko',       title: 'prof. dr hab. n. med., FESC, FEHRA', photo: '/speakers/RFtime-Max-Didenko.webp' },
   { name: 'Julian Chun',         title: 'prof. dr',        photo: '/speakers/RFtime-Julian-Chun.webp' },
   { name: 'Boris Schmidt',       title: 'prof. dr',        photo: '/speakers/RFtime-Boris-Schmidt.webp' },
   { name: 'Roland Tilz',         title: 'prof. dr',        photo: '/speakers/RFtime-Roland-Tilz.webp' },

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Phone, Mail } from 'lucide-react';
 import { setLang } from '../i18n/index.js';
+import { REGISTRATION_OPEN, REGISTRATION_URL } from '../config.js';
 
 function FacebookIcon() {
   return (
@@ -47,6 +48,18 @@ export default function Footer() {
         <div>
           <p className="text-gray-300 font-medium mb-3 text-xs uppercase tracking-widest">{t('footer.navLabel')}</p>
           <div className="space-y-2">
+            {/* Sits above the in-page links because it is the primary action, and is kept
+                out of navLinks because it leaves the site and needs target/rel. */}
+            {REGISTRATION_OPEN && (
+              <a
+                href={REGISTRATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                {t('footer.register')}
+              </a>
+            )}
             {navLinks.map(({ href, label }) => (
               <a key={label} href={href} className="block text-gray-400 hover:text-white transition-colors">{label}</a>
             ))}
@@ -84,6 +97,12 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 mt-10 pt-6 border-t border-gray-800 text-2xs text-gray-600 flex justify-between flex-wrap gap-2 items-center">
         <div className="flex items-center gap-4">
           <span>{t('footer.copyright')}</span>
+          <Link
+            to="/regulamin"
+            className="text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            {t('footer.terms')}
+          </Link>
           <Link
             to="/polityka-prywatnosci"
             className="text-gray-500 hover:text-gray-300 transition-colors"
