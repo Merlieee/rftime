@@ -25,3 +25,10 @@ dist-ssr
 
 # Vite cache
 .vite
+
+# Local env — .env* covers .env and .env*.local
+.env*
+!.env.example
+
+# Vercel CLI
+.vercel

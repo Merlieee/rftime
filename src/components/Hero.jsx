@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { REGISTRATION_OPEN, REGISTRATION_URL } from '../config.js';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -65,19 +66,20 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Hero CTAs hidden until sign-ups open.
         <div className="flex flex-wrap justify-center gap-3 mt-10">
-          <a
-            href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl.html"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3.5 rounded-lg transition-colors"
-            style={{ background: 'white', color: '#233889' }}
-            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.88)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'white'}
-          >
-            {t('hero.register')}
-          </a>
+          {REGISTRATION_OPEN && (
+            <a
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3.5 rounded-lg transition-colors"
+              style={{ background: 'white', color: '#233889' }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.88)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'white'}
+            >
+              {t('hero.register')}
+            </a>
+          )}
           <a
             href="#edycje"
             className="inline-flex items-center gap-2 border border-white/50 text-white text-sm font-medium px-7 py-3.5 rounded-lg transition-colors hover:border-white hover:bg-white/10"
@@ -85,7 +87,6 @@ export default function Hero() {
             {t('hero.editions')}
           </a>
         </div>
-        */}
       </div>
     </section>
   );

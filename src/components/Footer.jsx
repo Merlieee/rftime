@@ -59,8 +59,8 @@ export default function Footer() {
             <a href="tel:+48513874782" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
               <Phone className="w-4 h-4" strokeWidth={1.75} /> +48 513 874 782
             </a>
-            <a href="mailto:rftime@szpitalbp.pl" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-              <Mail className="w-4 h-4" strokeWidth={1.75} /> rftime@szpitalbp.pl
+            <a href="mailto:rftime@elkardia.pl" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+              <Mail className="w-4 h-4" strokeWidth={1.75} /> rftime@elkardia.pl
             </a>
           </div>
         </div>

@@ -37,21 +37,20 @@ export default function CookieConsent() {
           {t('cookies.privacy')}
         </Link>
       </p>
-      <div className="flex gap-2">
-        <button
-          onClick={() => choose('accepted')}
-          className="flex-1 rounded-lg px-4 py-2.5 text-2xs font-semibold text-white"
-          style={{ backgroundColor: '#233889' }}
-        >
-          {t('cookies.accept')}
-        </button>
-        <button
-          onClick={() => choose('rejected')}
-          className="flex-1 rounded-lg bg-gray-100 px-4 py-2.5 text-2xs font-medium text-gray-700 hover:bg-gray-200 transition-colors"
-        >
-          {t('cookies.reject')}
-        </button>
-      </div>
+      {/* Informational, not a consent request. The site stores only the chosen language
+          and this dismissal — functional storage that art. 173 PKE exempts from consent,
+          which is what the privacy policy §3 states. An Accept/Reject pair used to sit
+          here, but "Reject" changed nothing: asking for consent and ignoring the answer
+          is worse than not asking. If legal review decides consent IS required, the fix
+          is to make rejection actually suppress the language preference, not to restore
+          a decorative button. */}
+      <button
+        onClick={() => choose('acknowledged')}
+        className="w-full rounded-lg px-4 py-2.5 text-2xs font-semibold text-white transition-colors"
+        style={{ backgroundColor: '#233889' }}
+      >
+        {t('cookies.ok')}
+      </button>
     </div>
   );
 }

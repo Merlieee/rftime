@@ -7,7 +7,6 @@ const patronLogos = [
   { src: '/Oddzial-Lubelski-PTK-RFtime.webp',        alt: 'Oddział Lubelski PTK' },
   { src: '/Lubelska-Izba-Lekarska-RFtime.webp',       alt: 'Lubelska Izba Lekarska' },
   { src: '/Klub-30-PTK-RFtime.webp',                 alt: 'Klub 30 PTK' },
-  { src: '/certyfikat-RFtime.webp',                   alt: 'Certyfikat RFtime' },
 ];
 
 function DraggableTicker() {

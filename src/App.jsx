@@ -24,11 +24,13 @@ import CookieConsent from './components/CookieConsent';
 import EditionSection from './components/EditionSection';
 import PatronsSection from './components/PatronsSection';
 import MediaSection from './components/MediaSection';
-// import RegistrationCTA from './components/RegistrationCTA';
+import RegistrationCTA from './components/RegistrationCTA';
+import { REGISTRATION_OPEN } from './config.js';
 import PhotoCarousel from './components/PhotoCarousel';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import NotFound from './pages/NotFound';
 import { useTranslation } from 'react-i18next';
 import {
   speakerBase2024, speakerBase2025, speakerBase2026,
@@ -64,6 +66,7 @@ function Home() {
         highlights={highlights2026}
         program={e2026.program}
         accent="pink"
+        organizerKey="elkardia"
       />
       <div id="carousel" className="pt-10 pb-10 bg-white"><PhotoCarousel /></div>
       <div id="edycje">
@@ -95,7 +98,7 @@ function Home() {
       </div>
       <MediaSection />
       <PatronsSection />
-      {/* <RegistrationCTA /> */}
+      {REGISTRATION_OPEN && <RegistrationCTA />}
       <Footer />
     </div>
   );
@@ -110,6 +113,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/galeria" element={<Gallery />} />
       <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     <CookieConsent />
     {import.meta.env.DEV && <Agentation />}

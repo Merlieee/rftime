@@ -13,6 +13,7 @@ export default function ProgramTable({ program }) {
                 <div>
                   <p className="text-sm text-gray-800 leading-snug">{item.title}</p>
                   {item.speaker && <p className="text-2xs text-gray-400 mt-0.5">{item.speaker}</p>}
+                  {item.note && <p className="text-2xs text-gray-500 mt-2 leading-relaxed border-l-2 border-gray-200 pl-3">{item.note}</p>}
                 </div>
               </div>
             ))}

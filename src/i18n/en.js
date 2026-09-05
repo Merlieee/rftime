@@ -1,3 +1,5 @@
+import { POLICY_URL } from '../config';
+
 export default {
   // Document head — kept in sync with the English share page at public/en/index.html
   meta: {
@@ -11,55 +13,73 @@ export default {
     switch: 'Przejdź →',
   },
 
-  // Privacy policy page
+  // Privacy policy page — English rendering of docs/polityka_prywatnosci_rftime_5.md.
+  // Keep the two in sync: that file is the reviewed source of truth, and the Polish
+  // text on this site is the legally binding one (see `note` below).
+  //
+  // Scope note: this page covers ONLY what rftime.pl itself does. Registration data is
+  // collected by the form on elkardia.pl and governed by the policy published there
+  // (POLICY_URL) — that document is the binding one, this page just points at it.
   privacyPage: {
-    title: 'Privacy policy',
-    updated: 'Last updated: June 2026',
+    title: 'Privacy policy of the rftime.pl website',
+    updated: 'Last updated: 5 September 2026',
     back: 'Back to homepage',
+    note: 'This English version is provided for convenience. The Polish version of this policy is the legally binding text; in the event of any discrepancy, the Polish version prevails.',
+    intro: 'The rftime.pl website is purely informational — it does not collect or store any personal data of participants. This document describes what happens when you use the website itself.',
+    lead: `Registration for the Workshop is run on the Organizer’s own website, at elkardia.pl/rftime2026-rejestracja, and the “Register” button merely takes you there. The processing of registration data — the scope of data collected, purposes and legal bases, recipients, retention periods and PTK educational points — is governed by the [RFtime 2026 Workshop Privacy Policy](${POLICY_URL}), which is the binding document in that respect.`,
     sections: [
       {
-        heading: 'Data controller',
+        heading: '1. Data controller',
         body: [
-          'The data controller is the Electrophysiology and Cardiac Pacing Lab of the Provincial Specialist Hospital in Biała Podlaska, ul. Terebelska 57-65, 21-500 Biała Podlaska, Poland.',
-          'For any matters regarding the protection of personal data, you can contact us by phone at +48 513 874 782.',
+          'The controller of personal data is **Elkardia Sp. z o.o.**, seated in Lublin, ul. Rotmistrza Witolda Pileckiego 23/20, 20-091 Lublin, Poland (the “Controller” or “Organizer”).',
+          'Contact for data protection matters:',
+          { ul: [
+            'e-mail: rodo@elkardia.pl',
+            'by post: Elkardia Sp. z o.o., ul. Rot. W. Pileckiego 23/20, 20-091 Lublin, Poland',
+          ] },
         ],
       },
       {
-        heading: 'What data we collect',
+        heading: '2. Data collected by rftime.pl',
         body: [
-          'The RFtime website is purely informational. It has no account registration, no contact forms and no comment section, so we do not collect your personal data directly.',
-          'Registration for the workshop takes place on a separate website of the Provincial Specialist Hospital in Biała Podlaska and is subject to that website’s privacy policy.',
+          'The rftime.pl website has no forms, no user accounts and no newsletter sign-up. **We collect no personal data through it** — we do not ask for your name, e-mail address or any other identifying information.',
+          'The only data processed in connection with a visit to the website are the technical connection details automatically recorded in server logs by the hosting provider (IP address, date and time of the request, browser type and similar). They serve solely to keep the website secure and working correctly — legal basis: Art. 6(1)(f) GDPR (the Controller’s legitimate interest). These data are not combined with participants’ registration data, nor used to identify visitors.',
         ],
       },
       {
-        heading: 'Cookies and local storage',
+        heading: '3. Browser local storage',
         body: [
-          'We only use the browser’s functional local storage (localStorage) to remember your preferences — your selected language and your choice regarding the cookie notice. This information is stored on your device and is not sent to our servers.',
-          'We do not use our own tracking cookies or analytics tools that profile users.',
-          'You can delete the stored preferences at any time by clearing your browser data for this site.',
+          'The rftime.pl website **sets no cookies of its own**. It uses only the essential local storage of your browser (localStorage) needed for the site to work correctly — it remembers your chosen language and the fact that you have seen the privacy notice.',
+          'These values stay in your browser, are never sent to a server or shared with anyone, and you can remove them at any time by clearing site data in your browser settings.',
+          'We use no analytics or tracking tools, and fonts and images are served from the website’s own servers, with no calls to third-party providers.',
         ],
       },
       {
-        heading: 'Embedded content from other websites',
+        heading: '4. Embedded content (YouTube)',
         body: [
-          'We embed video content from YouTube. Once you play such content, YouTube (Google) may set its own cookies and collect data in accordance with its privacy policy.',
-          'The site also contains links to external services (including Facebook, Instagram, YouTube and news outlets). Once you visit those sites, their own privacy policies apply.',
+          'The website embeds video recordings from YouTube. The YouTube player **does not load automatically** — it starts only after you click the play button. Until then, no requests are sent to YouTube.',
+          'Once the player starts, YouTube (Google Ireland Limited) may set its own cookies and process your data in accordance with its own privacy policy, available at policies.google.com/privacy. If you would rather not send any data to YouTube, simply do not start playback.',
         ],
       },
       {
-        heading: 'Your rights',
+        heading: '5. Website hosting',
         body: [
-          'Under the GDPR you have the right to access your data, rectify it, erase it or restrict its processing, as well as the right to object and to lodge a complaint with the President of the Personal Data Protection Office.',
-          'Because this website does not collect personal data, the exercise of these rights concerns data processed in connection with workshop registration or phone contact.',
+          'The informational website rftime.pl is hosted by Vercel Inc., seated in the USA — an entity certified under the EU-US Data Privacy Framework, covered by the European Commission’s adequacy decision (Art. 45 GDPR).',
+          'Because no personal data of participants is collected or stored through this website, **the hosting provider has no access to registration data** — those are processed within the Controller’s own infrastructure, in the territory of the Republic of Poland.',
         ],
       },
       {
-        heading: 'Contact',
+        heading: '6. Your rights and contact',
         body: [
-          'Electrophysiology and Cardiac Pacing Lab',
-          'Provincial Specialist Hospital in Biała Podlaska',
-          'ul. Terebelska 57-65, 21-500 Biała Podlaska, Poland',
-          'phone +48 513 874 782',
+          'In respect of data processed in connection with your use of the website, you have the right to access your data, to rectify or erase it, to restrict processing, and to object to processing based on Art. 6(1)(f) GDPR. Simply write to: rodo@elkardia.pl.',
+          `Rights concerning the data you provide in the registration form are described in the [RFtime 2026 Workshop Privacy Policy](${POLICY_URL}).`,
+          'You also have the right to lodge a complaint with the supervisory authority — the **President of the Personal Data Protection Office** (ul. Stawki 2, 00-193 Warsaw, Poland, uodo.gov.pl).',
+        ],
+      },
+      {
+        heading: '7. Changes to this Privacy Policy',
+        body: [
+          'The Controller may update this Policy. The current version is always available on this page.',
         ],
       },
     ],
@@ -67,11 +87,10 @@ export default {
 
   // Cookie consent
   cookies: {
-    title: 'Cookies',
-    message: 'We use cookies and local storage to remember your preferences (e.g. your selected language).',
+    title: 'Privacy and local storage',
+    message: 'We use only essential local storage to remember your preferences (e.g. your selected language). We do not use analytics or tracking cookies.',
     privacy: 'Privacy policy',
-    accept: 'Accept',
-    reject: 'Reject',
+    ok: 'Got it',
   },
 
   // Hero
@@ -80,7 +99,7 @@ export default {
     dateShort: 'October 29–30, 2026',
     subtitle: 'International Ablation Workshop\nfor Electrophysiologists',
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
-    note: 'Registration via WSS Biała Podlaska',
+    note: 'Organizer: Elkardia Sp. z o.o.',
     register: 'Register now',
     editions: 'Previous editions',
   },
@@ -142,12 +161,18 @@ export default {
             { time: '16:30–17:00', title: 'Interesting case presentations by RFtime participants',                              speaker: 'Moderators: TBC' },
             { time: '17:00–19:00', title: 'Live procedure: AF substrate ablation with the Affera™ catheter',                    speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
             { time: '19:00–20:00', title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
-            { time: '21:00',       title: 'RFtime Evening Gathering',                                                           speaker: 'Uroczysko Zaborek' },
+            {
+              time: '21:00',
+              title: 'RFtime Evening Gathering',
+              speaker: 'Uroczysko Zaborek',
+              note: 'An accompanying networking event, held outside the scientific and training programme. Participation is optional and paid — attendees cover the cost themselves. The gathering is not funded by member companies of the POLMED Chamber or MedTech Polska.',
+            },
           ],
         },
         {
           day: 'Friday 30.10',
           items: [
+            { time: '9:00–9:30',   title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
             { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                        speaker: 'R. Tilz' },
             { time: '10:00–10:15', title: 'Lecture: VT ablation in the S3 protocol with a dual-energy PFA/RF catheter',         speaker: 'I. Roca-Luque' },
             { time: '10:15–12:00', title: 'Live procedure from Barcelona: VT ablation — S3 protocol with a dual-energy PFA/RF catheter', speaker: 'I. Roca-Luque' },
@@ -188,7 +213,7 @@ export default {
             { time: '14:30–16:00', title: 'Live procedure: Atypical AFL re-ablation (HDgridX + AutoMarkIndex)', speaker: 'O: Wójcik, Błaszkiewicz' },
             { time: '16:00–16:15', title: 'Lecture: Epicardial substrate mapping in complex AF/AT',             speaker: 'C. Piorkowski' },
             { time: '16:30–19:30', title: 'Live procedure: AF re-ablation after 1st generation PFA',            speaker: 'O: Wójcik, Kiedrowicz, Błaszkiewicz' },
-            { time: '20:30',       title: 'RFtime Evening Meeting *',                                           speaker: 'Uroczysko Zaborek' },
+            { time: '20:30',       title: 'RFtime Evening Meeting',                                             speaker: 'Uroczysko Zaborek' },
           ],
         },
         {
@@ -282,12 +307,23 @@ export default {
   },
 
   // Organizer
+  // Organiser differs per edition: 2024 and 2025 were run by the hospital, 2026 by Elkardia.
+  // EditionSection picks the entry via its `organizerKey` prop.
   organizer: {
     label: 'Organiser',
-    name: 'Department of Electrophysiology and Cardiac Pacing',
-    hospital: 'Regional Specialist Hospital in Biała Podlaska',
-    desc: 'The EP lab performs both simple and complex ablations of supraventricular and ventricular arrhythmias using advanced 3D mapping technology. As one of the few EP labs in Poland, we perform ablations in patients with electrical storm.',
     patronsLabel: 'Previous patrons & CME credits',
+    wss: {
+      name: 'Department of Electrophysiology and Cardiac Pacing',
+      hospital: 'Regional Specialist Hospital in Biała Podlaska',
+      desc: 'The EP lab performs both simple and complex ablations of supraventricular and ventricular arrhythmias using advanced 3D mapping technology. As one of the few EP labs in Poland, we perform ablations in patients with electrical storm.',
+      logo: '/szpital-logo.webp',
+    },
+    elkardia: {
+      name: 'Elkardia Sp. z o.o.',
+      hospital: 'Lublin Cardiology Centre for children and adults',
+      desc: 'Full cardiac diagnostics on site, innovative equipment and a team of specialist physicians — for children and adults. Elkardia is the organiser of the RFtime 2026 workshop.',
+      logo: '/elkardia-logo-SVG.svg',
+    },
   },
 
   // Media
@@ -327,7 +363,14 @@ export default {
     heading: 'Join RFtime 2026',
     desc: 'Workshop admission is free, places allocated on a first-come, first-served basis.',
     button: 'Register now',
-    note: 'Registration via WSS Biała Podlaska',
+    note: 'Organizer: Elkardia Sp. z o.o.',
+  },
+
+  // 404
+  notFound: {
+    title: 'Page not found',
+    message: 'This page does not exist or has been moved. Check the address or head back to the home page.',
+    home: 'Back to the home page',
   },
 
   // Footer

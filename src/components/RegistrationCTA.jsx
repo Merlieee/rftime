@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { REGISTRATION_URL } from '../config.js';
 
 export default function RegistrationCTA() {
   const { t } = useTranslation();
@@ -45,9 +46,9 @@ export default function RegistrationCTA() {
         </p>
 
         <a
-          href="https://www.szpitalbp.pl/pl/nauka/konferencje-2013/konferencje-2026/konferencja-kardio-war-abl.html"
+          href={REGISTRATION_URL}
           target="_blank"
-          rel="noopener noreferrer nofollow"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3.5 rounded-lg transition-colors"
           style={{ background: 'white', color: '#233889' }}
           onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.88)'}
@@ -55,6 +56,8 @@ export default function RegistrationCTA() {
         >
           {t('cta.button')}
         </a>
+
+        <p className="mt-4 text-2xs text-white/70">{t('cta.note')}</p>
       </div>
     </section>
   );

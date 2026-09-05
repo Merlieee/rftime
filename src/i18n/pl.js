@@ -1,3 +1,5 @@
+import { POLICY_URL } from '../config';
+
 export default {
   // Document head — kept in sync with <title> and <meta name="description"> in index.html
   meta: {
@@ -11,55 +13,74 @@ export default {
     switch: 'Switch →',
   },
 
-  // Privacy policy page
+  // Privacy policy page — transcription of docs/polityka_prywatnosci_rftime_5.md.
+  // Keep the two in sync: that file is the reviewed source of truth.
+  //
+  // Scope note: this page covers ONLY what rftime.pl itself does. Registration data is
+  // collected by the form on elkardia.pl and governed by the policy published there
+  // (POLICY_URL) — that document is the binding one, this page just points at it.
   privacyPage: {
-    title: 'Polityka prywatności',
-    updated: 'Ostatnia aktualizacja: czerwiec 2026',
+    title: 'Polityka prywatności strony rftime.pl',
+    updated: 'Ostatnia aktualizacja: 5 września 2026 r.',
     back: 'Powrót na stronę główną',
+    // Empty on purpose: the EN page carries a "Polish version prevails" note, and without
+    // this key i18next would fall back to English and print it on the Polish page too.
+    note: '',
+    intro: 'Strona rftime.pl ma charakter wyłącznie informacyjny — nie zbiera i nie przechowuje danych osobowych uczestników. Niniejszy dokument opisuje, co dzieje się podczas korzystania z samej strony.',
+    lead: `Rejestracja na Warsztaty prowadzona jest w serwisie Organizatora, pod adresem elkardia.pl/rftime2026-rejestracja, a przycisk „Zgłoś uczestnictwo” jedynie tam przenosi. Zasady przetwarzania danych zgłoszeniowych — zakres zbieranych danych, cele i podstawy prawne, odbiorcy, okresy przechowywania oraz punkty edukacyjne PTK — określa [Polityka prywatności Warsztatów RFtime 2026](${POLICY_URL}), i to ona jest dokumentem wiążącym w tym zakresie.`,
     sections: [
       {
-        heading: 'Administrator danych',
+        heading: '1. Administrator danych',
         body: [
-          'Administratorem danych jest Pracownia Elektrofizjologii i Elektrostymulacji Serca Wojewódzkiego Szpitala Specjalistycznego w Białej Podlaskiej, ul. Terebelska 57-65, 21-500 Biała Podlaska.',
-          'W sprawach dotyczących ochrony danych osobowych możesz skontaktować się z nami telefonicznie pod numerem +48 513 874 782.',
+          'Administratorem danych osobowych jest **Elkardia Sp. z o.o.** z siedzibą w Lublinie, ul. Rotmistrza Witolda Pileckiego 23/20, 20-091 Lublin (dalej: „Administrator” lub „Organizator”).',
+          'Kontakt w sprawach ochrony danych osobowych:',
+          { ul: [
+            'e-mail: rodo@elkardia.pl',
+            'korespondencyjnie: Elkardia Sp. z o.o., ul. Rot. W. Pileckiego 23/20, 20-091 Lublin',
+          ] },
         ],
       },
       {
-        heading: 'Jakie dane zbieramy',
+        heading: '2. Dane zbierane przez stronę rftime.pl',
         body: [
-          'Strona RFtime ma charakter wyłącznie informacyjny. Nie prowadzimy na niej rejestracji konta, nie udostępniamy formularzy kontaktowych ani sekcji komentarzy, dlatego nie zbieramy bezpośrednio Twoich danych osobowych.',
-          'Rejestracja na warsztaty odbywa się na osobnej stronie Wojewódzkiego Szpitala Specjalistycznego w Białej Podlaskiej i podlega polityce prywatności tego serwisu.',
+          'Strona rftime.pl nie zawiera formularzy, nie prowadzi kont użytkowników ani zapisów na newsletter. **Nie zbieramy za jej pośrednictwem żadnych danych osobowych** — nie prosimy o imię, adres e-mail ani jakiekolwiek inne dane identyfikujące.',
+          'Jedyne dane przetwarzane w związku z odwiedzeniem strony to techniczne dane połączenia zapisywane automatycznie w logach serwera przez dostawcę hostingu (m.in. adres IP, data i godzina zapytania, typ przeglądarki). Służą one wyłącznie zapewnieniu bezpieczeństwa i prawidłowego działania strony — podstawa: art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes Administratora). Dane te nie są łączone z danymi zgłoszeniowymi uczestników ani wykorzystywane do identyfikacji odwiedzających.',
         ],
       },
       {
-        heading: 'Pliki cookies i pamięć lokalna',
+        heading: '3. Pamięć lokalna przeglądarki',
         body: [
-          'Korzystamy wyłącznie z funkcjonalnej pamięci lokalnej przeglądarki (localStorage), aby zapamiętać Twoje preferencje — wybrany język oraz decyzję dotyczącą komunikatu o plikach cookies. Dane te są przechowywane na Twoim urządzeniu i nie są przesyłane na nasze serwery.',
-          'Nie stosujemy własnych plików cookies śledzących ani narzędzi analitycznych profilujących użytkowników.',
-          'Zapisane preferencje możesz w każdej chwili usunąć, czyszcząc dane przeglądarki dla tej witryny.',
+          'Strona rftime.pl **nie stosuje własnych plików cookies**. Wykorzystuje wyłącznie niezbędną pamięć lokalną przeglądarki (localStorage), zapewniającą jej prawidłowe działanie — zapamiętywany jest wybrany język strony oraz potwierdzenie zapoznania się z komunikatem o prywatności.',
+          'Dane te pozostają w przeglądarce użytkownika, nie są przesyłane na serwer ani udostępniane komukolwiek, i można je w każdej chwili usunąć, czyszcząc dane witryny w ustawieniach przeglądarki.',
+          'Nie korzystamy z narzędzi analitycznych ani śledzących, a kroje pisma i grafiki serwowane są z serwerów strony, bez odwołań do dostawców zewnętrznych.',
         ],
       },
       {
-        heading: 'Treści osadzone z innych witryn',
+        heading: '4. Treści osadzone (YouTube)',
         body: [
-          'Na stronie osadzamy materiały wideo z serwisu YouTube. Po odtworzeniu takiego materiału YouTube (Google) może zapisać własne pliki cookies i zbierać dane zgodnie ze swoją polityką prywatności.',
-          'Strona zawiera również odnośniki do serwisów zewnętrznych (m.in. Facebook, Instagram, YouTube oraz portali prasowych). Po przejściu na te strony obowiązują ich własne polityki prywatności.',
+          'Na stronie osadzone są nagrania wideo z serwisu YouTube. Odtwarzacz YouTube **nie ładuje się automatycznie** — uruchamiany jest wyłącznie po kliknięciu przycisku odtwarzania przez użytkownika. Do tego momentu do serwisu YouTube nie są wysyłane żadne zapytania.',
+          'Z chwilą uruchomienia odtwarzacza serwis YouTube (Google Ireland Limited) może zapisywać własne pliki cookies i przetwarzać dane użytkownika zgodnie z własną polityką prywatności, dostępną pod adresem policies.google.com/privacy. Osoby, które nie chcą przekazywać danych do serwisu YouTube, mogą po prostu nie uruchamiać odtwarzania nagrań.',
         ],
       },
       {
-        heading: 'Twoje prawa',
+        heading: '5. Hosting strony',
         body: [
-          'Zgodnie z RODO przysługuje Ci prawo dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, a także prawo do wniesienia sprzeciwu oraz skargi do Prezesa Urzędu Ochrony Danych Osobowych.',
-          'Ponieważ ta witryna nie gromadzi danych osobowych, realizacja powyższych praw dotyczy danych przetwarzanych w związku z rejestracją na warsztaty lub kontaktem telefonicznym.',
+          'Strona informacyjna rftime.pl hostowana jest przez Vercel Inc. z siedzibą w USA — podmiot certyfikowany w ramach programu EU-US Data Privacy Framework, objętego decyzją Komisji Europejskiej stwierdzającą odpowiedni stopień ochrony danych (art. 45 RODO).',
+          'Ponieważ za pośrednictwem tej strony nie są zbierane ani przechowywane dane osobowe uczestników, **dostawca hostingu nie ma dostępu do danych zgłoszeniowych** — te przetwarzane są w infrastrukturze Administratora, na terenie Rzeczypospolitej Polskiej.',
         ],
       },
       {
-        heading: 'Kontakt',
+        heading: '6. Prawa i kontakt',
         body: [
-          'Pracownia Elektrofizjologii i Elektrostymulacji Serca',
-          'Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej',
-          'ul. Terebelska 57-65, 21-500 Biała Podlaska',
-          'tel. +48 513 874 782',
+          'W zakresie danych przetwarzanych w związku z korzystaniem ze strony przysługuje prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wniesienia sprzeciwu wobec przetwarzania opartego na art. 6 ust. 1 lit. f RODO. Wystarczy napisać na adres: rodo@elkardia.pl.',
+          `Prawa dotyczące danych podanych w formularzu rejestracyjnym opisuje [Polityka prywatności Warsztatów RFtime 2026](${POLICY_URL}).`,
+          'Przysługuje również prawo wniesienia skargi do organu nadzorczego — **Prezesa Urzędu Ochrony Danych Osobowych** (ul. Stawki 2, 00-193 Warszawa, uodo.gov.pl).',
+        ],
+      },
+      {
+        heading: '7. Zmiany Polityki prywatności',
+        body: [
+          'Administrator może aktualizować niniejszą Politykę. Aktualna wersja jest zawsze dostępna na tej podstronie.',
         ],
       },
     ],
@@ -67,11 +88,10 @@ export default {
 
   // Cookie consent
   cookies: {
-    title: 'Pliki cookies',
-    message: 'Używamy plików cookies i pamięci lokalnej, aby zapamiętać Twoje preferencje (np. wybrany język).',
+    title: 'Prywatność i pamięć lokalna',
+    message: 'Używamy wyłącznie niezbędnej pamięci lokalnej, aby zapamiętać Twoje preferencje (np. wybrany język). Nie stosujemy cookies analitycznych ani śledzących.',
     privacy: 'Polityka prywatności',
-    accept: 'Akceptuję',
-    reject: 'Odrzuć',
+    ok: 'Rozumiem',
   },
 
   // Hero
@@ -80,7 +100,7 @@ export default {
     dateShort: '29–30 października 2026',
     subtitle: 'Międzynarodowe Warsztaty Ablacyjne\ndla Elektrofizjologów',
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
-    note: 'Rejestracja przez WSS w Białej Podlaskiej',
+    note: 'Organizator: Elkardia Sp. z o.o.',
     register: 'Zgłoś uczestnictwo',
     editions: 'Poprzednie edycje',
   },
@@ -142,12 +162,18 @@ export default {
             { time: '16:30–17:00', title: 'Prezentacja ciekawych przypadków przez uczestników RFtime',                                                     speaker: 'Moderatorzy: TBC' },
             { time: '17:00–19:00', title: 'Zabieg live: Ablacja substratu AF cewnikiem Affera™',                                                           speaker: 'A. Hoffmann, M. Wójcik, P. Błaszkiewicz' },
             { time: '19:00–20:00', title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                     speaker: 'Moderatorzy: TBC' },
-            { time: '21:00',       title: 'Wieczorne Spotkanie RFtime',                                                                                     speaker: 'Uroczysko Zaborek' },
+            {
+              time: '21:00',
+              title: 'Wieczorne Spotkanie RFtime',
+              speaker: 'Uroczysko Zaborek',
+              note: 'Spotkanie towarzyszące o charakterze networkingowym, poza programem naukowo-szkoleniowym. Udział jest opcjonalny i odpłatny — uczestnicy pokrywają jego koszt we własnym zakresie. Spotkanie nie jest finansowane ze środków firm członkowskich Izby POLMED ani MedTech Polska.',
+            },
           ],
         },
         {
           day: 'Piątek 30.10',
           items: [
+            { time: '9:00–9:30',   title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                   speaker: 'Moderatorzy: TBC' },
             { time: '9:30–10:00',  title: 'Wykład: Ablacja PFA dodatkowych pobudzeń komorowych',                                                            speaker: 'R. Tilz' },
             { time: '10:00–10:15', title: 'Wykład: Ablacja VT w protokole S3 cewnikiem dual-energy PFA/RF',                                                 speaker: 'I. Roca-Luque' },
             { time: '10:15–12:00', title: 'Zabieg live z Barcelony: Ablacja VT — protokół S3 z cewnikiem dual-energy PFA/RF',                               speaker: 'I. Roca-Luque' },
@@ -188,7 +214,7 @@ export default {
             { time: '14:30–16:00', title: 'Zabieg live: Re-ablacja atypowego AFL (HDgridX + AutoMarkIndex)',          speaker: 'O: Wójcik, Błaszkiewicz' },
             { time: '16:00–16:15', title: 'Wykład: Epicardial substrate mapping in complex AF/AT',                   speaker: 'C. Piorkowski' },
             { time: '16:30–19:30', title: 'Zabieg live: Re-ablacja AF po PFA I generacji',                           speaker: 'O: Wójcik, Kiedrowicz, Błaszkiewicz' },
-            { time: '20:30',       title: 'Wieczorne Spotkanie RFtime *',                                            speaker: 'Uroczysko Zaborek' },
+            { time: '20:30',       title: 'Wieczorne Spotkanie RFtime',                                              speaker: 'Uroczysko Zaborek' },
           ],
         },
         {
@@ -282,12 +308,23 @@ export default {
   },
 
   // Organizer
+  // Organiser differs per edition: 2024 and 2025 were run by the hospital, 2026 by Elkardia.
+  // EditionSection picks the entry via its `organizerKey` prop.
   organizer: {
     label: 'Organizator',
-    name: 'Pracownia Elektrofizjologii i Elektrostymulacji Serca',
-    hospital: 'Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej',
-    desc: 'W Pracowni EP wykonywane są zarówno ablacje proste jak i złożone ablacje arytmii nadkomorowych i komorowych z wykorzystaniem zaawansowanej technologii mapowania 3D. Jako jedna z nielicznych Pracowni EP w Polsce wykonujemy ablacje u pacjentów z burzą elektryczną.',
     patronsLabel: 'Poprzedni patroni i punkty edukacyjne',
+    wss: {
+      name: 'Pracownia Elektrofizjologii i Elektrostymulacji Serca',
+      hospital: 'Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej',
+      desc: 'W Pracowni EP wykonywane są zarówno ablacje proste jak i złożone ablacje arytmii nadkomorowych i komorowych z wykorzystaniem zaawansowanej technologii mapowania 3D. Jako jedna z nielicznych Pracowni EP w Polsce wykonujemy ablacje u pacjentów z burzą elektryczną.',
+      logo: '/szpital-logo.webp',
+    },
+    elkardia: {
+      name: 'Elkardia Sp. z o.o.',
+      hospital: 'Lubelskie Centrum Kardiologii dla dzieci i dorosłych',
+      desc: 'Pełna diagnostyka kardiologiczna na miejscu, innowacyjny sprzęt i zespół lekarzy specjalistów — dla dzieci i dorosłych. Elkardia jest organizatorem warsztatów RFtime 2026.',
+      logo: '/elkardia-logo-SVG.svg',
+    },
   },
 
   // Media
@@ -327,7 +364,14 @@ export default {
     heading: 'Dołącz do RFtime 2026',
     desc: 'Udział w warsztatach bezpłatny, liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
-    note: 'Rejestracja przez WSS w Białej Podlaskiej',
+    note: 'Organizator: Elkardia Sp. z o.o.',
+  },
+
+  // 404
+  notFound: {
+    title: 'Nie znaleziono strony',
+    message: 'Ta strona nie istnieje lub została przeniesiona. Sprawdź adres albo wróć na stronę główną.',
+    home: 'Wróć na stronę główną',
   },
 
   // Footer

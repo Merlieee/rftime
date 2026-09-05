@@ -5,7 +5,7 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst }) {
+export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, organizerKey = 'wss' }) {
   const tabOrder = speakersFirst
     ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
     : ['program', 'speakers', 'scientific', 'organizing', 'organizer'];
@@ -123,22 +123,25 @@ export default function EditionSection({ edition, date, location, theme, speaker
             </button>
           </div>
         )}
-        {tab === 'organizer' && (
-          <div className="flex flex-col sm:flex-row sm:items-stretch gap-8 sm:gap-16 rounded-2xl border border-gray-200 bg-white p-8">
-            <div>
-              <h3 className="font-semibold text-gray-900 text-base">{t('organizer.name')}</h3>
-              <p className="text-sm text-gray-500 mt-1">{t('organizer.hospital')}</p>
-              <p className="text-sm text-gray-400 leading-relaxed mt-4">{t('organizer.desc')}</p>
+        {tab === 'organizer' && (() => {
+          const org = t(`organizer.${organizerKey}`, { returnObjects: true });
+          return (
+            <div className="flex flex-col sm:flex-row sm:items-stretch gap-8 sm:gap-16 rounded-2xl border border-gray-200 bg-white p-8">
+              <div>
+                <h3 className="font-semibold text-gray-900 text-base">{org.name}</h3>
+                <p className="text-sm text-gray-500 mt-1">{org.hospital}</p>
+                <p className="text-sm text-gray-400 leading-relaxed mt-4">{org.desc}</p>
+              </div>
+              <div className="flex items-center justify-center sm:w-96 shrink-0">
+                <img
+                  src={org.logo}
+                  alt={org.hospital}
+                  className="h-32 sm:h-full max-h-full w-auto object-contain"
+                />
+              </div>
             </div>
-            <div className="flex items-center justify-center sm:w-96 shrink-0">
-              <img
-                src="/szpital-logo.webp"
-                alt={t('organizer.hospital')}
-                className="h-32 sm:h-full max-h-full w-auto object-contain"
-              />
-            </div>
-          </div>
-        )}
+          );
+        })()}
 
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
@@ -162,9 +165,15 @@ export default function EditionSection({ edition, date, location, theme, speaker
                   className="relative aspect-video w-full block group cursor-pointer"
                   aria-label={`Play RFtime ${edition}`}
                 >
+                  {/* Served from /public, not img.youtube.com — otherwise every visitor's
+                      IP reaches Google on page load, before anyone clicks play. The privacy
+                      policy §4 says nothing goes to YouTube until playback starts; this is
+                      what makes that true. Refresh with:
+                      curl -o public/youtube/<id>.jpg https://img.youtube.com/vi/<id>/maxresdefault.jpg */}
                   <img
-                    src={`https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`}
+                    src={`/youtube/${youtubeId}.jpg`}
                     alt={`RFtime ${edition}`}
+                    loading="lazy"
                     className="w-full h-full object-cover scale-[1.02]"
                   />
                   <span className="absolute inset-0 flex items-center justify-center">
