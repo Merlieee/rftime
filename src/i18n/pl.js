@@ -273,7 +273,7 @@ export default {
         {
           day: 'Piątek 30.10.2026',
           items: [
-            { time: '9:00–9:30',   title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków młodych uczestników',                                   speaker: 'Moderatorzy: TBC' },
+            { time: '8:00–9:30',   title: 'Kącik Młodego Elektrofizjologa: Prezentacja przypadków EP',                                   speaker: 'Moderatorzy: TBC' },
             { time: '9:30–10:00',  title: 'Wykład: Ablacja PFA dodatkowych pobudzeń komorowych',                                                            speaker: 'R. Tilz' },
             { time: '10:00–10:15', title: 'Wykład: Ablacja VT w protokole S3 cewnikiem dual-energy PFA/RF',                                                 speaker: 'I. Roca-Luque' },
             { time: '10:15–12:00', title: 'Zabieg live z Barcelony: Ablacja VT — protokół S3 z cewnikiem dual-energy PFA/RF',                               speaker: 'I. Roca-Luque' },

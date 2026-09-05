@@ -273,7 +273,7 @@ export default {
         {
           day: 'Friday 30.10.2026',
           items: [
-            { time: '9:00–9:30',   title: 'Young EP Corner: Case presentations by young participants',                          speaker: 'Moderators: TBC' },
+            { time: '8:00–9:30',   title: 'Young EP Corner: EP case presentations',                          speaker: 'Moderators: TBC' },
             { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                        speaker: 'R. Tilz' },
             { time: '10:00–10:15', title: 'Lecture: VT ablation in the S3 protocol with a dual-energy PFA/RF catheter',         speaker: 'I. Roca-Luque' },
             { time: '10:15–12:00', title: 'Live procedure from Barcelona: VT ablation — S3 protocol with a dual-energy PFA/RF catheter', speaker: 'I. Roca-Luque' },
