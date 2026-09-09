@@ -64,6 +64,7 @@ function Home() {
         location="WSS Biała Podlaska"
         theme={e2026.theme}
         speakers={speakers2026}
+        committeeExtra={e2026.committeeExtra}
         highlights={highlights2026}
         program={e2026.program}
         accent="pink"

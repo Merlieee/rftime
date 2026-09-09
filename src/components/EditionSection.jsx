@@ -5,7 +5,7 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
+export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
   const tabOrder = speakersFirst
     ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
     : ['program', 'speakers', 'scientific', 'organizing', 'organizer'];
@@ -44,9 +44,13 @@ export default function EditionSection({ edition, date, location, theme, speaker
     program: current ? t('edition.tabProgram') : t('edition.tabProgramNamed', { edition }),
   };
 
-  // Scientific committee = this edition's faculty, chaired by Maciej Wójcik.
+  // Scientific committee = this edition's faculty, chaired by Maciej Wójcik, plus any
+  // members who sit on the committee without appearing in the speakers grid.
   // Organizing committee is fixed across editions (from i18n).
-  const scientificMembers = speakers.map((s) => ({ name: s.name, title: s.title }));
+  const scientificMembers = [
+    ...speakers.map((s) => ({ name: s.name, title: s.title, location: s.location })),
+    ...committeeExtra,
+  ];
   const organizingMembers = t('committee.organizing', { returnObjects: true });
 
   return (
@@ -216,11 +220,23 @@ function CommitteeList({ members, chairName, chairIndex, chairLabel }) {
     <ul className="rounded-2xl border border-gray-200 bg-white divide-y divide-gray-100">
       {members.map((m, i) => {
         const isChair = m.name === chairName || i === chairIndex;
+        // Affiliations are optional — the organizing committee carries names only.
+        const affiliations = m.location ? (Array.isArray(m.location) ? m.location : [m.location]) : [];
         return (
-          <li key={m.name} className="flex items-center justify-between gap-4 px-6 py-4">
+          <li key={m.name} className="flex items-start justify-between gap-4 px-6 py-4">
             <div>
               <p className="text-sm font-semibold text-gray-900">{m.name}</p>
               <p className="text-2xs text-sky-600 font-medium mt-0.5">{m.title}</p>
+              {affiliations.length > 0 && (
+                <ul className="mt-1.5 space-y-0.5">
+                  {affiliations.map((line, j) => (
+                    <li key={j} className="text-2xs text-gray-400 leading-snug flex gap-1.5">
+                      <span className="shrink-0 text-gray-300">•</span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             {isChair && (
               <span className="shrink-0 text-2xs font-semibold text-sky-600 uppercase tracking-widest">
