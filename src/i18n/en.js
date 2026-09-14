@@ -407,7 +407,7 @@ export default {
     // Same organizing committee across all editions
     organizing: [
       { name: 'Maciej Wójcik',        title: 'Assoc. Prof., MD, PhD' },
-      { name: 'Radosław Kiedrowicz',  title: 'Assoc. Prof., MD, PhD' },
+      { name: 'Radosław Kiedrowicz',  title: 'Prof., MD, PhD' },
       { name: 'Andrzej Hoffmann',     title: 'MD, PhD' },
       { name: 'Paweł Błaszkiewicz',   title: 'MD, PhD' },
       { name: 'Sebastian Wójcik',     title: 'MD' },

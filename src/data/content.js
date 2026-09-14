@@ -8,7 +8,7 @@ export const speakerBase2026 = [
   { name: 'Roland Tilz',         title: 'prof. dr',        photo: '/speakers/RFtime-Roland-Tilz.webp' },
   { name: 'Ivo Roca-Luque',      title: 'prof. dr',        photo: '/speakers/RFtime-Ivo-Roca.webp' },
   { name: 'Andrzej Głowniak',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Andrzej-Glowniak.webp' },
-  { name: 'Radosław Kiedrowicz', title: 'dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
+  { name: 'Radosław Kiedrowicz', title: 'prof. dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
   { name: 'Andrzej Hoffmann',    title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
 ];
 
@@ -18,7 +18,7 @@ export const speakerBase2024 = [
   { name: 'Christopher Piorkowski', title: 'prof. dr',        photo: '/speakers/RFtime-Piorkowski-Christopher-webb-scaled.webp' },
   { name: 'Yan Huo',                title: 'prof. dr',        photo: '/speakers/RFtime-Yan-Huo-webb.webp' },
   { name: 'Andrzej Hoffmann',       title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
-  { name: 'Radosław Kiedrowicz',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
+  { name: 'Radosław Kiedrowicz',    title: 'prof. dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
 ];
 
 export const speakerBase2025 = [
@@ -27,7 +27,7 @@ export const speakerBase2025 = [
   { name: 'Thomas Neumann',         title: 'prof. dr',        photo: '/speakers/rftime-Thomas-Neumann-webb.webp' },
   { name: 'Ivo Roca-Luque',         title: 'prof. dr',        photo: '/speakers/Ivo-Roca-Luque.webp' },
   { name: 'Andrzej Hoffmann',       title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
-  { name: 'Radosław Kiedrowicz',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
+  { name: 'Radosław Kiedrowicz',    title: 'prof. dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
 ];
 
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
