@@ -241,7 +241,7 @@ export default {
         { title: 'prof. dr hab. n. med., FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Niemcy', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Niemcy'] },
         { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, Universitat de Barcelona, Hiszpania'] },
         { title: 'dr hab. n. med., prof. UM w Lublinie', location: ['Lubelski konsultant wojewódzki w dziedzinie kardiologii', 'Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska'] },
-        { title: 'dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'] },
+        { title: 'prof. dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'] },
         { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
@@ -307,7 +307,7 @@ export default {
         { title: 'prof. dr',        location: 'Kerckoff Klinik, Bad Nauheim, Niemcy' },
         { title: 'prof. dr',        location: 'Universitat de Barcelona, Hiszpania' },
         { title: 'dr n. med.',      location: 'Polska' },
-        { title: 'dr hab. n. med.', location: 'Polska' },
+        { title: 'prof. dr hab. n. med.', location: 'Polska' },
       ],
       program: [
         {
@@ -353,7 +353,7 @@ export default {
         { title: 'prof. dr',        location: 'Minneapolis, USA' },
         { title: 'prof. dr',        location: 'Chiny' },
         { title: 'dr n. med.',      location: 'Polska' },
-        { title: 'dr hab. n. med.', location: 'Polska' },
+        { title: 'prof. dr hab. n. med.', location: 'Polska' },
       ],
       program: [
         {

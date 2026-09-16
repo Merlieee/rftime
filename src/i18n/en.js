@@ -241,7 +241,7 @@ export default {
         { title: 'Prof., MD, PhD, FHRS, FESC, FEHRA', location: ['University Hospital Schleswig-Holstein, Campus Lübeck, Department of Rhythmology, Lübeck, Germany', 'Fraunhofer Research Institution for Individualized Medical Technology and Engineering IMTE, Lübeck, Germany'] },
         { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, University of Barcelona, Spain'] },
         { title: 'Assoc. Prof., MD, PhD (Prof. MU Lublin)', location: ['Regional Consultant in Cardiology for the Lublin Province', 'Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland'] },
-        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'] },
+        { title: 'Prof., MD, PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'] },
         { title: 'MD, PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre, Medical University of Silesia, Katowice, Poland'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
@@ -307,7 +307,7 @@ export default {
         { title: 'Prof., MD, PhD',        location: 'Kerckoff Klinik, Bad Nauheim, Germany' },
         { title: 'Prof., MD, PhD',        location: 'Universitat de Barcelona, Spain' },
         { title: 'MD, PhD',               location: 'Poland' },
-        { title: 'Assoc. Prof., MD, PhD', location: 'Poland' },
+        { title: 'Prof., MD, PhD',        location: 'Poland' },
       ],
       program: [
         {
@@ -353,7 +353,7 @@ export default {
         { title: 'Prof., MD, PhD',        location: 'Minneapolis, USA' },
         { title: 'Prof., MD, PhD',        location: 'China' },
         { title: 'MD, PhD',               location: 'Poland' },
-        { title: 'Assoc. Prof., MD, PhD', location: 'Poland' },
+        { title: 'Prof., MD, PhD',        location: 'Poland' },
       ],
       program: [
         {
