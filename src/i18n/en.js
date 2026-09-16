@@ -242,12 +242,12 @@ export default {
         { title: 'Prof., MD, PhD, FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, University of Barcelona, Spain'] },
         { title: 'Assoc. Prof., MD, PhD (Prof. MU Lublin)', location: ['Regional Consultant in Cardiology for the Lublin Province', 'Department of Cardiology and Cardiac Surgery, Medical University of Lublin, Poland', 'University Clinical Hospital No. 4, Lublin, Poland'] },
         { title: 'Prof., MD, PhD', location: ['Department of Cardiology, Pomeranian Medical University in Szczecin, Poland'] },
+        { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology, Medical University of Warsaw, Poland'] },
         { title: 'MD, PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre, Medical University of Silesia, Katowice, Poland'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
       // committee and operate on Friday without appearing in the speakers grid (no photo).
       committeeExtra: [
-        { name: 'Michał Peller',  title: 'Assoc. Prof., MD, PhD', location: ['1st Department of Cardiology, Medical University of Warsaw, Poland', 'University Clinical Centre of the Medical University of Warsaw (Central Clinical Hospital), Warsaw, Poland'] },
         { name: 'Marcin Szczasny', title: 'MD, PhD',              location: ['Provincial Specialist Hospital in Lublin (al. Kraśnicka), Poland'] },
       ],
       program: [

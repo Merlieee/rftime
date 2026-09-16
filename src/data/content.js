@@ -9,6 +9,7 @@ export const speakerBase2026 = [
   { name: 'Ivo Roca-Luque',      title: 'prof. dr',        photo: '/speakers/RFtime-Ivo-Roca.webp' },
   { name: 'Andrzej Głowniak',    title: 'dr hab. n. med.', photo: '/speakers/RFtime-Andrzej-Glowniak.webp' },
   { name: 'Radosław Kiedrowicz', title: 'prof. dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
+  { name: 'Michał Peller',       title: 'dr hab. n. med.', photo: '/speakers/RFtime-Michal-Peller.webp' },
   { name: 'Andrzej Hoffmann',    title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
 ];
 
