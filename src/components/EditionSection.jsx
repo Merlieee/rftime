@@ -5,10 +5,14 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
-  const tabOrder = speakersFirst
-    ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
-    : ['program', 'speakers', 'scientific', 'organizing', 'organizer'];
+export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, patronage, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
+  const tabOrder = [
+    ...(speakersFirst
+      ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
+      : ['program', 'speakers', 'scientific', 'organizing', 'organizer']),
+    // Only editions with patronage data get the tab.
+    ...(patronage ? ['patronage'] : []),
+  ];
   // Past editions start with every tab shut and stay that way until the reader picks one;
   // picking the open one closes it again. The current edition leads with its first tab
   // already showing.
@@ -18,7 +22,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
   const [playing, setPlaying] = useState(false);
   const scheduleRef = useRef(null);
   const sectionBg = index % 2 === 0 ? 'from-gray-50' : 'from-white';
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // Animate max-height between the collapsed preview and the measured full height,
   // the same smooth reveal as the media section's "show more" CTA.
@@ -39,6 +43,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
     scientific: t('committee.scientificTab'),
     organizing: t('committee.organizingTab'),
     organizer: t('organizer.label'),
+    patronage: t('patronage.tab'),
     // Past editions name the year on the programme tab — scrolled this far down the page,
     // a bare "Program" gives the reader no way to tell which one they are opening.
     program: current ? t('edition.tabProgram') : t('edition.tabProgramNamed', { edition }),
@@ -153,6 +158,10 @@ export default function EditionSection({ edition, date, location, theme, speaker
           );
         })()}
 
+        {tab === 'patronage' && (
+          <PatronageBlock patronage={patronage} lang={i18n.language} />
+        )}
+
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-widest mb-5">
@@ -247,5 +256,48 @@ function CommitteeList({ members, chairName, chairIndex, chairLabel }) {
         );
       })}
     </ul>
+  );
+}
+
+// Patron logos followed by the honorary patron card. Names come from i18n by index;
+// a patron with an English logo variant shows it when the page is read in English.
+function PatronageBlock({ patronage, lang }) {
+  const { t } = useTranslation();
+  const names = t('patronage.patrons', { returnObjects: true });
+  return (
+    <div className="space-y-4">
+      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('patronage.patronsLabel')}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {patronage.patrons.map((p, i) => (
+          <div key={names[i]} className="rounded-2xl border border-gray-200 bg-white p-6 flex flex-col items-center text-center">
+            <div className="h-24 w-full flex items-center justify-center">
+              <img
+                src={lang === 'en' && p.logoEn ? p.logoEn : p.logo}
+                alt={names[i]}
+                loading="lazy"
+                decoding="async"
+                className="max-h-full max-w-[220px] object-contain"
+              />
+            </div>
+            <p className="text-2xs text-gray-400 mt-4 leading-snug">{names[i]}</p>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('patronage.honoraryLabel')}</p>
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex items-center gap-5 sm:gap-6">
+        <img
+          src={patronage.honoraryPhoto}
+          alt={t('patronage.honoraryName')}
+          loading="lazy"
+          decoding="async"
+          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top shrink-0"
+        />
+        <div>
+          <p className="text-base font-semibold text-gray-900">{t('patronage.honoraryName')}</p>
+          <p className="text-sm text-gray-500 mt-0.5 leading-snug">{t('patronage.honoraryRole')}</p>
+        </div>
+      </div>
+    </div>
   );
 }

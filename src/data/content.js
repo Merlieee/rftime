@@ -31,6 +31,17 @@ export const speakerBase2025 = [
   { name: 'Radosław Kiedrowicz',    title: 'prof. dr hab. n. med.', photo: '/speakers/RFtime-Radoslaw-Kiedrowicz-web.webp' },
 ];
 
+// Patronage of the 2026 edition. Patron names live in i18n (patronage.patrons), merged by
+// index; Klub 30 ships a separate English-language logo, picked by the active language.
+export const patronage2026 = {
+  honoraryPhoto: '/speakers/RFtime-Andrzej-Glowniak.webp',
+  patrons: [
+    { logo: '/patronaty/asocjacja-rytmu-serca-ptk.webp' },
+    { logo: '/patronaty/klub-30-ptk.webp', logoEn: '/patronaty/club-30-pcs.webp' },
+    { logo: '/patronaty/oddzial-lubelski-ptk.webp' },
+  ],
+};
+
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
 export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
 export const highlightIcons2026 = [Activity, Radio, Mic, Users];

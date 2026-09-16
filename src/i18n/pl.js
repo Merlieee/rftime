@@ -435,6 +435,20 @@ export default {
     },
   },
 
+  // Patronage (2026 edition tab)
+  patronage: {
+    tab: 'Patronaty',
+    honoraryLabel: 'Patronat honorowy',
+    honoraryName: 'dr hab. n. med. Andrzej Głowniak, prof. UM',
+    honoraryRole: 'Konsultant Wojewódzki w dziedzinie kardiologii województwa lubelskiego',
+    patronsLabel: 'Patronaty',
+    patrons: [
+      'Asocjacja Rytmu Serca Polskiego Towarzystwa Kardiologicznego',
+      'Klub 30 Polskiego Towarzystwa Kardiologicznego',
+      'Oddział Lubelski Polskiego Towarzystwa Kardiologicznego',
+    ],
+  },
+
   // Media
   media: {
     label: 'Media',

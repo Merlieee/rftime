@@ -435,6 +435,20 @@ export default {
     },
   },
 
+  // Patronage (2026 edition tab)
+  patronage: {
+    tab: 'Patronage',
+    honoraryLabel: 'Honorary patronage',
+    honoraryName: 'Assoc. Prof. Andrzej Głowniak, MD, PhD (Prof. MU Lublin)',
+    honoraryRole: 'Regional Consultant in Cardiology for the Lublin Province',
+    patronsLabel: 'Patronage',
+    patrons: [
+      'Heart Rhythm Association of the Polish Cardiac Society',
+      'Club 30 of the Polish Cardiac Society',
+      'Lublin Branch of the Polish Cardiac Society',
+    ],
+  },
+
   // Media
   media: {
     label: 'Media',
