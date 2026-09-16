@@ -242,8 +242,8 @@ export default {
         { title: 'prof. dr hab. n. med., FESC, FEHRA', location: ['Head of Arrhythmia Section, Cardiology Department, Cardiovascular Institute, Hospital Clínic, Universitat de Barcelona, Hiszpania'] },
         { title: 'dr hab. n. med., prof. UM w Lublinie', location: ['Lubelski konsultant wojewódzki w dziedzinie kardiologii', 'Katedra Kardiologii i Kardiochirurgii, Uniwersytet Medyczny w Lublinie, Polska', 'Uniwersytecki Szpital Kliniczny Nr 4, Lublin, Polska'] },
         { title: 'prof. dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'] },
-        { title: 'dr hab. n. med.', location: ['Katedra i Klinika Kardiologii, Warszawski Uniwersytet Medyczny, Polska'] },
         { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'] },
+        { title: 'dr hab. n. med.', location: ['Katedra i Klinika Kardiologii, Warszawski Uniwersytet Medyczny, Polska'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
       // committee and operate on Friday without appearing in the speakers grid (no photo).
