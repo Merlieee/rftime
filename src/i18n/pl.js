@@ -446,6 +446,7 @@ export default {
       'Asocjacja Rytmu Serca Polskiego Towarzystwa Kardiologicznego',
       'Klub 30 Polskiego Towarzystwa Kardiologicznego',
       'Oddział Lubelski Polskiego Towarzystwa Kardiologicznego',
+      'Lubelska Izba Lekarska',
     ],
   },
 

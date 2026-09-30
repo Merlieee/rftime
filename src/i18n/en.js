@@ -446,6 +446,7 @@ export default {
       'Heart Rhythm Association of the Polish Cardiac Society',
       'Club 30 of the Polish Cardiac Society',
       'Lublin Branch of the Polish Cardiac Society',
+      'Lublin Chamber of Physicians',
     ],
   },
 

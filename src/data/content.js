@@ -39,6 +39,7 @@ export const patronage2026 = {
     { logo: '/patronaty/asocjacja-rytmu-serca-ptk.webp' },
     { logo: '/patronaty/klub-30-ptk.webp', logoEn: '/patronaty/club-30-pcs.webp' },
     { logo: '/patronaty/oddzial-lubelski-ptk.webp' },
+    { logo: '/patronaty/lubelska-izba-lekarska.webp' },
   ],
 };
 
