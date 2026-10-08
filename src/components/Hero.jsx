@@ -87,10 +87,6 @@ export default function Hero() {
             {t('hero.editions')}
           </a>
         </div>
-
-        {REGISTRATION_OPEN && (
-          <p className="mt-4 text-sm font-semibold text-white/90">{t('hero.registerNote')}</p>
-        )}
       </div>
     </section>
   );

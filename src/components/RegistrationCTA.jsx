@@ -57,8 +57,7 @@ export default function RegistrationCTA() {
           {t('cta.button')}
         </a>
 
-        <p className="mt-4 text-sm font-semibold text-white/90">{t('cta.registerNote')}</p>
-        <p className="mt-2 text-2xs text-white/70">{t('cta.note')}</p>
+        <p className="mt-4 text-2xs text-white/70">{t('cta.note')}</p>
       </div>
     </section>
   );

@@ -201,7 +201,6 @@ export default {
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
     note: 'Organizer: Elkardia Sp. z o.o.',
     register: 'Register now',
-    registerNote: 'Free admission · 17 PTK educational points',
     editions: 'Previous editions',
   },
 
@@ -492,7 +491,6 @@ export default {
     heading: 'Join RFtime 2026',
     desc: 'Workshop admission is free, places allocated on a first-come, first-served basis.',
     button: 'Register now',
-    registerNote: 'Free admission · 17 PTK educational points',
     note: 'Organizer: Elkardia Sp. z o.o.',
   },
 

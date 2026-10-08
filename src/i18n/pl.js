@@ -201,7 +201,6 @@ export default {
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
     note: 'Organizator: Elkardia Sp. z o.o.',
     register: 'Zgłoś uczestnictwo',
-    registerNote: 'Udział bezpłatny · 17 punktów edukacyjnych PTK',
     editions: 'Poprzednie edycje',
   },
 
@@ -492,7 +491,6 @@ export default {
     heading: 'Dołącz do RFtime 2026',
     desc: 'Udział w warsztatach bezpłatny, liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
-    registerNote: 'Udział bezpłatny · 17 punktów edukacyjnych PTK',
     note: 'Organizator: Elkardia Sp. z o.o.',
   },
 
