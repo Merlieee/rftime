@@ -259,25 +259,26 @@ function CommitteeList({ members, chairName, chairIndex, chairLabel }) {
   );
 }
 
-// Honorary patron card followed by the patron logos. Names come from i18n by index;
+// Educational points card, the patron logos, then the honorary patron card. Names come from i18n by index;
 // a patron with an English logo variant shows it when the page is read in English.
 function PatronageBlock({ patronage, lang }) {
   const { t } = useTranslation();
   const names = t('patronage.patrons', { returnObjects: true });
   return (
     <div className="space-y-4">
-      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('patronage.honoraryLabel')}</p>
+      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('patronage.pointsLabel')}</p>
       <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex items-center gap-5 sm:gap-6">
         <img
-          src={patronage.honoraryPhoto}
-          alt={t('patronage.honoraryName')}
+          src="/patronaty/ptk-logo.webp"
+          alt={t('patronage.pointsLogoAlt')}
           loading="lazy"
           decoding="async"
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top shrink-0"
+          className="w-20 h-20 sm:w-24 sm:h-24 object-contain shrink-0"
         />
         <div>
-          <p className="text-base font-bold text-gray-900 leading-snug">{t('patronage.honoraryRole')}</p>
-          <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.honoraryName')}</p>
+          <p className="text-base font-bold text-gray-900 leading-snug">{t('patronage.pointsTitle')}</p>
+          <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.pointsDays')}</p>
+          <p className="text-2xs text-gray-400 mt-2 leading-snug">{t('patronage.pointsSource')}</p>
         </div>
       </div>
 
@@ -299,19 +300,18 @@ function PatronageBlock({ patronage, lang }) {
         ))}
       </div>
 
-      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('patronage.pointsLabel')}</p>
+      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('patronage.honoraryLabel')}</p>
       <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex items-center gap-5 sm:gap-6">
         <img
-          src="/patronaty/ptk-logo.webp"
-          alt={t('patronage.pointsLogoAlt')}
+          src={patronage.honoraryPhoto}
+          alt={t('patronage.honoraryName')}
           loading="lazy"
           decoding="async"
-          className="w-20 h-20 sm:w-24 sm:h-24 object-contain shrink-0"
+          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover object-top shrink-0"
         />
         <div>
-          <p className="text-base font-bold text-gray-900 leading-snug">{t('patronage.pointsTitle')}</p>
-          <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.pointsDays')}</p>
-          <p className="text-2xs text-gray-400 mt-2 leading-snug">{t('patronage.pointsSource')}</p>
+          <p className="text-base font-bold text-gray-900 leading-snug">{t('patronage.honoraryRole')}</p>
+          <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.honoraryName')}</p>
         </div>
       </div>
     </div>
