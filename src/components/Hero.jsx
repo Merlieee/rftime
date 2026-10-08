@@ -15,12 +15,12 @@ export default function Hero() {
       <div
         aria-hidden="true"
         className="absolute inset-y-0 left-0 w-1/2 pointer-events-none bg-no-repeat opacity-85"
-        style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '200% auto', backgroundPosition: 'left 0%' }}
+        style={{ backgroundImage: 'url(/hero-pattern.webp)', backgroundSize: '200% auto', backgroundPosition: 'left 0%' }}
       />
       <div
         aria-hidden="true"
         className="absolute inset-y-0 right-0 w-1/2 pointer-events-none bg-no-repeat opacity-85"
-        style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '200% auto', backgroundPosition: 'right 100%' }}
+        style={{ backgroundImage: 'url(/hero-pattern.webp)', backgroundSize: '200% auto', backgroundPosition: 'right 100%' }}
       />
 
       {/* Darkening scrim — symmetric, for centered text legibility. Gradient untouched underneath. */}
@@ -87,6 +87,10 @@ export default function Hero() {
             {t('hero.editions')}
           </a>
         </div>
+
+        {REGISTRATION_OPEN && (
+          <p className="mt-4 text-sm font-semibold text-white/90">{t('hero.registerNote')}</p>
+        )}
       </div>
     </section>
   );

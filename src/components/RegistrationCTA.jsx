@@ -14,7 +14,7 @@ export default function RegistrationCTA() {
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none bg-no-repeat opacity-85"
-        style={{ backgroundImage: 'url(/hero-pattern.png)', backgroundSize: '100% auto', backgroundPosition: 'center 35%' }}
+        style={{ backgroundImage: 'url(/hero-pattern.webp)', backgroundSize: '100% auto', backgroundPosition: 'center 35%' }}
       />
 
       {/* Darkening scrim — gentle, even, for centered text legibility. Gradient untouched underneath. */}
@@ -57,7 +57,8 @@ export default function RegistrationCTA() {
           {t('cta.button')}
         </a>
 
-        <p className="mt-4 text-2xs text-white/70">{t('cta.note')}</p>
+        <p className="mt-4 text-sm font-semibold text-white/90">{t('cta.registerNote')}</p>
+        <p className="mt-2 text-2xs text-white/70">{t('cta.note')}</p>
       </div>
     </section>
   );

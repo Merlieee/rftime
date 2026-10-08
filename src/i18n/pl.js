@@ -88,14 +88,13 @@ export default {
 
   // Terms & conditions page — transcription of docs/regulamin_rftime_2026.md, itself a
   // copy of elkardia.pl/rftime-2026-regulamin. That published version is the binding one;
-  // keep all three in sync, and re-check §3 once PTK rules on accreditation — the wording
-  // is conditional on a decision that had not arrived when this was written.
+  // keep all three in sync. §3 reflects the PTK decision: 17 points (9 day one, 8 day two).
   termsPage: {
     title: 'Regulamin Warsztatów naukowo-szkoleniowych RFtime 2026',
-    updated: 'Ostatnia aktualizacja: 5 września 2026 r.',
+    updated: 'Ostatnia aktualizacja: 8 października 2026 r.',
     back: 'Powrót na stronę główną',
     note: '',
-    intro: 'Wersja z warunkowymi zapisami dotyczącymi akredytacji PTK — do stosowania do czasu otrzymania decyzji Polskiego Towarzystwa Kardiologicznego.',
+    intro: 'Wersja uwzględniająca decyzję Polskiego Towarzystwa Kardiologicznego o przyznaniu Warsztatom 17 punktów edukacyjnych.',
     lead: `Rejestracja na Warsztaty prowadzona jest pod adresem [elkardia.pl/rftime2026-rejestracja](${REGISTRATION_URL}); przesłanie formularza wymaga akceptacji niniejszego Regulaminu. Zasady przetwarzania danych zgłoszeniowych opisuje [Polityka prywatności Warsztatów RFtime 2026](${POLICY_URL}).`,
     sections: [
       {
@@ -133,8 +132,8 @@ export default {
         heading: '§ 3. Punkty edukacyjne i certyfikaty',
         body: [
           { ol: [
-            'Organizator informuje, że **trwa procedura ubiegania się o przyznanie Warsztatom akredytacji oraz punktów edukacyjnych Polskiego Towarzystwa Kardiologicznego (PTK)**. Przyznanie punktów uczestnikom będącym lekarzami uzależnione jest od pozytywnej decyzji PTK. O wyniku procedury Organizator poinformuje na stronie rftime.pl.',
-            { text: 'W przypadku przyznania akredytacji, warunkiem uzyskania punktów edukacyjnych PTK oraz certyfikatu z punktami przez lekarza jest:', ul: [
+            'Warsztatom przyznano **17 punktów edukacyjnych Polskiego Towarzystwa Kardiologicznego (PTK)**: 9 punktów za I dzień (29 października 2026 r.) oraz 8 punktów za II dzień (30 października 2026 r.).',
+            { text: 'Warunkiem uzyskania punktów edukacyjnych PTK oraz certyfikatu z punktami przez lekarza jest:', ul: [
               'podanie poprawnego numeru PWZ w procesie rejestracji,',
               'osobista obecność na Warsztatach, zweryfikowana zgodnie z procedurą Organizatora.',
             ] },
@@ -160,10 +159,10 @@ export default {
             'Administratorem danych osobowych uczestników Warsztatów jest **Elkardia Sp. z o.o.** z siedzibą w Lublinie przy ul. Rotmistrza Witolda Pileckiego 23/20 (20-091 Lublin). Kontakt w sprawach ochrony danych osobowych: e-mail rodo@elkardia.pl.',
             { text: 'Dane osobowe uczestników przetwarzane są w celu:', ul: [
               'rejestracji, organizacji, przeprowadzenia i obsługi logistycznej Warsztatów oraz wystawienia i przesłania certyfikatów uczestnictwa (podstawa: art. 6 ust. 1 lit. b RODO — realizacja umowy zgłoszenia udziału),',
-              'weryfikacji statusu uczestnika (lekarz / student medycyny) oraz — **w przypadku przyznania akredytacji przez PTK** — przyznania punktów edukacyjnych i rozliczenia akredytacji naukowej przed Polskim Towarzystwem Kardiologicznym (podstawa: art. 6 ust. 1 lit. b RODO oraz art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes Organizatora i podmiotu trzeciego, polegający na rzetelnym rozliczeniu programu edukacyjnego),',
+              'weryfikacji statusu uczestnika (lekarz / student medycyny) oraz przyznania punktów edukacyjnych i rozliczenia akredytacji naukowej przed Polskim Towarzystwem Kardiologicznym (podstawa: art. 6 ust. 1 lit. b RODO oraz art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes Organizatora i podmiotu trzeciego, polegający na rzetelnym rozliczeniu programu edukacyjnego),',
               'ustalenia, dochodzenia lub obrony przed ewentualnymi roszczeniami związanymi z organizacją Warsztatów (podstawa: art. 6 ust. 1 lit. f RODO).',
             ] },
-            'Odbiorcą danych osobowych lekarzy ubiegających się o punkty edukacyjne (imię, nazwisko, numer PWZ) będzie **Polskie Towarzystwo Kardiologiczne** z siedzibą w Warszawie — **pod warunkiem i wyłącznie w celu rejestracji punktów po uzyskaniu pozytywnej decyzji akredytacyjnej PTK**. Dane mogą być ponadto powierzane podmiotom świadczącym dla Organizatora usługi techniczne (m.in. hosting strony i formularza, obsługa poczty elektronicznej) na podstawie umów powierzenia przetwarzania danych.',
+            'Odbiorcą danych osobowych lekarzy ubiegających się o punkty edukacyjne (imię, nazwisko, numer PWZ) będzie **Polskie Towarzystwo Kardiologiczne** z siedzibą w Warszawie — **wyłącznie w celu rejestracji przyznanych punktów edukacyjnych**. Dane mogą być ponadto powierzane podmiotom świadczącym dla Organizatora usługi techniczne (m.in. hosting strony i formularza, obsługa poczty elektronicznej) na podstawie umów powierzenia przetwarzania danych.',
             'Dane osobowe uczestników będą przechowywane przez okres niezbędny do przeprowadzenia, rozliczenia i udokumentowania Warsztatów, a także przez czas wymagany przepisami prawa powszechnie obowiązującego, wytycznymi PTK dotyczącymi sprawozdawczości programów edukacyjnych oraz przez okres przedawnienia ewentualnych roszczeń.',
             'Uczestnikowi przysługuje prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz prawo wniesienia sprzeciwu wobec przetwarzania opartego na art. 6 ust. 1 lit. f RODO. Prawa te można realizować poprzez kontakt na adres: rodo@elkardia.pl.',
             'Uczestnikowi przysługuje prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa), jeżeli uzna, że przetwarzanie jego danych narusza przepisy RODO.',
@@ -202,6 +201,7 @@ export default {
     topics: ['Mapowanie 3D', 'Złożone Ablacje RF/PFA'],
     note: 'Organizator: Elkardia Sp. z o.o.',
     register: 'Zgłoś uczestnictwo',
+    registerNote: 'Udział bezpłatny · 17 punktów edukacyjnych PTK',
     editions: 'Poprzednie edycje',
   },
 
@@ -448,6 +448,11 @@ export default {
       'Oddział Lubelski Polskiego Towarzystwa Kardiologicznego',
       'Lubelska Izba Lekarska',
     ],
+    pointsLogoAlt: 'Polskie Towarzystwo Kardiologiczne',
+    pointsLabel: 'Punkty edukacyjne',
+    pointsTitle: '17 punktów edukacyjnych PTK',
+    pointsDays: 'I dzień: 9 · II dzień: 8',
+    pointsSource: 'Przyznane przez Komisję ds. Szkoleń Polskiego Towarzystwa Kardiologicznego',
   },
 
   // Media
@@ -487,6 +492,7 @@ export default {
     heading: 'Dołącz do RFtime 2026',
     desc: 'Udział w warsztatach bezpłatny, liczy się kolejność zgłoszeń.',
     button: 'Zgłoś uczestnictwo',
+    registerNote: 'Udział bezpłatny · 17 punktów edukacyjnych PTK',
     note: 'Organizator: Elkardia Sp. z o.o.',
   },
 

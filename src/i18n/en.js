@@ -22,7 +22,7 @@ export default {
   // (POLICY_URL) — that document is the binding one, this page just points at it.
   privacyPage: {
     title: 'Privacy policy of the rftime.pl website',
-    updated: 'Last updated: 5 September 2026',
+    updated: 'Last updated: 8 October 2026',
     back: 'Back to homepage',
     note: 'This English version is provided for convenience. The Polish version of this policy is the legally binding text; in the event of any discrepancy, the Polish version prevails.',
     intro: 'The rftime.pl website is purely informational — it does not collect or store any personal data of participants. This document describes what happens when you use the website itself.',
@@ -87,15 +87,14 @@ export default {
 
   // Terms & conditions page — English rendering of docs/regulamin_rftime_2026.md, itself
   // a copy of elkardia.pl/rftime-2026-regulamin. That published Polish version is the
-  // binding one (see `note` below); keep all three in sync, and re-check § 3 once PTK
-  // rules on accreditation — the wording is conditional on a decision that had not
-  // arrived when this was written.
+  // binding one (see `note` below); keep all three in sync. § 3 reflects the PTK decision:
+  // 17 points (9 day one, 8 day two).
   termsPage: {
     title: 'Terms and conditions of the RFtime 2026 scientific and training workshop',
-    updated: 'Last updated: 5 September 2026',
+    updated: 'Last updated: 8 October 2026',
     back: 'Back to homepage',
     note: 'This English version is provided for convenience. The Polish version of these terms is the legally binding text; in the event of any discrepancy, the Polish version prevails.',
-    intro: 'Version with conditional provisions concerning PTK accreditation — to be applied until the decision of the Polish Cardiac Society is received.',
+    intro: 'Version reflecting the decision of the Polish Cardiac Society to award the Workshop 17 educational points.',
     lead: `Registration for the Workshop runs at [elkardia.pl/rftime2026-rejestracja](${REGISTRATION_URL}); submitting the form requires accepting these Terms. The processing of registration data is described in the [RFtime 2026 Workshop Privacy Policy](${POLICY_URL}).`,
     sections: [
       {
@@ -133,8 +132,8 @@ export default {
         heading: '§ 3. Educational points and certificates',
         body: [
           { ol: [
-            'The Organizer informs that **the procedure for obtaining accreditation and educational points of the Polish Cardiac Society (PTK) for the Workshop is under way**. The award of points to participants who are doctors depends on a positive PTK decision. The Organizer will announce the outcome of the procedure on rftime.pl.',
-            { text: 'Should accreditation be granted, a doctor obtaining PTK educational points and a certificate bearing them is conditional upon:', ul: [
+            'The Workshop has been awarded **17 educational points of the Polish Cardiac Society (PTK)**: 9 points for day one (29 October 2026) and 8 points for day two (30 October 2026).',
+            { text: 'A doctor obtaining PTK educational points and a certificate bearing them is conditional upon:', ul: [
               'providing a correct PWZ number during registration,',
               'personal attendance at the Workshop, verified in accordance with the Organizer’s procedure.',
             ] },
@@ -160,10 +159,10 @@ export default {
             'The controller of participants’ personal data is **Elkardia Sp. z o.o.**, seated in Lublin at ul. Rotmistrza Witolda Pileckiego 23/20 (20-091 Lublin, Poland). Contact for data protection matters: e-mail rodo@elkardia.pl.',
             { text: 'Participants’ personal data is processed for the purpose of:', ul: [
               'registration, organisation, delivery and logistical handling of the Workshop, and issuing and sending certificates of participation (basis: Art. 6(1)(b) GDPR — performance of the participation agreement),',
-              'verifying participant status (doctor / medical student) and — **if accreditation is granted by PTK** — awarding educational points and accounting for the scientific accreditation before the Polish Cardiac Society (basis: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR — the legitimate interest of the Organizer and of a third party in the proper settlement of the educational programme),',
+              'verifying participant status (doctor / medical student) and awarding educational points and accounting for the scientific accreditation before the Polish Cardiac Society (basis: Art. 6(1)(b) GDPR and Art. 6(1)(f) GDPR — the legitimate interest of the Organizer and of a third party in the proper settlement of the educational programme),',
               'establishing, pursuing or defending against any claims connected with the organisation of the Workshop (basis: Art. 6(1)(f) GDPR).',
             ] },
-            'The recipient of the personal data of doctors applying for educational points (first name, surname, PWZ number) will be the **Polish Cardiac Society**, seated in Warsaw — **conditionally and solely for the purpose of registering the points once a positive PTK accreditation decision has been obtained**. Data may additionally be entrusted to entities providing technical services to the Organizer (including website and form hosting, e-mail services) under data processing agreements.',
+            'The recipient of the personal data of doctors applying for educational points (first name, surname, PWZ number) will be the **Polish Cardiac Society**, seated in Warsaw — **solely for the purpose of registering the awarded educational points**. Data may additionally be entrusted to entities providing technical services to the Organizer (including website and form hosting, e-mail services) under data processing agreements.',
             'Participants’ personal data will be stored for the period necessary to deliver, settle and document the Workshop, and for the period required by generally applicable law, by PTK guidelines on the reporting of educational programmes, and by the limitation period for any claims.',
             'The participant has the right to access their data, to rectify or erase it, to restrict processing, to data portability, and to object to processing based on Art. 6(1)(f) GDPR. These rights may be exercised by writing to: rodo@elkardia.pl.',
             'The participant has the right to lodge a complaint with the President of the Personal Data Protection Office (ul. Stawki 2, 00-193 Warsaw, Poland) if they consider that the processing of their data infringes the GDPR.',
@@ -202,6 +201,7 @@ export default {
     topics: ['3D Mapping', 'Complex RF/PFA Ablations'],
     note: 'Organizer: Elkardia Sp. z o.o.',
     register: 'Register now',
+    registerNote: 'Free admission · 17 PTK educational points',
     editions: 'Previous editions',
   },
 
@@ -448,6 +448,11 @@ export default {
       'Lublin Branch of the Polish Cardiac Society',
       'Lublin Chamber of Physicians',
     ],
+    pointsLogoAlt: 'Polish Cardiac Society',
+    pointsLabel: 'Educational points',
+    pointsTitle: '17 PTK educational points',
+    pointsDays: 'Day one: 9 · Day two: 8',
+    pointsSource: 'Awarded by the Training Committee of the Polish Cardiac Society',
   },
 
   // Media
@@ -487,6 +492,7 @@ export default {
     heading: 'Join RFtime 2026',
     desc: 'Workshop admission is free, places allocated on a first-come, first-served basis.',
     button: 'Register now',
+    registerNote: 'Free admission · 17 PTK educational points',
     note: 'Organizer: Elkardia Sp. z o.o.',
   },
 

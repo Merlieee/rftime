@@ -188,9 +188,9 @@ export default function EditionSection({ edition, date, location, theme, speaker
                       IP reaches Google on page load, before anyone clicks play. The privacy
                       policy §4 says nothing goes to YouTube until playback starts; this is
                       what makes that true. Refresh with:
-                      curl -o public/youtube/<id>.jpg https://img.youtube.com/vi/<id>/maxresdefault.jpg */}
+                      curl -o /tmp/<id>.jpg https://img.youtube.com/vi/<id>/maxresdefault.jpg && cwebp -q 82 /tmp/<id>.jpg -o public/youtube/<id>.webp */}
                   <img
-                    src={`/youtube/${youtubeId}.jpg`}
+                    src={`/youtube/${youtubeId}.webp`}
                     alt={`RFtime ${edition}`}
                     loading="lazy"
                     className="w-full h-full object-cover scale-[1.02]"
@@ -297,6 +297,22 @@ function PatronageBlock({ patronage, lang }) {
             <p className="text-2xs text-gray-400 mt-4 leading-snug">{names[i]}</p>
           </div>
         ))}
+      </div>
+
+      <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('patronage.pointsLabel')}</p>
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex items-center gap-5 sm:gap-6">
+        <img
+          src="/patronaty/ptk-logo.webp"
+          alt={t('patronage.pointsLogoAlt')}
+          loading="lazy"
+          decoding="async"
+          className="w-20 h-20 sm:w-24 sm:h-24 object-contain shrink-0"
+        />
+        <div>
+          <p className="text-base font-bold text-gray-900 leading-snug">{t('patronage.pointsTitle')}</p>
+          <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.pointsDays')}</p>
+          <p className="text-2xs text-gray-400 mt-2 leading-snug">{t('patronage.pointsSource')}</p>
+        </div>
       </div>
     </div>
   );
