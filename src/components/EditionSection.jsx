@@ -5,11 +5,13 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, programNote, patronage, partners, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
+export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, programNote, patronage, partners, certificate, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
+  // The current edition shows both committees under one tab; past editions keep them apart.
+  const committeeTabs = current ? ['committees'] : ['scientific', 'organizing'];
   const tabOrder = [
-    ...(speakersFirst
-      ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
-      : ['program', 'speakers', 'scientific', 'organizing', 'organizer']),
+    ...(speakersFirst ? ['speakers', 'program'] : ['program', 'speakers']),
+    ...committeeTabs,
+    'organizer',
     // Only editions with patronage data get the tab.
     ...(patronage ? ['patronage'] : []),
     ...(partners ? ['partners'] : []),
@@ -43,6 +45,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
     speakers: t('edition.tabSpeakers'),
     scientific: t('committee.scientificTab'),
     organizing: t('committee.organizingTab'),
+    committees: t('committee.combinedTab'),
     organizer: t('organizer.label'),
     patronage: t('patronage.tab'),
     partners: t('partners.tab'),
@@ -118,6 +121,14 @@ export default function EditionSection({ edition, date, location, theme, speaker
         )}
         {tab === 'scientific' && <CommitteeList members={scientificMembers} chairName="Maciej Wójcik" chairLabel={t('committee.chair')} />}
         {tab === 'organizing' && <CommitteeList members={organizingMembers} chairIndex={0} chairLabel={t('committee.chair')} />}
+        {tab === 'committees' && (
+          <div className="space-y-4">
+            <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest">{t('committee.scientificTab')}</p>
+            <CommitteeList members={scientificMembers} chairName="Maciej Wójcik" chairLabel={t('committee.chair')} />
+            <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('committee.organizingTab')}</p>
+            <CommitteeList members={organizingMembers} chairIndex={0} chairLabel={t('committee.chair')} />
+          </div>
+        )}
         {tab === 'program' && (
           <div>
             <div
@@ -164,7 +175,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
           <PatronageBlock patronage={patronage} lang={i18n.language} />
         )}
 
-        {tab === 'partners' && <PartnersBlock partners={partners} />}
+        {tab === 'partners' && <PartnersBlock partners={partners} certificate={certificate} />}
 
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
@@ -332,7 +343,7 @@ const TIER_LAYOUT = {
   friends: { grid: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4', logo: 'h-14', maxW: 'max-w-[160px]', text: 'text-base' },
 };
 
-function PartnersBlock({ partners }) {
+function PartnersBlock({ partners, certificate }) {
   const { t } = useTranslation();
   return (
     <div className="space-y-4">
@@ -363,6 +374,38 @@ function PartnersBlock({ partners }) {
           </div>
         );
       })}
+
+      {certificate && (
+        <>
+          <p className="text-xs font-semibold text-sky-600 uppercase tracking-widest pt-4">{t('partners.certLabel')}</p>
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className="flex items-center gap-6 shrink-0">
+              {certificate.issuers.map((c) => (
+                <img
+                  key={c.name}
+                  src={c.logo}
+                  alt={c.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-12 sm:h-14 w-auto max-w-[160px] object-contain"
+                />
+              ))}
+            </div>
+            <div>
+              <p className="text-base font-bold text-gray-900 leading-snug">{t('partners.certTitle', { number: certificate.number })}</p>
+              <p className="text-sm font-normal text-gray-500 mt-1">{t('partners.certText')}</p>
+              <a
+                href={certificate.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-2xs font-medium text-sky-600 mt-2 hover:underline"
+              >
+                {t('partners.certLink')} →
+              </a>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

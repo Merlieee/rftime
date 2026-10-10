@@ -259,7 +259,7 @@ export default {
             { time: '9:30–10:00',  title: 'Wykład: Jak wykonać ablację cewnikiem Volt™ PFA (dane Rejestru Revolutionary)',                                 speaker: 'B. Schmidt, J. Chun' },
             { time: '10:00–11:30', title: 'Zabieg live z Frankfurtu: Ablacja AF systemem Volt™ PFA II generacji',                                          speaker: 'J. Chun, B. Schmidt',         moderators: 'Moderatorzy: M. Wójcik, A. Głowniak, M. Peller' },
             { time: '10:30–12:45', title: 'Zabieg live: Ablacja poza PVI systemem Volt™ PFA II generacji — izolacja żyły głównej górnej (SVC)',            speaker: 'M. Wójcik, P. Błaszkiewicz',  moderators: 'Moderatorzy: A. Głowniak, M. Peller, A. Hoffmann' },
-            { time: 'ok. 12:00',   title: 'Komunikat badawczy (w trakcie transmisji zabiegu): EPISODE VT — randomizowane badanie wieloośrodkowe',          speaker: 'P. Derejko (Medicover, Warszawa) — 3–5 min' },
+            { time: 'ok. 12:00',   title: 'EPISODE VT — randomizowane badanie wieloośrodkowe',          speaker: 'P. Derejko (Medicover, Warszawa) — 5 min' },
             { time: '12:45–13:30', title: 'Lunch',                                                                                                        speaker: '' },
             { time: '13:30–14:15', title: 'Wykład: Clinical Anatomy for Electrophysiology — Session 1: How to ablate atrial arrhythmias, from specimen to catheter',      speaker: 'M. Didenko' },
             { time: '14:15–14:30', title: 'Prezentacja ciekawego przypadku: Częstoskurcz przedsionkowy u młodego mężczyzny — ile zabiegów potrzeba, żeby skutecznie pozbawić pacjenta arytmii?', speaker: 'M. Kiliszek (WIM, Warszawa)', moderators: 'Moderatorzy: A. Hoffmann, R. Płaksej, B. Bińkowski' },
@@ -272,7 +272,7 @@ export default {
             {
               time: '19:00–20:00',
               title: 'Kącik Młodego Elektrofizjologa I — Prezentacje przypadków uczestników',
-              speaker: 'Moderatorzy: R. Kiedrowicz, T. Kucejko, K. Momot',
+              moderators: 'Moderatorzy: R. Kiedrowicz, T. Kucejko, K. Momot',
               cases: [
                 { time: '19:00', speaker: 'P. Życiński (Sieradz)',                 title: 'Persistent AF — ablation of nonpulmonary triggers' },
                 { time: '19:10', speaker: 'B. Bińkowski (WWCOiT Łódź)',            title: 'Ultimate remedy for Bachmann’s bundle dependent tachycardias?' },
@@ -302,7 +302,7 @@ export default {
             {
               time: '14:30–15:30',
               title: 'Kącik Młodego Elektrofizjologa II — Prezentacje przypadków uczestników',
-              speaker: 'Moderatorzy: R. Kiedrowicz, K. Momot',
+              moderators: 'Moderatorzy: R. Kiedrowicz, K. Momot',
               cases: [
                 { time: '14:30', speaker: 'I. Warchoł-Kryszkowska, T. Kucejko (USK nr 2 Łódź)',   title: 'Cardioneuromodulation as an Effective Method for Syncope Treatment Controlled by Extracardiac Vagal Stimulation with Use of Neuromuscular Monitor: The Case Series' },
                 { time: '14:40', speaker: 'P. Życiński (Sieradz)',                                title: 'Unusual sVT scenario (inspired by CSP)' },
@@ -429,6 +429,7 @@ export default {
   committee: {
     scientificTab: 'Komitet naukowy',
     organizingTab: 'Komitet organizacyjny',
+    combinedTab: 'Komitety',
     chair: 'Przewodniczący komitetu',
     // Same organizing committee across all editions
     organizing: [
@@ -483,6 +484,10 @@ export default {
 
   partners: {
     tab: 'Partnerzy',
+    certLabel: 'Certyfikat SOWE',
+    certTitle: 'Certyfikat nr {{number}}',
+    certText: 'RFtime 2026 spełnia standardy etyczne Kodeksów Etyki Izby POLMED i MedTech Polska.',
+    certLink: 'Sprawdź wynik certyfikacji',
     tiers: {
       diamond: 'Partner Diamentowy',
       gold: 'Partnerzy Złoci',

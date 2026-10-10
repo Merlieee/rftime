@@ -259,7 +259,7 @@ export default {
             { time: '9:30–10:00',  title: 'Lecture: How to perform Volt™ PFA ablation (Revolutionary Registry data)',            speaker: 'B. Schmidt, J. Chun' },
             { time: '10:00–11:30', title: 'Live procedure from Frankfurt: AF ablation with the 2nd-generation Volt™ PFA system', speaker: 'J. Chun, B. Schmidt',        moderators: 'Moderators: M. Wójcik, A. Głowniak, M. Peller' },
             { time: '10:30–12:45', title: 'Live procedure: Beyond-PVI ablation with the 2nd-generation Volt™ PFA system — superior vena cava (SVC) isolation', speaker: 'M. Wójcik, P. Błaszkiewicz', moderators: 'Moderators: A. Głowniak, M. Peller, A. Hoffmann' },
-            { time: 'approx. 12:00', title: 'Research communication (during the live procedure): EPISODE VT — a randomised multicentre trial', speaker: 'P. Derejko (Medicover, Warsaw) — 3–5 min' },
+            { time: 'approx. 12:00', title: 'EPISODE VT — a randomised multicentre trial', speaker: 'P. Derejko (Medicover, Warsaw) — 5 min' },
             { time: '12:45–13:30', title: 'Lunch',                                                                               speaker: '' },
             { time: '13:30–14:15', title: 'Lecture: Clinical Anatomy for Electrophysiology — Session 1: How to ablate atrial arrhythmias, from specimen to catheter',      speaker: 'M. Didenko' },
             { time: '14:15–14:30', title: 'Interesting case: Atrial tachycardia in a young man — how many procedures does it take to free the patient of the arrhythmia?', speaker: 'M. Kiliszek (Military Institute of Medicine, Warsaw)', moderators: 'Moderators: A. Hoffmann, R. Płaksej, B. Bińkowski' },
@@ -272,7 +272,7 @@ export default {
             {
               time: '19:00–20:00',
               title: 'Young EP Corner I — Participant case presentations',
-              speaker: 'Moderators: R. Kiedrowicz, T. Kucejko, K. Momot',
+              moderators: 'Moderators: R. Kiedrowicz, T. Kucejko, K. Momot',
               cases: [
                 { time: '19:00', speaker: 'P. Życiński (Sieradz)',                 title: 'Persistent AF — ablation of nonpulmonary triggers' },
                 { time: '19:10', speaker: 'B. Bińkowski (WWCOiT Łódź)',            title: 'Ultimate remedy for Bachmann’s bundle dependent tachycardias?' },
@@ -302,7 +302,7 @@ export default {
             {
               time: '14:30–15:30',
               title: 'Young EP Corner II — Participant case presentations',
-              speaker: 'Moderators: R. Kiedrowicz, K. Momot',
+              moderators: 'Moderators: R. Kiedrowicz, K. Momot',
               cases: [
                 { time: '14:30', speaker: 'I. Warchoł-Kryszkowska, T. Kucejko (USK No. 2 Łódź)',   title: 'Cardioneuromodulation as an Effective Method for Syncope Treatment Controlled by Extracardiac Vagal Stimulation with Use of Neuromuscular Monitor: The Case Series' },
                 { time: '14:40', speaker: 'P. Życiński (Sieradz)',                                 title: 'Unusual sVT scenario (inspired by CSP)' },
@@ -429,6 +429,7 @@ export default {
   committee: {
     scientificTab: 'Scientific Committee',
     organizingTab: 'Organizing Committee',
+    combinedTab: 'Committees',
     chair: 'Committee Chair',
     // Same organizing committee across all editions
     organizing: [
@@ -483,6 +484,10 @@ export default {
 
   partners: {
     tab: 'Partners',
+    certLabel: 'SOWE certificate',
+    certTitle: 'Certificate no. {{number}}',
+    certText: 'RFtime 2026 meets the ethical standards of the POLMED Chamber and MedTech Polska Codes of Ethics.',
+    certLink: 'Verify the certification',
     tiers: {
       diamond: 'Diamond Partner',
       gold: 'Gold Partners',

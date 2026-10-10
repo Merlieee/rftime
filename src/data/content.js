@@ -67,6 +67,17 @@ export const partners2026 = [
   ] },
 ];
 
+// SOWE certificate: the 2026 edition meets the POLMED and MedTech Polska codes of ethics.
+// Shown at the foot of the partners tab; the number links to the public SOWE record.
+export const ethicsCert2026 = {
+  number: '3477',
+  url: 'https://sowe.org.pl/3477',
+  issuers: [
+    { name: 'POLMED', logo: '/partnerzy/polmed.webp' },
+    { name: 'MedTech Polska', logo: '/partnerzy/medtech-polska.svg' },
+  ],
+};
+
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
 export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
 export const highlightIcons2026 = [Activity, Radio, Mic, Users];

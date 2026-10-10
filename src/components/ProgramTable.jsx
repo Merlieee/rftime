@@ -14,7 +14,7 @@ export default function ProgramTable({ program, note }) {
                   <div className="min-w-0">
                     <p className="text-sm text-gray-800 leading-snug">{item.title}</p>
                     {item.speaker && <p className="text-2xs text-gray-400 mt-0.5">{item.speaker}</p>}
-                    {item.moderators && <p className="text-2xs text-gray-400 mt-0.5">{item.moderators}</p>}
+                    {item.moderators && <p className="text-2xs text-gray-400 italic mt-0.5">{item.moderators}</p>}
                     {item.cases && (
                       <ul className="mt-2 space-y-1.5">
                         {item.cases.map((c, j) => (
