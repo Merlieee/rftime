@@ -43,6 +43,30 @@ export const patronage2026 = {
   ],
 };
 
+// Partners of the 2026 edition, grouped by tier (labels in i18n: partners.tiers). Brand names
+// stay untranslated; a partner without a logo file shows its name in the logo slot.
+export const partners2026 = [
+  { tier: 'diamond', partners: [
+    { name: 'Abbott', logo: '/partnerzy/abbott.webp' },
+  ] },
+  { tier: 'gold', partners: [
+    { name: 'Johnson & Johnson MedTech', logo: '/partnerzy/johnson-johnson.svg' },
+    { name: 'Medtronic', logo: '/partnerzy/medtronic.svg' },
+  ] },
+  { tier: 'silver', partners: [
+    { name: 'Siemens Healthineers', logo: '/partnerzy/siemens-healthineers.webp' },
+    { name: 'doktorEKG.pl', logo: '/partnerzy/doktorekg.svg' },
+  ] },
+  { tier: 'bronze', partners: [
+    { name: 'Procardia', logo: '/partnerzy/procardia.webp' },
+    { name: 'AGM Ultrasound', logo: '/partnerzy/agm-ultrasound.webp' },
+    { name: 'Biotronik', logo: '/partnerzy/biotronik.webp' },
+  ] },
+  { tier: 'friends', partners: [
+    { name: 'Pol-Skone', logo: '/partnerzy/pol-skone.svg' },
+  ] },
+];
+
 export const highlightIcons2024 = [Video, Globe, ClipboardCheck, Users];
 export const highlightIcons2025 = [Video, Zap, Activity, Trophy];
 export const highlightIcons2026 = [Activity, Radio, Mic, Users];

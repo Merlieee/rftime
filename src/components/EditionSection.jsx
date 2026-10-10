@@ -5,13 +5,14 @@ import ProgramTable from './ProgramTable';
 
 const COLLAPSED_HEIGHT = 448; // ~28rem preview
 
-export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, patronage, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
+export default function EditionSection({ edition, date, location, theme, speakers, committeeExtra = [], highlights, program, programNote, patronage, partners, index, youtubeId, youtubeListId, editionLabel, speakersFirst, current, organizerKey = 'wss' }) {
   const tabOrder = [
     ...(speakersFirst
       ? ['speakers', 'program', 'scientific', 'organizing', 'organizer']
       : ['program', 'speakers', 'scientific', 'organizing', 'organizer']),
     // Only editions with patronage data get the tab.
     ...(patronage ? ['patronage'] : []),
+    ...(partners ? ['partners'] : []),
   ];
   // Past editions start with every tab shut and stay that way until the reader picks one;
   // picking the open one closes it again. The current edition leads with its first tab
@@ -44,6 +45,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
     organizing: t('committee.organizingTab'),
     organizer: t('organizer.label'),
     patronage: t('patronage.tab'),
+    partners: t('partners.tab'),
     // Past editions name the year on the programme tab — scrolled this far down the page,
     // a bare "Program" gives the reader no way to tell which one they are opening.
     program: current ? t('edition.tabProgram') : t('edition.tabProgramNamed', { edition }),
@@ -124,7 +126,7 @@ export default function EditionSection({ edition, date, location, theme, speaker
               onTransitionEnd={() => { if (scheduleOpen) setScheduleMaxH('none'); }}
             >
               <div ref={scheduleRef}>
-                <ProgramTable program={program} />
+                <ProgramTable program={program} note={programNote} />
               </div>
               {!scheduleOpen && (
                 <div className={`absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t ${sectionBg} to-transparent pointer-events-none`} />
@@ -161,6 +163,8 @@ export default function EditionSection({ edition, date, location, theme, speaker
         {tab === 'patronage' && (
           <PatronageBlock patronage={patronage} lang={i18n.language} />
         )}
+
+        {tab === 'partners' && <PartnersBlock partners={partners} />}
 
         {youtubeId && (
           <div className="mt-10 pt-8 flex flex-col items-center text-center">
@@ -314,6 +318,51 @@ function PatronageBlock({ patronage, lang }) {
           <p className="text-sm font-normal text-gray-500 mt-1">{t('patronage.honoraryName')}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Partner tiers, highest first. Higher tiers get fewer columns and taller logo slots, so the
+// diamond partner reads largest; a partner without a logo file shows its name instead.
+const TIER_LAYOUT = {
+  diamond: { grid: 'grid-cols-1',                            logo: 'h-28', maxW: 'max-w-[320px]', text: 'text-2xl' },
+  gold:    { grid: 'grid-cols-1 sm:grid-cols-2',             logo: 'h-24', maxW: 'max-w-[240px]', text: 'text-xl' },
+  silver:  { grid: 'grid-cols-1 sm:grid-cols-2',             logo: 'h-20', maxW: 'max-w-[220px]', text: 'text-lg' },
+  bronze:  { grid: 'grid-cols-2 lg:grid-cols-3',             logo: 'h-16', maxW: 'max-w-[180px]', text: 'text-base' },
+  friends: { grid: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4', logo: 'h-14', maxW: 'max-w-[160px]', text: 'text-base' },
+};
+
+function PartnersBlock({ partners }) {
+  const { t } = useTranslation();
+  return (
+    <div className="space-y-4">
+      {partners.map(({ tier, partners: list }, ti) => {
+        const layout = TIER_LAYOUT[tier];
+        return (
+          <div key={tier} className="space-y-4">
+            <p className={`text-xs font-semibold text-sky-600 uppercase tracking-widest${ti > 0 ? ' pt-4' : ''}`}>{t(`partners.tiers.${tier}`)}</p>
+            <div className={`grid ${layout.grid} gap-4`}>
+              {list.map((p) => (
+                <div key={p.name} className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center">
+                  <div className={`${layout.logo} w-full flex items-center justify-center`}>
+                    {p.logo ? (
+                      <img
+                        src={p.logo}
+                        alt={p.name}
+                        loading="lazy"
+                        decoding="async"
+                        className={`max-h-full ${layout.maxW} w-full object-contain`}
+                      />
+                    ) : (
+                      <p className={`${layout.text} font-semibold text-gray-700 text-center`}>{p.name}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

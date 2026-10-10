@@ -33,7 +33,7 @@ import LegalPage from './pages/LegalPage';
 import NotFound from './pages/NotFound';
 import { useTranslation } from 'react-i18next';
 import {
-  speakerBase2024, speakerBase2025, speakerBase2026, patronage2026,
+  speakerBase2024, speakerBase2025, speakerBase2026, patronage2026, partners2026,
   highlightIcons2024, highlightIcons2025, highlightIcons2026,
 } from './data/content';
 
@@ -67,7 +67,9 @@ function Home() {
         committeeExtra={e2026.committeeExtra}
         highlights={highlights2026}
         program={e2026.program}
+        programNote={e2026.programNote}
         patronage={patronage2026}
+        partners={partners2026}
         accent="pink"
         organizerKey="elkardia"
       />
