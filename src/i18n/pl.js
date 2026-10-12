@@ -243,11 +243,11 @@ export default {
         { title: 'prof. dr hab. n. med.', location: ['Klinika Kardiologii, Pomorski Uniwersytet Medyczny w Szczecinie, Polska'] },
         { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'] },
         { title: 'dr hab. n. med.', location: ['Katedra i Klinika Kardiologii, Warszawski Uniwersytet Medyczny, Polska'] },
+        { title: 'dr n. med.', location: ['Oddział Kardiologii, Wojewódzki Szpital Specjalistyczny w Lublinie, Polska'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
       // committee and operate on Friday without appearing in the speakers grid (no photo).
       committeeExtra: [
-        { name: 'Marcin Szczasny', title: 'dr n. med.',     location: ['Wojewódzki Szpital Specjalistyczny w Lublinie (al. Kraśnicka), Polska'] },
       ],
       program: [
         {
