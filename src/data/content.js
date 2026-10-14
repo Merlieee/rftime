@@ -12,6 +12,7 @@ export const speakerBase2026 = [
   { name: 'Andrzej Hoffmann',    title: 'dr n. med.',      photo: '/speakers/Andrzej-Hoffman-RFtime.webp' },
   { name: 'Michał Peller',       title: 'dr hab. n. med.', photo: '/speakers/RFtime-Michal-Peller.webp' },
   { name: 'Marcin Szczasny',     title: 'dr n. med.',      photo: '/speakers/RFtime-Marcin-Szczasny.webp' },
+  { name: 'Paweł Błaszkiewicz',  title: 'dr n. med.',      photo: '/speakers/RFtime-Pawel-Blaszkiewicz.webp' },
 ];
 
 export const speakerBase2024 = [

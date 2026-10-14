@@ -244,6 +244,7 @@ export default {
         { title: 'MD, PhD', location: ['Department of Cardiology, Prof. Leszek Giec Upper-Silesian Medical Centre, Medical University of Silesia, Katowice, Poland'] },
         { title: 'Assoc. Prof., MD, PhD', location: ['Department of Cardiology, Medical University of Warsaw, Poland'] },
         { title: 'MD, PhD', location: ['Department of Cardiology, Provincial Specialist Hospital in Lublin, Poland'] },
+        { title: 'MD, PhD', location: ['Elkardia – Lublin Cardiology Centre, Lublin, Poland', 'Department of Cardiology, Provincial Specialist Hospital, Biała Podlaska, Poland'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
       // committee and operate on Friday without appearing in the speakers grid (no photo).
@@ -267,7 +268,7 @@ export default {
             { time: '15:15–15:45', title: 'Coffee break',                                                                        speaker: '' },
             { time: '15:45–16:00', title: 'Interesting case: Left atrial PFA ablation in patients with interrupted inferior vena cava', speaker: 'R. Płaksej, M. Adamczyk (J. Struś Multispecialty City Hospital, Poznań)', moderators: 'Moderators: M. Kiliszek, P. Wałek, P. Życiński' },
             { time: '16:00–17:20', title: 'Lecture: TactiFlex™ Duo in challenging ablation targets + case: VT ablation — S3 protocol, dual-energy PFA/RF catheter (live link to Barcelona)', speaker: 'I. Roca-Luque', moderators: 'Moderators: M. Wójcik, R. Kiedrowicz, A. Głowniak, A. Hoffmann' },
-            { time: '17:20–17:30', title: 'Presentation: Management of complications after pulmonary vein isolation',           speaker: 'K. Momot (Międzylesie Specialist Hospital / 3rd Department of Cardiology and Internal Diseases, Medical University of Warsaw)' },
+            { time: '17:20–17:30', title: 'Presentation: Management of complications after pulmonary vein isolation',           speaker: 'K. Momot (Międzylesie Specialist Hospital / MUW)' },
             { time: '17:30–19:00', title: 'Live procedure: Re-ablation of atypical AFL with the TactiFlex™ Duo catheter',       speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz', moderators: 'Moderators: A. Hoffmann, R. Płaksej, M. Peller' },
             {
               time: '19:00–20:00',
@@ -308,7 +309,7 @@ export default {
                 { time: '14:40', speaker: 'P. Życiński (Sieradz)',                                 title: 'Unusual sVT scenario (inspired by CSP)' },
                 { time: '14:50', speaker: 'M. Wielusiński, R. Kiedrowicz (PUM Szczecin)',          title: 'Endo- and epicardial VT mapping and out-of-reach substrate' },
                 { time: '15:00', speaker: 'B. Bińkowski (WWCOiT Łódź)',                            title: 'When RF failed… twice… Re-do ablation of resistant accessory pathway' },
-                { time: '15:10', speaker: 'P. Kośmider (WSZ Kielce / UJK)',                        title: 'Doctor, how much longer…?' },
+                { time: '15:10', speaker: 'P. Kośmider (WSZ Kielce / UJK)',                        title: 'In life you need a little luck – a 5th attempt at AF' },
                 { time: '15:20', speaker: 'K. Momot (Międzylesie Specialist Hospital / MUW)',      title: 'Targeting epicardial adipose tissue to improve outcomes after atrial fibrillation catheter ablation' },
               ],
             },

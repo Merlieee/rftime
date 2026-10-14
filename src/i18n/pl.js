@@ -244,6 +244,7 @@ export default {
         { title: 'dr n. med.', location: ['Klinika Kardiologii, Górnośląskie Centrum Medyczne im. prof. Leszka Gieca, Śląski Uniwersytet Medyczny w Katowicach, Polska'] },
         { title: 'dr hab. n. med.', location: ['Katedra i Klinika Kardiologii, Warszawski Uniwersytet Medyczny, Polska'] },
         { title: 'dr n. med.', location: ['Oddział Kardiologii, Wojewódzki Szpital Specjalistyczny w Lublinie, Polska'] },
+        { title: 'dr n. med.', location: ['Elkardia – Lubelskie Centrum Kardiologii, Lublin, Polska', 'Oddział Kardiologii, Wojewódzki Szpital Specjalistyczny w Białej Podlaskiej, Polska'] },
       ],
       // Scientific committee = this edition's faculty plus these members, who sit on the
       // committee and operate on Friday without appearing in the speakers grid (no photo).
@@ -267,7 +268,7 @@ export default {
             { time: '15:15–15:45', title: 'Przerwa kawowa',                                                                                                speaker: '' },
             { time: '15:45–16:00', title: 'Prezentacja ciekawego przypadku: Ablacja PFA w lewym przedsionku u pacjentów z przerwaniem ciągłości żyły głównej dolnej', speaker: 'R. Płaksej, M. Adamczyk (WSM im. J. Strusia, Poznań)', moderators: 'Moderatorzy: M. Kiliszek, P. Wałek, P. Życiński' },
             { time: '16:00–17:20', title: 'Wykład: TactiFlex™ Duo w trudnych celach ablacyjnych + case: Ablacja VT — protokół S3, cewnik dual-energy PFA/RF (łączenie na żywo z Barceloną)', speaker: 'I. Roca-Luque', moderators: 'Moderatorzy: M. Wójcik, R. Kiedrowicz, A. Głowniak, A. Hoffmann' },
-            { time: '17:20–17:30', title: 'Prezentacja: Management of complications after pulmonary vein isolation',                                       speaker: 'K. Momot (Międzyleski Szpital Specjalistyczny / III Klinika Kardiologii i Chorób Wewnętrznych WUM)' },
+            { time: '17:20–17:30', title: 'Prezentacja: Management of complications after pulmonary vein isolation',                                       speaker: 'K. Momot (Międzyleski Szpital Specjalistyczny / WUM)' },
             { time: '17:30–19:00', title: 'Zabieg live: Re-ablacja atypowego AFL cewnikiem TactiFlex™ Duo',                                                 speaker: 'R. Kiedrowicz, M. Wójcik, P. Błaszkiewicz', moderators: 'Moderatorzy: A. Hoffmann, R. Płaksej, M. Peller' },
             {
               time: '19:00–20:00',
@@ -308,7 +309,7 @@ export default {
                 { time: '14:40', speaker: 'P. Życiński (Sieradz)',                                title: 'Unusual sVT scenario (inspired by CSP)' },
                 { time: '14:50', speaker: 'M. Wielusiński, R. Kiedrowicz (PUM Szczecin)',         title: 'Mapping endo- i epikardialny VT a substrat poza zasięgiem' },
                 { time: '15:00', speaker: 'B. Bińkowski (WWCOiT Łódź)',                           title: 'When RF failed… twice… Re-do ablation of resistant accessory pathway' },
-                { time: '15:10', speaker: 'P. Kośmider (WSZ Kielce / UJK)',                       title: 'Doktorze, długo jeszcze…?' },
+                { time: '15:10', speaker: 'P. Kośmider (WSZ Kielce / UJK)',                       title: 'W życiu trzeba mieć trochę szczęścia – 5. podejście do AF' },
                 { time: '15:20', speaker: 'K. Momot (Międzyleski Szpital Specjalistyczny / WUM)', title: 'Targeting epicardial adipose tissue to improve outcomes after atrial fibrillation catheter ablation' },
               ],
             },
