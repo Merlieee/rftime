@@ -32,3 +32,6 @@ dist-ssr
 
 # Vercel CLI
 .vercel
+
+# Local logo sources
+public/nowe loga/
