@@ -296,9 +296,11 @@ export default {
           items: [
             { time: '8:00–9:30',   title: 'Zabieg live z Lubeki: Ablacja VT/PVC z użyciem PFA (TactiFlex™ Duo)',                                            speaker: 'R. Tilz',                  moderators: 'Moderatorzy: M. Wójcik, R. Kiedrowicz, B. Bińkowski' },
             { time: '9:30–10:00',  title: 'Wykład: Ablacja PFA dodatkowych pobudzeń komorowych',                                                            speaker: 'R. Tilz' },
+            { time: 'ok. 10:00',   title: 'GENTLE-PACE — randomizowane badanie wieloośrodkowe',          speaker: 'P. Skoczyński (4 WSK, Wrocław) — 5 min' },
             { time: '10:00–10:15', title: 'Przerwa kawowa',                                                                                                 speaker: '' },
             { time: '10:15–11:45', title: 'Zabieg live z Lublina (USK nr 4): Ablacja substratu AF cewnikiem Affera™',                                        speaker: 'A. Hoffmann, A. Głowniak', moderators: 'Moderatorzy: R. Kiedrowicz, M. Kiliszek, R. Płaksej' },
             { time: '11:45–13:15', title: 'Zabieg live z Lublina (WSzS, al. Kraśnicka): Ablacja AF/AT cewnikiem dual-energy PFA/RF',                         speaker: 'M. Peller, M. Szczasny',   moderators: 'Moderatorzy: R. Kiedrowicz, P. Wałek, M. Wójcik' },
+            { time: 'ok. 12:15',   title: 'Atypical atrial flutter treated with dual energy',          speaker: 'A. Priebe (Wejherowo) — 10 min' },
             { time: '13:15–14:30', title: 'Zabieg live z Lublina (USK nr 4): Ablacja AF — OPAL HDx™ Software 7.0 + FARAVIEW™',                               speaker: 'A. Głowniak',              moderators: 'Moderatorzy: R. Kiedrowicz, B. Bińkowski, T. Kucejko' },
             {
               time: '14:30–15:30',
@@ -494,6 +496,7 @@ export default {
       gold: 'Partnerzy Złoci',
       silver: 'Partnerzy Srebrni',
       bronze: 'Partnerzy Brązowi',
+      tech: 'Partner Technologiczny',
       friends: 'Przyjaciele RFtime',
     },
   },

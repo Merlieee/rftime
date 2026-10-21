@@ -296,9 +296,11 @@ export default {
           items: [
             { time: '8:00–9:30',   title: 'Live procedure from Lübeck: VT/PVC ablation using PFA (TactiFlex™ Duo)',              speaker: 'R. Tilz',                  moderators: 'Moderators: M. Wójcik, R. Kiedrowicz, B. Bińkowski' },
             { time: '9:30–10:00',  title: 'Lecture: PFA ablation of premature ventricular contractions',                         speaker: 'R. Tilz' },
+            { time: 'approx. 10:00', title: 'GENTLE-PACE — a randomised multicentre trial', speaker: 'P. Skoczyński (4th Military Clinical Hospital, Wrocław) — 5 min' },
             { time: '10:00–10:15', title: 'Coffee break',                                                                        speaker: '' },
             { time: '10:15–11:45', title: 'Live procedure from Lublin (University Clinical Hospital No. 4): AF substrate ablation with the Affera™ catheter',  speaker: 'A. Hoffmann, A. Głowniak', moderators: 'Moderators: R. Kiedrowicz, M. Kiliszek, R. Płaksej' },
             { time: '11:45–13:15', title: 'Live procedure from Lublin (Provincial Specialist Hospital, al. Kraśnicka): AF/AT ablation with a dual-energy PFA/RF catheter', speaker: 'M. Peller, M. Szczasny', moderators: 'Moderators: R. Kiedrowicz, P. Wałek, M. Wójcik' },
+            { time: 'approx. 12:15', title: 'Atypical atrial flutter treated with dual energy', speaker: 'A. Priebe (Wejherowo) — 10 min' },
             { time: '13:15–14:30', title: 'Live procedure from Lublin (University Clinical Hospital No. 4): AF ablation — OPAL HDx™ Software 7.0 + FARAVIEW™', speaker: 'A. Głowniak', moderators: 'Moderators: R. Kiedrowicz, B. Bińkowski, T. Kucejko' },
             {
               time: '14:30–15:30',
@@ -494,6 +496,7 @@ export default {
       gold: 'Gold Partners',
       silver: 'Silver Partners',
       bronze: 'Bronze Partners',
+      tech: 'Technology Partner',
       friends: 'Friends of RFtime',
     },
   },

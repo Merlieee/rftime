@@ -340,6 +340,7 @@ const TIER_LAYOUT = {
   gold:    { grid: 'grid-cols-1 sm:grid-cols-2',             logo: 'h-24', maxW: 'max-w-[240px]', text: 'text-xl' },
   silver:  { grid: 'grid-cols-1 sm:grid-cols-2',             logo: 'h-20', maxW: 'max-w-[220px]', text: 'text-lg' },
   bronze:  { grid: 'grid-cols-2 lg:grid-cols-3',             logo: 'h-16', maxW: 'max-w-[180px]', text: 'text-base' },
+  tech:    { grid: 'grid-cols-1 sm:grid-cols-2',             logo: 'h-16', maxW: 'max-w-[200px]', text: 'text-base' },
   friends: { grid: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4', logo: 'h-14', maxW: 'max-w-[160px]', text: 'text-base' },
 };
 

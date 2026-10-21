@@ -63,9 +63,18 @@ export const partners2026 = [
     { name: 'Procardia', logo: '/partnerzy/procardia.webp' },
     { name: 'AGM Ultrasound', logo: '/partnerzy/agm-ultrasound.webp' },
     { name: 'Biotronik', logo: '/partnerzy/biotronik.webp' },
+    { name: 'Boston Scientific', logo: '/partnerzy/boston-scientific.webp' },
+  ] },
+  { tier: 'tech', partners: [
+    { name: 'Centrum Multimedialne Politechniki Łódzkiej', logo: '/partnerzy/cm-politechnika-lodzka.webp' },
   ] },
   { tier: 'friends', partners: [
     { name: 'Pol-Skone', logo: '/partnerzy/pol-skone.svg' },
+    { name: 'Elkardia', logo: '/partnerzy/elkardia.webp' },
+    { name: 'Uroczysko Zaborek', logo: '/partnerzy/uroczysko-zaborek.webp' },
+    { name: 'Osada Zaborek', logo: '/partnerzy/osada-zaborek.webp' },
+    { name: 'Arche Zamek Janów Podlaski', logo: '/partnerzy/arche-zamek-janow-podlaski.webp' },
+    { name: 'Spiroprint', logo: '/partnerzy/spiroprint.webp' },
   ] },
 ];
 
